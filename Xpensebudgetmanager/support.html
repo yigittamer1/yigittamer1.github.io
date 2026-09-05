@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Budget Manager — Support</title>
+<style>
+  :root {
+    --bg: #f5f6f7;
+    --surface: #ffffff;
+    --surface-2: #eef1f2;
+    --text: #1b1f27;
+    --text-muted: #5b6572;
+    --accent: #6952d8;
+    --accent-strong: #4f3bb0;
+    --rule: #d8dce1;
+    --rule-strong: #b9c0c7;
+    --font-mono: ui-monospace, "SF Mono", "Menlo", "Cascadia Code", monospace;
+    --font-body: -apple-system, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c1017;
+      --surface: #161c26;
+      --surface-2: #202836;
+      --text: #e7e9ec;
+      --text-muted: #98a2ae;
+      --accent: #7c6cf5;
+      --accent-strong: #a396ff;
+      --rule: #262e3d;
+      --rule-strong: #3a424d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c1017;
+    --surface: #161c26;
+    --surface-2: #202836;
+    --text: #e7e9ec;
+    --text-muted: #98a2ae;
+    --accent: #7c6cf5;
+    --accent-strong: #a396ff;
+    --rule: #262e3d;
+    --rule-strong: #3a424d;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 56px 24px 100px;
+  }
+  .page { max-width: 680px; margin: 0 auto; }
+
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  h1 {
+    font-size: clamp(24px, 4vw, 30px);
+    line-height: 1.25;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .dek { color: var(--text-muted); font-size: 15px; margin: 0 0 40px; }
+
+  section { margin: 44px 0; scroll-margin-top: 24px; }
+  h2 {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  h3 { font-size: 16px; margin: 24px 0 6px; }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; max-width: 60ch; }
+  a { color: var(--accent-strong); }
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--surface-2);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+  }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 20px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .contact-card .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+  }
+  .contact-card .email {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .contact-card a.button {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    text-decoration: none;
+    color: var(--bg);
+    background: var(--accent);
+    padding: 10px 18px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--rule);
+    padding: 16px 0;
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q { font-weight: 600; margin: 0 0 6px; }
+  .faq-a { color: var(--text-muted); margin: 0; }
+
+  .divider {
+    margin: 56px 0;
+    border: none;
+    border-top: 2px dashed var(--rule-strong);
+  }
+
+  .foot {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="kicker">Budget Manager · Support</p>
+  <h1>Destek / Support</h1>
+  <p class="dek">Türkçe içerik aşağıda; English follows further down the page.</p>
+
+  <section id="tr">
+    <h2>01 — Türkçe</h2>
+
+    <p>Budget Manager ile ilgili bir sorun mu yaşıyorsun, bir öneri mi iletmek istiyorsun? Aşağıdaki adresten bize ulaşabilirsin — genellikle 1-2 iş günü içinde dönüş yapıyoruz.</p>
+
+    <div class="contact-card">
+      <div>
+        <div class="label">E-posta</div>
+        <div class="email">yigittamer99@gmail.com</div>
+      </div>
+      <a class="button" href="mailto:yigittamer99@gmail.com?subject=Budget%20Manager%20Destek">E-posta gönder</a>
+    </div>
+
+    <h3>Sık sorulan sorular</h3>
+    <div class="faq-item">
+      <p class="faq-q">Kayıtlarım kayboldu / farklı bir cihazda göremiyorum, ne yapmalıyım?</p>
+      <p class="faq-a">Kayıtların, aynı Apple Hesabıyla giriş yaptığın cihazlar arasında iCloud üzerinden otomatik senkronize olur. Görünmüyorlarsa: cihazın iCloud'a bağlı mı (Ayarlar → [Adın]) ve internet bağlantın var mı kontrol et. iCloud'a hiç giriş yapmadıysan kayıtlar yalnızca o cihazda kalır, başka bir cihaza taşınmaz.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Uygulamayı silip tekrar kurdum, verilerim geri gelir mi?</p>
+      <p class="faq-a">Aynı Apple Hesabıyla giriş yapılıysa ve daha önce "Tüm Verileri Sil" ile silinmediyse, evet — kayıtların iCloud'dan otomatik olarak geri yüklenir.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">iCloud'dan çıkış yaptım (ya da hesap değiştirdim), verilerim ne olacak?</p>
+      <p class="faq-a">Cihazındaki kayıtlar silinmez, uygulama yerel kopyayla normal çalışmaya devam eder. Sadece senkronizasyon durur: yeni kayıtlar iCloud'a gitmez, başka cihazlardan bir şey inmez, tekrar giriş yapana kadar. Daha önce senkron olmuş kayıtların o hesabın iCloud'unda kalır, kaybolmaz — aynı hesaba dönünce senkron kaldığı yerden devam eder. Farklı bir hesaba geçersen, o hesap boş başlar; eski hesabına dönersen verilerin yine orada olur. Ayarlar ekranındaki "iCloud senkronizasyonu" satırından şu an aktif olup olmadığını her zaman görebilirsin.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Verilerimi tamamen silmek istiyorum, nasıl yaparım?</p>
+      <p class="faq-a">Ayarlar → Tüm Verileri Sil. Bu, tüm kayıtları hem cihazından hem iCloud hesabından kalıcı olarak siler; onay istenir, geri alınamaz.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Fiş tarama ne kadar doğru çalışıyor, fotoğrafım nereye gidiyor?</p>
+      <p class="faq-a">Tarama tamamen cihazında, internete çıkmadan yapılır. Fotoğraf hiçbir yere yüklenmez ve okuma biter bitmez atılır. Tutar/tarih/mağaza bazen yanlış okunabilir — kaydetmeden önce kontrol edip elle düzeltebilirsin.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Döviz kurları ne kadar güncel?</p>
+      <p class="faq-a">Kurlar Avrupa Merkez Bankası referans kurlarından (Frankfurter servisi üzerinden) çekilir ve periyodik olarak yenilenir. İnternet yoksa bilinen son kur kullanılır. Büyük miktarlı veya resmi işlemlerde bu kurlara güvenmemeni öneririz.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Abonelik hatırlatmaları gelmiyor.</p>
+      <p class="faq-a">Ayarlar uygulamasından Budget Manager için bildirim izni verildiğinden emin ol. Bildirimler tamamen cihazında planlanır, internete ihtiyaç duymaz.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Uygulama neden reklam gösteriyor?</p>
+      <p class="faq-a">Uygulama ücretsiz kullanılabilsin diye Google AdMob üzerinden banner reklamlar gösteriyoruz. İsteğe bağlı olarak kısa bir reklam izleyerek o günlük reklamları kapatabilir ya da bir raporu dışa aktarabilirsin.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Verilerim nasıl kullanılıyor?</p>
+      <p class="faq-a">Detaylar için <a href="index.html">Gizlilik Politikası</a> sayfamıza bakabilirsin.</p>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="en">
+    <h2>02 — English</h2>
+
+    <p>Running into an issue with Budget Manager, or have a suggestion? Reach out below — we typically respond within 1-2 business days.</p>
+
+    <div class="contact-card">
+      <div>
+        <div class="label">Email</div>
+        <div class="email">yigittamer99@gmail.com</div>
+      </div>
+      <a class="button" href="mailto:yigittamer99@gmail.com?subject=Budget%20Manager%20Support">Send an email</a>
+    </div>
+
+    <h3>Frequently asked questions</h3>
+    <div class="faq-item">
+      <p class="faq-q">My entries disappeared, or I can't see them on another device.</p>
+      <p class="faq-a">Your records sync automatically over iCloud between devices signed into the same Apple Account. If they're missing, check that the device is signed into iCloud (Settings → [Your Name]) and connected to the internet. If you've never signed into iCloud, entries stay on that device only and won't carry over.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I deleted and reinstalled the app — will my data come back?</p>
+      <p class="faq-a">Yes, as long as you're signed into the same Apple Account and hadn't previously used "Delete All Data" — your records are restored automatically from iCloud.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I signed out of iCloud (or switched accounts) — what happens to my data?</p>
+      <p class="faq-a">Nothing on your device is deleted; the app keeps working normally with its local copy. Only syncing pauses: new entries stop going to iCloud, and nothing new comes down, until you sign back in. Records already synced stay safely in that account's iCloud storage. Switching to a different Apple Account starts that account fresh (empty) — your original data isn't lost, it's just waiting for you to sign back into that account. The "iCloud sync" row in Settings always shows whether you're currently active or off.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I permanently delete all my data?</p>
+      <p class="faq-a">Settings → Delete All Data. This permanently erases everything from both your device and your iCloud account, after a confirmation step. It cannot be undone.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How accurate is receipt scanning, and where does my photo go?</p>
+      <p class="faq-a">Scanning happens entirely on your device, with no network access. The photo is never uploaded anywhere and is discarded right after the text is read. The amount, date, or merchant may occasionally be misread — review and correct them before saving.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How current are the exchange rates?</p>
+      <p class="faq-a">Rates come from European Central Bank reference rates (via the Frankfurter service) and refresh periodically. If there's no internet connection, the last known rate is used. We don't recommend relying on these rates for large or official transactions.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I'm not getting subscription reminders.</p>
+      <p class="faq-a">Make sure notifications are allowed for Budget Manager in the iOS Settings app. Reminders are scheduled entirely on your device and don't require an internet connection.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Why does the app show ads?</p>
+      <p class="faq-a">We show banner ads via Google AdMob so the app can remain free to use. You can optionally watch a short ad to remove ads for the day, or to export a report.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How is my data used?</p>
+      <p class="faq-a">See our <a href="index.html">Privacy Policy</a> for details.</p>
+    </div>
+  </section>
+
+  <p class="foot">Budget Manager Support · yigittamer99@gmail.com</p>
+</div>
+</body>
+</html>
