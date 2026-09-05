@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Metrik — Privacy Policy</title>
+<title>Yiğit Tamer — Apps</title>
 <style>
   :root {
     --bg: #f5f6f7;
@@ -71,73 +71,43 @@
   }
   .dek { color: var(--text-muted); font-size: 15px; margin: 0 0 40px; }
 
-  .lang-nav {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 40px;
+  .app-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 14px;
+    padding: 20px 22px;
+    margin-bottom: 16px;
   }
-  .lang-nav a {
+  .app-card:hover { border-color: var(--accent); }
+  .app-name {
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0 0 4px;
+  }
+  .app-dek {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 12px;
+  }
+  .app-links {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .app-links a {
     font-family: var(--font-mono);
     font-size: 12px;
     text-decoration: none;
     color: var(--text);
-    background: var(--surface);
+    background: var(--surface-2);
     border: 1px solid var(--rule);
     padding: 6px 12px;
     border-radius: 999px;
   }
-  .lang-nav a:hover { border-color: var(--accent); color: var(--accent-strong); }
-
-  section { margin: 44px 0; scroll-margin-top: 24px; }
-  h2 {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--text);
-    margin: 0 0 14px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid var(--rule-strong);
-  }
-  h3 { font-size: 16px; margin: 24px 0 6px; }
-  p { margin: 0 0 14px; max-width: 66ch; }
-  ul { margin: 0 0 14px; padding-left: 22px; }
-  li { margin-bottom: 6px; max-width: 60ch; }
-  a { color: var(--accent-strong); }
-  code {
-    font-family: var(--font-mono);
-    font-size: 0.9em;
-    background: var(--surface-2);
-    border: 1px solid var(--rule);
-    border-radius: 4px;
-    padding: 0.1em 0.4em;
-  }
-
-  .divider {
-    margin: 56px 0;
-    border: none;
-    border-top: 2px dashed var(--rule-strong);
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    margin: 8px 0 20px;
-  }
-  th, td {
-    text-align: left;
-    padding: 8px 10px;
-    border-bottom: 1px solid var(--rule);
-    vertical-align: top;
-  }
-  th {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-  }
+  .app-links a:hover { border-color: var(--accent); color: var(--accent-strong); }
 
   .foot {
     margin-top: 56px;
@@ -146,94 +116,34 @@
     color: var(--text-muted);
     font-size: 13px;
   }
+  .foot a { color: var(--accent-strong); }
 </style>
 </head>
 <body>
 <div class="page">
-  <p class="kicker">Metrik · Legal</p>
-  <h1>Privacy Policy</h1>
-  <p class="dek">Last updated: September 1, 2026</p>
+  <p class="kicker">Yiğit Tamer</p>
+  <h1>Apps</h1>
+  <p class="dek">Independent iOS developer. Privacy policies and support pages for each app below.</p>
 
-  <nav class="lang-nav">
-    <a href="#en">English</a>
-    <a href="#tr">Türkçe</a>
-  </nav>
+  <div class="app-card">
+    <p class="app-name">Xpense Budget Manager</p>
+    <p class="app-dek">Personal expense &amp; income tracker with receipt scanning and iCloud sync.</p>
+    <div class="app-links">
+      <a href="Xpensebudgetmanager/index.html">Privacy Policy</a>
+      <a href="Xpensebudgetmanager/support.html">Support</a>
+    </div>
+  </div>
 
-  <section id="en">
-    <h2>01 — English</h2>
+  <div class="app-card">
+    <p class="app-name">Metrik</p>
+    <p class="app-dek">Unit conversion utility.</p>
+    <div class="app-links">
+      <a href="metrik/index.html">Privacy Policy</a>
+      <a href="metrik/support.html">Support</a>
+    </div>
+  </div>
 
-    <p>Metrik ("the App") is a unit conversion utility developed by an individual developer ("we", "us"). This policy explains what information the App handles and how.</p>
-
-    <h3>No account, no personal profile</h3>
-    <p>The App does not require you to create an account, sign in, or provide any personal information to use it. There are no user profiles.</p>
-
-    <h3>What stays on your device</h3>
-    <p>Your category and unit preferences, favorites, and selected language are stored locally on your device using Apple's standard <code>UserDefaults</code> storage. This information is never transmitted to us and we have no access to it.</p>
-
-    <h3>Network requests the App makes</h3>
-    <table>
-      <thead><tr><th>Purpose</th><th>Destination</th><th>Data sent</th></tr></thead>
-      <tbody>
-        <tr><td>Currency exchange rates</td><td><code>open.er-api.com</code></td><td>None — a public rate lookup only.</td></tr>
-        <tr><td>Advertising</td><td>Google AdMob</td><td>Device/advertising identifiers as needed to serve ads. See Google's own privacy policy below.</td></tr>
-      </tbody>
-    </table>
-
-    <h3>Advertising (Google AdMob)</h3>
-    <p>The App shows banner advertisements served by Google AdMob to support free use of the App. AdMob may collect device identifiers and usage data to serve and measure ads, as described in <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</p>
-
-    <h3>Children's privacy</h3>
-    <p>The App is a general-audience utility and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-
-    <h3>Data retention and deletion</h3>
-    <p>Since we do not operate any backend server or database, we do not retain any of your data. Deleting the App from your device removes all locally stored preferences immediately.</p>
-
-    <h3>Changes to this policy</h3>
-    <p>If this policy changes, the "Last updated" date above will be revised. Continued use of the App after a change constitutes acceptance of the updated policy.</p>
-
-    <h3>Contact</h3>
-    <p>Questions about this policy can be sent to <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a>.</p>
-  </section>
-
-  <hr class="divider" />
-
-  <section id="tr">
-    <h2>02 — Türkçe</h2>
-
-    <p>Metrik ("Uygulama"), bağımsız bir geliştirici ("biz") tarafından geliştirilen bir birim çevirici yardımcı uygulamasıdır. Bu metin, Uygulamanın hangi bilgileri nasıl işlediğini açıklar.</p>
-
-    <h3>Hesap yok, kişisel profil yok</h3>
-    <p>Uygulamayı kullanmak için hesap oluşturman, giriş yapman ya da herhangi bir kişisel bilgi vermen gerekmiyor. Kullanıcı profili bulunmuyor.</p>
-
-    <h3>Cihazında kalan bilgiler</h3>
-    <p>Kategori/birim tercihlerin, favorilerin ve seçtiğin dil, Apple'ın standart <code>UserDefaults</code> deposu ile sadece cihazında saklanır. Bu bilgiler bize hiçbir şekilde iletilmez, erişimimiz yoktur.</p>
-
-    <h3>Uygulamanın yaptığı ağ istekleri</h3>
-    <table>
-      <thead><tr><th>Amaç</th><th>Hedef</th><th>Gönderilen veri</th></tr></thead>
-      <tbody>
-        <tr><td>Döviz kurları</td><td><code>open.er-api.com</code></td><td>Yok — sadece herkese açık kur bilgisi okunur.</td></tr>
-        <tr><td>Reklam</td><td>Google AdMob</td><td>Reklam gösterebilmek için gerektiğinde cihaz/reklam kimlikleri. Aşağıda Google'ın kendi politikasına bağlantı var.</td></tr>
-      </tbody>
-    </table>
-
-    <h3>Reklam (Google AdMob)</h3>
-    <p>Uygulamanın ücretsiz kullanılabilmesi için Google AdMob tarafından sağlanan banner reklamlar gösterilir. AdMob, reklam gösterebilmek ve ölçümleyebilmek için cihaz kimlikleri ve kullanım verisi toplayabilir — detaylar için <a href="https://policies.google.com/privacy?hl=tr" target="_blank" rel="noopener">Google Gizlilik Politikası</a>'na bakabilirsin.</p>
-
-    <h3>Çocukların gizliliği</h3>
-    <p>Uygulama genel kitleye yönelik bir yardımcı araçtır, 13 yaş altı çocukları hedeflemez. Çocuklardan bilerek kişisel veri toplamayız.</p>
-
-    <h3>Veri saklama ve silme</h3>
-    <p>Herhangi bir sunucu/veritabanı işletmediğimiz için hiçbir verini bizde tutmuyoruz. Uygulamayı cihazından silmen, tüm yerel tercihleri anında kaldırır.</p>
-
-    <h3>Bu politikadaki değişiklikler</h3>
-    <p>Politika değişirse yukarıdaki "Son güncelleme" tarihi güncellenir. Değişiklikten sonra Uygulamayı kullanmaya devam etmen, güncellenmiş politikayı kabul ettiğin anlamına gelir.</p>
-
-    <h3>İletişim</h3>
-    <p>Bu politikayla ilgili sorular için: <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
-  </section>
-
-  <div class="foot">Metrik — Bu sayfa, App Store Connect'te "Privacy Policy URL" alanına eklenmek üzere hazırlanmıştır.</div>
+  <div class="foot">Questions about any app? <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></div>
 </div>
 </body>
 </html>
