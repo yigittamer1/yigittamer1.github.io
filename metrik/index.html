@@ -175,14 +175,22 @@
       <thead><tr><th>Purpose</th><th>Destination</th><th>Data sent</th></tr></thead>
       <tbody>
         <tr><td>Currency exchange rates</td><td><code>api.frankfurter.dev</code></td><td>None — a public, ECB-based rate lookup only.</td></tr>
-        <tr><td>Advertising</td><td>AppLovin MAX (mediating Unity Ads and Yandex Ads)</td><td>Device/advertising identifiers as needed to serve and measure ads, subject to the tracking permission described below. See each network's own privacy policy below.</td></tr>
-        <tr><td>Ad-network analytics &amp; crash reporting</td><td>Yandex AppMetrica</td><td>Bundled by the Yandex Ads SDK itself (not called by our own code) for that network's own crash reporting, analytics, and ad ID synchronization. Covered by Yandex's privacy policy below.</td></tr>
+        <tr><td>Advertising &amp; the SDKs it bundles</td><td>AppLovin MAX (mediating Unity Ads and Yandex Ads)</td><td>See the SDK table below — subject to the tracking permission described further down.</td></tr>
       </tbody>
     </table>
 
-    <h3>Advertising (AppLovin MAX, Unity Ads, Yandex Ads)</h3>
-    <p>The App is supported by advertising so it can remain free to use. Ads are served through AppLovin MAX, which mediates demand from Unity Ads and Yandex Ads. Not every device sees ads at every moment — the specific networks and ad formats shown can vary. These partners may collect device and advertising identifiers, approximate location, and usage data to serve and measure ads, as described in their own privacy policies: <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin</a>, <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity</a>, and <a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex</a>.</p>
-    <p>Yandex's ad SDK includes its own AppMetrica toolkit (analytics, crash reporting, and ad-ID synchronization) as a standard part of how that network operates — we don't configure or call it ourselves, and it's covered by Yandex's own privacy policy linked above, not a separate integration of ours.</p>
+    <h3>Advertising, and every SDK that comes with it</h3>
+    <p>The App is supported by advertising so it can remain free to use. Ads are served through AppLovin MAX, which mediates demand from two networks — Unity Ads and Yandex Ads. Each network's SDK brings along its own sub-components (for ad-quality measurement or crash reporting); every one of them ships an Apple-mandated privacy manifest, and this table reflects exactly what those manifests declare — not a guess:</p>
+    <table>
+      <thead><tr><th>SDK</th><th>Why it's here</th><th>What it declares collecting</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin SDK</a></td><td>Ad mediation — picks which network's ad to show</td><td>Device/advertising identifiers to serve ads</td></tr>
+        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a>, incl. ironSource Ad Quality</td><td>One of the two ad networks</td><td>Device ID and performance/diagnostic data, for ad-quality analytics and app functionality — not linked to your identity</td></tr>
+        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a>, incl. its AppMetrica and KSCrash components</td><td>The other ad network</td><td>Device/advertising identifiers for ads; separately, Yandex's own AppMetrica toolkit collects crash and performance data, general usage data, and approximate (typically IP-based, not GPS) location for its own analytics — not linked to your identity</td></tr>
+      </tbody>
+    </table>
+    <p>None of these declare themselves as "tracking" under Apple's own definition. We still ask for App Tracking Transparency permission (below) because ad mediation can involve sharing device identifiers with more than one company — you get the same result either way, we just default to asking.</p>
+    <p>The App itself never asks for your camera, photos, precise location, contacts, or microphone — it has no feature that would need them.</p>
 
     <h3>App Tracking Transparency</h3>
     <p>On iOS, the App asks for Apple's standard tracking permission a short moment after launch. Whether you allow or decline tracking, every feature of the App works exactly the same — declining only limits how personalized the ads you see can be.</p>
@@ -224,14 +232,22 @@
       <thead><tr><th>Amaç</th><th>Hedef</th><th>Gönderilen veri</th></tr></thead>
       <tbody>
         <tr><td>Döviz kurları</td><td><code>api.frankfurter.dev</code></td><td>Yok — sadece herkese açık, ECB tabanlı kur bilgisi okunur.</td></tr>
-        <tr><td>Reklam</td><td>AppLovin MAX (Unity Ads ve Yandex Ads aracılığıyla)</td><td>Aşağıda açıklanan takip izni dahilinde, reklam gösterebilmek ve ölçümleyebilmek için gerektiğinde cihaz/reklam kimlikleri. Her ağın kendi politikasına aşağıda bağlantı var.</td></tr>
-        <tr><td>Reklam ağının kendi analitik ve çökme raporlaması</td><td>Yandex AppMetrica</td><td>Bizim kodumuz tarafından değil, Yandex'in reklam SDK'sının kendisi tarafından, o ağın kendi çökme raporlaması, analitiği ve reklam kimliği eşleştirmesi için gömülüdür. Aşağıdaki Yandex politikası kapsar.</td></tr>
+        <tr><td>Reklam ve beraberinde gelen SDK'lar</td><td>AppLovin MAX (Unity Ads ve Yandex Ads aracılığıyla)</td><td>Aşağıdaki SDK tablosuna bak — aşağıda açıklanan takip izni dahilinde.</td></tr>
       </tbody>
     </table>
 
-    <h3>Reklam (AppLovin MAX, Unity Ads, Yandex Ads)</h3>
-    <p>Uygulamanın ücretsiz kalabilmesi için reklam desteğiyle sunulur. Reklamlar, Unity Ads ve Yandex Ads'ten talep toplayan AppLovin MAX aracılığıyla gösterilir. Her cihaz her an reklam görmeyebilir — gösterilen ağ ve reklam formatı değişebilir. Bu ortaklar, reklam gösterebilmek ve ölçümleyebilmek için cihaz/reklam kimlikleri, yaklaşık konum ve kullanım verisi toplayabilir — detaylar için kendi gizlilik politikalarına bakabilirsin: <a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin</a>, <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity</a> ve <a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex</a>.</p>
-    <p>Yandex'in reklam SDK'sı, o ağın normal çalışma şeklinin standart bir parçası olarak kendi AppMetrica araç setini (analitik, çökme raporlama ve reklam kimliği eşleştirmesi) içerir — bunu biz yapılandırmıyor veya çağırmıyoruz; yukarıdaki Yandex gizlilik politikası kapsamında, bizim ayrı bir entegrasyonumuz değil.</p>
+    <h3>Reklam, ve beraberinde gelen her SDK</h3>
+    <p>Uygulamanın ücretsiz kalabilmesi için reklam desteğiyle sunulur. Reklamlar, iki ağdan — Unity Ads ve Yandex Ads — talep toplayan AppLovin MAX aracılığıyla gösterilir. Her ağın SDK'sı kendi alt bileşenlerini de getiriyor (reklam kalitesi ölçümü veya çökme raporlama için); bunların hepsi Apple'ın zorunlu tuttuğu bir gizlilik manifestosuyla geliyor, ve bu tablo tahmin değil, tam olarak o manifestoların beyan ettiğini yansıtıyor:</p>
+    <table>
+      <thead><tr><th>SDK</th><th>Neden burada</th><th>Ne topladığını beyan ediyor</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin SDK</a></td><td>Reklam aracılığı — hangi ağın reklamının gösterileceğine karar verir</td><td>Reklam gösterebilmek için cihaz/reklam kimlikleri</td></tr>
+        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a> (ironSource Ad Quality dahil)</td><td>İki reklam ağından biri</td><td>Reklam kalitesi analitiği ve uygulama işlevselliği için cihaz kimliği ve performans/tanılama verisi — kimliğinle eşleştirilmiyor</td></tr>
+        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a> (AppMetrica ve KSCrash bileşenleri dahil)</td><td>Diğer reklam ağı</td><td>Reklam için cihaz/reklam kimlikleri; ayrıca Yandex'in kendi AppMetrica araç seti, kendi analitiği için çökme ve performans verisi, genel kullanım verisi ve yaklaşık (genelde GPS değil, IP tabanlı) konum topluyor — kimliğinle eşleştirilmiyor</td></tr>
+      </tbody>
+    </table>
+    <p>Bunların hiçbiri Apple'ın kendi tanımına göre "izleme" olarak beyan edilmiyor. Yine de Uygulama İzleme Şeffaflığı izni istiyoruz (aşağıda) çünkü reklam aracılığı, cihaz kimliklerinin birden fazla şirketle paylaşılmasını içerebiliyor — iki durumda da sonuç aynı, biz sadece varsayılan olarak soruyoruz.</p>
+    <p>Uygulamanın kendisi kameranı, fotoğraflarını, hassas konumunu, kişilerini veya mikrofonunu asla istemez — bunlara ihtiyaç duyan hiçbir özelliği yok.</p>
 
     <h3>Uygulama İzleme Şeffaflığı (App Tracking Transparency)</h3>
     <p>iOS'ta Uygulama, açılıştan kısa bir süre sonra Apple'ın standart izleme izni penceresini gösterir. İzni versen de vermesen de Uygulamanın tüm özellikleri birebir aynı şekilde çalışır — vermemen sadece gördüğün reklamların ne kadar kişiselleştirildiğini sınırlar.</p>
