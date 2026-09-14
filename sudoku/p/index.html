@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudoku - Daily Brain Puzzles</title>
+<meta name="description" content="Someone shared a Sudoku puzzle with you. Open it in the app and see if you can beat their time.">
+
+<!-- Shown when the link is pasted into Messages, WhatsApp, Slack and so on.
+     This preview is most of what decides whether anyone taps it. -->
+<meta property="og:title" content="Can you solve this Sudoku?">
+<meta property="og:description" content="Someone shared a puzzle with you. Same board, same start — see who solves it faster.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Sudoku - Daily Brain Puzzles">
+<meta name="twitter:card" content="summary">
+
+<style>
+  :root {
+    --teal: #0EA5A5;
+    --teal-deep: #0B7A78;
+    --teal-wash: #DFF3F2;
+    --page: #F1F4F3;
+    --card: #FFFFFF;
+    --ink: #111A19;
+    --ink-2: #5A6664;
+    --ink-3: #8A9694;
+    --line: #D9E1DF;
+    --shadow: 0 18px 40px -22px rgba(17, 26, 25, 0.4);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --teal: #2DD4CE;
+      --teal-deep: #45CFCB;
+      --teal-wash: #123331;
+      --page: #0E1413;
+      --card: #171F1E;
+      --ink: #E9EEEC;
+      --ink-2: #A0ACAA;
+      --ink-3: #6F7B79;
+      --line: #2A3635;
+      --shadow: 0 18px 40px -20px rgba(0, 0, 0, 0.7);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  /* Author `display` rules outrank the UA stylesheet's `[hidden]`, so
+     without this the difficulty chip and the "already have the app" button
+     stay visible when the script hides them. */
+  [hidden] { display: none !important; }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: var(--page);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 380px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 26px;
+    padding: 32px 26px 26px;
+    box-shadow: var(--shadow);
+    text-align: center;
+  }
+
+  /* The app icon, redrawn — the page has to look like the thing it's
+     advertising or the tap feels like a mistake. */
+  .mark {
+    width: 74px;
+    height: 74px;
+    margin: 0 auto 20px;
+    border-radius: 22.4%;
+    background: var(--card);
+    border: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+    box-shadow: 0 8px 18px -10px rgba(0,0,0,0.4);
+  }
+  .mark span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    font-weight: 700;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    color: var(--ink);
+  }
+  .mark span:nth-child(3n) { border-right: none; }
+  .mark span:nth-child(n+7) { border-bottom: none; }
+  .mark span.accent { color: var(--teal); }
+
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal-deep);
+    margin-bottom: 10px;
+  }
+
+  h1 {
+    font-size: 25px;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    margin: 0 0 12px;
+  }
+
+  p.lede {
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0 0 22px;
+  }
+
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    background: var(--teal-wash);
+    color: var(--teal-deep);
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  .chip .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: currentColor;
+  }
+
+  .actions { display: grid; gap: 10px; }
+
+  a.button {
+    display: block;
+    padding: 14px 18px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.15s ease;
+  }
+  a.button:active { transform: scale(0.98); }
+
+  /* The button names the app exactly as the App Store listing does. A
+     recipient who taps "Get Sudoku" and lands on a differently-named page
+     has a small reason to doubt they're in the right place. */
+  a.primary .name { display: block; line-height: 1.25; }
+  a.primary .sub {
+    display: block;
+    font-size: 12.5px;
+    font-weight: 600;
+    opacity: 0.85;
+    margin-top: 2px;
+  }
+
+  a.primary {
+    background: linear-gradient(135deg, #14B8B4, #0A8F8D);
+    color: #fff;
+    box-shadow: 0 14px 26px -16px rgba(14, 165, 165, 0.9);
+  }
+
+  a.secondary {
+    background: transparent;
+    color: var(--teal-deep);
+    border: 1.5px solid rgba(14, 165, 165, 0.35);
+  }
+
+  footer {
+    margin-top: 22px;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: var(--ink-3);
+  }
+
+  /* Only meaningful when a seed is actually present. */
+  .missing h1 { font-size: 22px; }
+</style>
+</head>
+<body>
+
+<main class="card" id="card">
+  <div class="mark" aria-hidden="true">
+    <span>4</span><span class="accent">8</span><span>2</span>
+    <span class="accent">6</span><span></span><span>3</span>
+    <span>9</span><span>1</span><span class="accent">7</span>
+  </div>
+
+  <div class="eyebrow" id="eyebrow">Shared puzzle</div>
+  <h1 id="title">Can you solve this Sudoku?</h1>
+  <p class="lede" id="lede">Someone sent you a puzzle. You'll both get the exact same board, so it's a fair race.</p>
+
+  <div class="chip" id="chip" hidden><span class="dot"></span><span id="difficulty"></span></div>
+
+  <div class="actions">
+    <a class="button primary" id="store" href="#">
+      <span class="name">Get Sudoku&nbsp;- Daily Brain Puzzles</span>
+      <span class="sub">Free on the App Store</span>
+    </a>
+    <a class="button secondary" id="openApp" href="#" hidden>I already have the app</a>
+  </div>
+
+  <footer>
+    Six difficulty levels, a daily challenge, and puzzles you can share.
+  </footer>
+</main>
+
+<script>
+  // Keep in sync with Difficulty.swift — the raw values are the enum's
+  // declaration order, so anything appended there belongs here too.
+  var DIFFICULTIES = ["Easy", "Medium", "Hard", "Expert", "Master", "Extreme"];
+
+  // TODO before launch: replace with the real App Store URL once the listing
+  // exists. Until then this points at a search so the button is never dead.
+  var APP_STORE_URL = "https://apps.apple.com/search?term=sudoku%20daily%20brain%20puzzles";
+
+  var params = new URLSearchParams(window.location.search);
+  var seed = params.get("seed");
+  var rawDifficulty = parseInt(params.get("difficulty"), 10);
+  var difficultyName = DIFFICULTIES[rawDifficulty];
+
+  document.getElementById("store").href = APP_STORE_URL;
+
+  if (seed && difficultyName) {
+    document.getElementById("difficulty").textContent = difficultyName + " puzzle";
+    document.getElementById("chip").hidden = false;
+
+    // Offered as a button rather than fired on load: auto-opening a custom
+    // scheme throws an ugly "cannot open page" error at exactly the people
+    // who don't have the app — the ones this page exists for.
+    var openApp = document.getElementById("openApp");
+    openApp.href = "sudokupuzzle://play?seed=" + encodeURIComponent(seed) +
+                   "&difficulty=" + encodeURIComponent(rawDifficulty);
+    openApp.hidden = false;
+  } else {
+    // A malformed or bare link still has to land somewhere sensible.
+    document.getElementById("card").classList.add("missing");
+    document.getElementById("eyebrow").textContent = "Sudoku";
+    document.getElementById("title").textContent = "Sudoku - Daily Brain Puzzles";
+    document.getElementById("lede").textContent =
+      "Classic Sudoku with six difficulty levels, a daily challenge, and puzzles you can share with friends.";
+  }
+</script>
+
+</body>
+</html>
