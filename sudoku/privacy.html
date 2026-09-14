@@ -37,12 +37,27 @@
   }
   .summary p { margin: 0; color: var(--ink); font-size: 16px; }
   footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-2); }
+
+  .langbar { display: flex; gap: 10px; margin: 0 0 28px; font-size: 14px; }
+  .langbar a {
+    display: inline-block; padding: 5px 12px; border: 1px solid var(--line);
+    border-radius: 999px; text-decoration: none; background: var(--card);
+  }
+  .langsplit {
+    margin: 56px 0 34px; border: 0; border-top: 1px solid var(--line);
+  }
+  .langsplit + h1 { margin-top: 0; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Privacy Policy</h1>
+  <h1 id="en">Privacy Policy</h1>
   <p class="updated">Sudoku - Daily Brain Puzzles · Last updated 14 September 2026</p>
+
+  <div class="langbar">
+    <a href="#tr">Türkçe</a>
+    <a href="#en">English</a>
+  </div>
 
   <div class="summary">
     <p><strong>The short version:</strong> there is no account, and your puzzles
@@ -124,6 +139,19 @@
   so a streak does not lapse. There is no server involved and nothing about your
   play is sent anywhere. You can turn them off in iOS Settings.</p>
 
+  <h2>Your rights over your data</h2>
+  <p>Because there is no account and we hold nothing about you, there is no
+  file for us to hand over or delete — everything is on your device and in your
+  own iCloud account, and <strong>Settings → Delete All Data</strong> erases it
+  from both at any time, without asking us.</p>
+  <p>The ad providers are separate data controllers for what they collect. To
+  limit that, use the ATT prompt (or iOS Settings → Privacy &amp; Security →
+  Tracking), and the consent form in the app's Settings where it applies. If
+  you are in the EU, the UK or Türkiye and want to exercise rights under the
+  GDPR or KVKK against them, their own policies linked above explain how.</p>
+  <p>If you have a question about any of this, write to us and a person will
+  answer: <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
+
   <h2>Children</h2>
   <p>The app is not directed at children under 13 and does not knowingly collect
   personal information from them.</p>
@@ -134,6 +162,121 @@
 
   <h2>Contact</h2>
   <p>Questions about this policy: <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
+
+  <hr class="langsplit">
+
+  <h1 id="tr">Gizlilik Politikası</h1>
+  <p class="updated">Sudoku - Daily Brain Puzzles · Son güncelleme 14 Eylül 2026</p>
+  <p class="updated">Bu metin İngilizce sürümün Türkçe çevirisidir. Bir uyuşmazlık
+  durumunda İngilizce metin esas alınır.</p>
+
+  <div class="summary">
+    <p><strong>Kısacası:</strong> hesap yok ve bulmacalarınız ile ilerlemeniz
+    bize hiçbir zaman gönderilmiyor. Bunlar yalnızca sizin okuyabileceğiniz özel
+    iCloud hesabınıza senkronize oluyor. Uygulama reklam gösteriyor ve reklam
+    sağlayıcıları aşağıda anlatıldığı gibi veri topluyor. Bir şey satın
+    alırsanız ödemeyi Apple yürütür, ödeme bilgilerinizi biz hiç görmeyiz.</p>
+  </div>
+
+  <h2>Hesap yok, kayıt yok</h2>
+  <p>Uygulama sizin için bir hesap oluşturmaz; adınızı, e-posta adresinizi veya
+  parolanızı asla istemez. Hiçbir şekilde kimliğinizi belirtmeden her şeyi
+  oynayabilirsiniz.</p>
+
+  <h2>Cihazınızda kalanlar</h2>
+  <ul>
+    <li>Devam eden bulmacanız, istatistikleriniz, serileriniz, ödülleriniz,
+    coinleriniz ve eşyalarınız.</li>
+    <li>Tema ve sayacın görünüp görünmemesi gibi ayarlarınız.</li>
+    <li>Bugün kaç ücretsiz hint kullandığınız.</li>
+  </ul>
+
+  <h2>iCloud senkronizasyonu</h2>
+  <p>İlerlemeniz yeni bir telefonda da kaybolmasın diye uygulama aynı veriyi
+  Apple'ın CloudKit ve iCloud Key-Value Storage teknolojisiyle <strong>sizin özel
+  iCloud veritabanınızda</strong> saklar. Burası sizin kişisel iCloud
+  hesabınızdır. Bizim oraya erişimimiz yoktur, okuyamayız. iCloud'a giriş yapmış
+  değilseniz uygulama normal çalışır ve her şeyi yalnızca cihazda tutar.</p>
+  <p>Tamamını — cihazdaki ve iCloud'daki — istediğiniz zaman uygulama içindeki
+  <strong>Ayarlar → Tüm Verileri Sil</strong> ile silebilirsiniz.</p>
+
+  <h2>Reklamcılık</h2>
+  <p>Uygulama ücretsizdir ve reklamlarla desteklenir. Reklamlar, her reklam alanı
+  için birden çok ağın yarışmasını sağlayan <strong>Unity LevelPlay</strong>
+  üzerinden sunulur. Reklam gösterebilecek ağlar <strong>Unity Ads</strong> ve
+  <strong>Yandex Reklam Ağı</strong>'dır. Zaman içinde ağ ekleyip
+  çıkarabiliriz; bunu yaptığımızda bu sayfa güncellenir.</p>
+  <p>Reklamları gösterebilmek için bu sağlayıcılar; reklam kimliği, cihaz ve
+  işletim sistemi bilgileri, IP adresinizden türetilen yaklaşık konum ve
+  reklamlarla nasıl etkileşim kurduğunuza dair veriler gibi bilgileri toplayıp
+  işleyebilir. Bu veriler bize ulaşmaz; biz yalnızca kaç reklam gösterildiği
+  gibi toplam sayıları görürüz.</p>
+  <p>iOS'ta uygulama, herhangi bir reklam kimliği takip amacıyla kullanılmadan
+  önce izninizi ister. Reddederseniz yine reklam görürsünüz ama bunlar
+  kişiselleştirilmiş olmaz. Gerekli olan bölgelerde uygulama ayrıca verinizin
+  reklam için nasıl kullanılacağını seçebileceğiniz bir onay formu gösterir;
+  bunu istediğiniz zaman Ayarlar'dan yeniden açabilirsiniz.</p>
+  <p>Bazı reklamlar <strong>ödüllüdür</strong>: coin, hint veya ek bir şans
+  karşılığında izlemeyi siz seçersiniz. Onlarda farklı bir şey toplanmaz; tek
+  fark izlemeyi sizin seçmiş olmanızdır.</p>
+  <p>Her sağlayıcının veriyi nasıl işlediğine dair kendi açıklaması:</p>
+  <ul>
+    <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity — Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası</a></li>
+    <li><a href="https://yandex.com/legal/confidential/">Yandex — Gizlilik Politikası</a></li>
+  </ul>
+
+  <h2>Satın almalar ve abonelik</h2>
+  <p>Uygulama isteğe bağlı satın almalar sunar: reklamsız yükseltme, coin
+  paketleri ve <strong>Sudoku Plus</strong> aboneliği. Hepsi App Store üzerinden
+  <strong>Apple</strong> tarafından işlenir.</p>
+  <p><strong>Kartınızı, banka bilgilerinizi veya fatura adresinizi hiçbir zaman
+  görmeyiz.</strong> Apple uygulamaya yalnızca bir satın almanın geçerli olup
+  olmadığını bildirir; uygulama da neyi açacağını böyle bilir. Satın alma
+  geçmişiniz bizde değil, <a href="https://www.apple.com/legal/privacy/">Apple'ın
+  Gizlilik Politikası</a> kapsamında Apple'da tutulur.</p>
+  <p>Bir satın almanın neyi açtığı bilgisi, ilerlemenizin geri kalanı gibi
+  cihazınızda ve kendi iCloud hesabınızda saklanır.</p>
+
+  <h2>Yapmadıklarımız</h2>
+  <ul>
+    <li>Bulmacalarınızı, istatistiklerinizi veya ilerlemenizi toplamayız, almayız
+    ve saklamayız.</li>
+    <li>Analitik veya çökme raporlama hizmeti kullanmayız.</li>
+    <li>Kimseye veri satmayız, çünkü elimizde veri yok.</li>
+    <li>Rehber, fotoğraf, mikrofon veya kesin konum istemeyiz.</li>
+    <li>Ödeme bilgisi görmez ve saklamayız.</li>
+  </ul>
+
+  <h2>Bildirimler</h2>
+  <p>İzin verirseniz uygulama, seriniz bozulmasın diye hatırlatmaları
+  <strong>cihazınızda</strong> planlar. Araya hiçbir sunucu girmez ve oyununuza
+  dair hiçbir şey bir yere gönderilmez. iOS Ayarlar'dan kapatabilirsiniz.</p>
+
+  <h2>Verileriniz üzerindeki haklarınız</h2>
+  <p>Hesap olmadığı ve hakkınızda hiçbir şey tutmadığımız için size verecek veya
+  silecek bir dosyamız yok — her şey cihazınızda ve kendi iCloud hesabınızda; ve
+  <strong>Ayarlar → Tüm Verileri Sil</strong> bunu bize sormanıza gerek kalmadan,
+  istediğiniz an her ikisinden de siler.</p>
+  <p>Reklam sağlayıcıları, topladıkları veri bakımından ayrı veri sorumlularıdır.
+  Bunu sınırlamak için ATT iznini (veya iOS Ayarlar → Gizlilik ve Güvenlik →
+  İzleme) ve geçerli olduğu yerlerde uygulama Ayarlar'ındaki onay formunu
+  kullanın. AB, Birleşik Krallık veya Türkiye'deyseniz ve onlara karşı GDPR ya da
+  KVKK kapsamındaki haklarınızı kullanmak istiyorsanız, yukarıda bağlantısı
+  verilen kendi politikaları nasıl yapılacağını açıklıyor.</p>
+  <p>Bununla ilgili bir sorunuz olursa yazın, bir insan cevaplayacak:
+  <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
+
+  <h2>Çocuklar</h2>
+  <p>Uygulama 13 yaşın altındaki çocuklara yönelik değildir ve onlardan bilerek
+  kişisel bilgi toplamaz.</p>
+
+  <h2>Değişiklikler</h2>
+  <p>Bu politika değişirse sayfanın başındaki tarih de onunla birlikte
+  değişir.</p>
+
+  <h2>İletişim</h2>
+  <p>Bu politikayla ilgili sorular:
+  <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
 
   <footer>
     <a href="terms.html">Terms of Service</a> · <a href="support.html">Support</a>

@@ -37,12 +37,27 @@
   }
   .summary p { margin: 0; color: var(--ink); font-size: 16px; }
   footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-2); }
+
+  .langbar { display: flex; gap: 10px; margin: 0 0 28px; font-size: 14px; }
+  .langbar a {
+    display: inline-block; padding: 5px 12px; border: 1px solid var(--line);
+    border-radius: 999px; text-decoration: none; background: var(--card);
+  }
+  .langsplit {
+    margin: 56px 0 34px; border: 0; border-top: 1px solid var(--line);
+  }
+  .langsplit + h1 { margin-top: 0; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Support</h1>
+  <h1 id="en">Support</h1>
   <p class="updated">Sudoku - Daily Brain Puzzles · Last updated 14 September 2026</p>
+
+  <div class="langbar">
+    <a href="#tr">Türkçe</a>
+    <a href="#en">English</a>
+  </div>
 
   <div class="summary">
     <p><strong>Need a hand?</strong> Email
@@ -51,49 +66,82 @@
     it usually saves a round trip.</p>
   </div>
 
+  <h2>I bought something and it did not unlock</h2>
+  <p>Open the shop or the Sudoku Plus screen and tap <strong>Restore
+  Purchases</strong>. Purchases belong to the Apple Account that made them, so
+  it has to be that same account. If it still does not appear, email us with
+  the date of the purchase.</p>
+
+  <h2>Cancelling Sudoku Plus, and refunds</h2>
+  <p>Subscriptions are managed by Apple rather than inside the app: open the
+  iOS <strong>Settings</strong> app, tap your name, then
+  <strong>Subscriptions</strong>. Cancelling stops future renewals and you keep
+  Plus until the period you paid for ends.</p>
+  <p>Refunds are also handled by Apple, at
+  <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
+
   <h2>My progress disappeared</h2>
   <p>Progress lives in your own private iCloud account. If it is missing on a
   new device, check that you are signed in to the <strong>same Apple
-  Account</strong> and that iCloud Drive is on. The app keeps working with
-  iCloud off, but it then stores everything only on that one device.</p>
+  Account</strong> and that iCloud Drive is on. The app works fine with iCloud
+  off, but it then keeps everything on that one device only.</p>
 
-  <h2>I bought something and it did not unlock</h2>
-  <p>Open the shop or the Sudoku Plus screen and tap <strong>Restore
-  Purchases</strong>. Purchases are tied to the Apple Account that made them,
-  so this has to be the same account. If it still does not appear, email us
-  with the date of the purchase and we will help.</p>
+  <h2>Something in the game went wrong</h2>
+  <p><strong>A rewarded ad gave no reward.</strong> The reward is granted when
+  the ad finishes, so a video closed early or a connection that dropped partway
+  does not count. If one played all the way through and nothing arrived, tell
+  us roughly when.</p>
+  <p><strong>A puzzle looks wrong.</strong> Every puzzle is machine-checked to
+  have exactly one solution before it is ever shown, so this is worth
+  reporting. Use <strong>Share</strong> on that puzzle and send us the link — it
+  identifies the exact board.</p>
 
-  <h2>How do I cancel Sudoku Plus?</h2>
-  <p>Subscriptions are managed by Apple, not inside the app: open the iOS
-  <strong>Settings</strong> app, tap your name, then
-  <strong>Subscriptions</strong>. Cancelling stops future renewals and you
-  keep Plus until the period you paid for ends.</p>
+  <h2>Anything else</h2>
+  <p><a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
 
-  <h2>How do I get a refund?</h2>
-  <p>Refunds are handled by Apple at
+  <hr class="langsplit">
+
+  <h1 id="tr">Destek</h1>
+  <p class="updated">Sudoku - Daily Brain Puzzles · Son güncelleme 14 Eylül 2026</p>
+
+  <div class="summary">
+    <p><strong>Yardım mı lazım?</strong>
+    <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a> adresine
+    yazın. Gelen postaları tek bir kişi okuyor; hangi iPhone ve iOS sürümünü
+    kullandığınızı yazarsanız genelde bir tur zaman kazandırıyor.</p>
+  </div>
+
+  <h2>Bir şey satın aldım ama açılmadı</h2>
+  <p>Mağazayı veya Sudoku Plus ekranını açıp <strong>Satın Almaları Geri
+  Yükle</strong>'ye dokunun. Satın almalar, onları yapan Apple Hesabına aittir;
+  dolayısıyla aynı hesapta olmanız gerekir. Yine görünmüyorsa satın alma
+  tarihiyle birlikte bize yazın.</p>
+
+  <h2>Sudoku Plus iptali ve iadeler</h2>
+  <p>Abonelikler uygulama içinden değil Apple tarafından yönetilir: iOS
+  <strong>Ayarlar</strong> uygulamasını açın, adınıza dokunun, ardından
+  <strong>Abonelikler</strong>. İptal, gelecekteki yenilemeleri durdurur ve
+  ücretini ödediğiniz dönem bitene kadar Plus sizde kalır.</p>
+  <p>İadeler de Apple tarafından yürütülür:
   <a href="https://reportaproblem.apple.com">reportaproblem.apple.com</a>.</p>
 
-  <h2>A rewarded ad did not give me my reward</h2>
-  <p>The reward is granted when the ad finishes. If the video was closed
-  early, or the connection dropped partway, it does not count. If an ad played
-  all the way through and nothing arrived, tell us roughly when it happened.</p>
+  <h2>İlerlemem kayboldu</h2>
+  <p>İlerleme kendi özel iCloud hesabınızda durur. Yeni cihazda görünmüyorsa
+  <strong>aynı Apple Hesabına</strong> giriş yaptığınızdan ve iCloud Drive'ın
+  açık olduğundan emin olun. Uygulama iCloud kapalıyken de sorunsuz çalışır ama
+  o zaman her şeyi yalnızca o tek cihazda tutar.</p>
 
-  <h2>I think a puzzle is wrong</h2>
-  <p>Every puzzle is machine-checked to have exactly one solution before it is
-  ever shown, so this is worth reporting. Use <strong>Share</strong> on that
-  puzzle and send us the link — it identifies the exact board.</p>
+  <h2>Oyunda bir şey ters gitti</h2>
+  <p><strong>Ödüllü reklam ödül vermedi.</strong> Ödül, reklam bittiğinde
+  verilir; erken kapatılan bir video veya ortasında kopan bir bağlantı
+  sayılmaz. Baştan sona oynadığı halde bir şey gelmediyse yaklaşık olarak ne
+  zaman olduğunu yazın.</p>
+  <p><strong>Bulmaca hatalı görünüyor.</strong> Her bulmaca gösterilmeden önce
+  tek çözümü olduğu makinece doğrulanıyor, dolayısıyla bu bildirmeye değer. O
+  bulmacada <strong>Paylaş</strong>'ı kullanıp bize linki gönderin — tam olarak
+  hangi tahta olduğunu gösteriyor.</p>
 
-  <h2>Turning off notifications</h2>
-  <p>iOS <strong>Settings → Sudoku → Notifications</strong>. The app only ever
-  schedules reminders on your device; nothing is sent from a server.</p>
-
-  <h2>Deleting everything</h2>
-  <p>In the app: <strong>Settings → Delete All Data</strong>. It erases your
-  progress on the device and in your iCloud account. Purchases are not deleted
-  by this, because they belong to your Apple Account — use Restore Purchases
-  to get them back.</p>
-
-  <h2>Still stuck</h2>
+  <h2>Başka bir konu</h2>
   <p><a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
 
   <footer>

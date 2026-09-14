@@ -37,12 +37,27 @@
   }
   .summary p { margin: 0; color: var(--ink); font-size: 16px; }
   footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13.5px; color: var(--ink-2); }
+
+  .langbar { display: flex; gap: 10px; margin: 0 0 28px; font-size: 14px; }
+  .langbar a {
+    display: inline-block; padding: 5px 12px; border: 1px solid var(--line);
+    border-radius: 999px; text-decoration: none; background: var(--card);
+  }
+  .langsplit {
+    margin: 56px 0 34px; border: 0; border-top: 1px solid var(--line);
+  }
+  .langsplit + h1 { margin-top: 0; }
 </style>
 </head>
 <body>
 <main>
-  <h1>Sudoku - Daily Brain Puzzles</h1>
+  <h1 id="en">Sudoku - Daily Brain Puzzles</h1>
   <p class="updated">A Sudoku game for iPhone — no account, no sign-up.</p>
+
+  <div class="langbar">
+    <a href="#tr">Türkçe</a>
+    <a href="#en">English</a>
+  </div>
 
   <div class="summary">
     <p>Six difficulty levels, a new Daily Challenge every day, streaks and
@@ -58,6 +73,27 @@
   </ul>
 
   <h2>Contact</h2>
+  <p><a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
+
+  <hr class="langsplit">
+
+  <h1 id="tr">Sudoku - Daily Brain Puzzles</h1>
+  <p class="updated">iPhone için bir Sudoku oyunu — hesap yok, kayıt yok.</p>
+
+  <div class="summary">
+    <p>Altı zorluk seviyesi, her gün yeni bir Günlük Bulmaca, ve kendi özel
+    iCloud hesabınız üzerinden yeni telefonunuza kadar sizi takip eden seriler
+    ve istatistikler. Her bulmacanın tek çözümü olduğu makinece doğrulanıyor.</p>
+  </div>
+
+  <h2>Sayfalar</h2>
+  <ul>
+    <li><a href="privacy.html#tr">Gizlilik Politikası</a> — neler toplanıyor, neler toplanmıyor</li>
+    <li><a href="terms.html#tr">Kullanım Koşulları</a> — satın almalar, abonelik ve gerisi</li>
+    <li><a href="support.html#tr">Destek</a> — sık sorulanlar ve bize ulaşma</li>
+  </ul>
+
+  <h2>İletişim</h2>
   <p><a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
 
   <footer>

@@ -223,7 +223,48 @@
 <script>
   // Keep in sync with Difficulty.swift — the raw values are the enum's
   // declaration order, so anything appended there belongs here too.
-  var DIFFICULTIES = ["Easy", "Medium", "Hard", "Expert", "Master", "Extreme"];
+  var DIFFICULTIES = {
+    en: ["Easy", "Medium", "Hard", "Expert", "Master", "Extreme"],
+    tr: ["Kolay", "Orta", "Zor", "Uzman", "Usta", "Uç Nokta"]
+  };
+
+  // This page is most often opened from a message thread, on a phone, by
+  // someone who has never heard of the app. Meeting them in their own
+  // language is the difference between a tap and a shrug. Swapped rather
+  // than stacked: a second copy of every line underneath would bury the one
+  // button the page exists for.
+  var STRINGS = {
+    en: {
+      eyebrow: "Shared puzzle",
+      title: "Can you solve this Sudoku?",
+      lede: "Someone sent you a puzzle. You'll both get the exact same board, so it's a fair race.",
+      storeName: "Get Sudoku\u00a0- Daily Brain Puzzles",
+      storeSub: "Free on the App Store",
+      openApp: "I already have the app",
+      footer: "Six difficulty levels, a daily challenge, and puzzles you can share.",
+      suffix: " puzzle",
+      bareEyebrow: "Sudoku",
+      bareTitle: "Sudoku - Daily Brain Puzzles",
+      bareLede: "Classic Sudoku with six difficulty levels, a daily challenge, and puzzles you can share with friends."
+    },
+    tr: {
+      eyebrow: "Paylaşılan bulmaca",
+      title: "Bu Sudoku'yu çözebilir misin?",
+      lede: "Biri sana bir bulmaca gönderdi. İkiniz de birebir aynı tahtayı alıyorsunuz, yani yarış adil.",
+      storeName: "Sudoku\u00a0- Daily Brain Puzzles'ı indir",
+      storeSub: "App Store'da ücretsiz",
+      openApp: "Uygulama zaten bende",
+      footer: "Altı zorluk seviyesi, günlük bulmaca ve paylaşabileceğin bulmacalar.",
+      suffix: " bulmaca",
+      bareEyebrow: "Sudoku",
+      bareTitle: "Sudoku - Daily Brain Puzzles",
+      bareLede: "Altı zorluk seviyesi, günlük bulmaca ve arkadaşlarınla paylaşabileceğin bulmacalarla klasik Sudoku."
+    }
+  };
+
+  var lang = (navigator.language || "en").toLowerCase().indexOf("tr") === 0 ? "tr" : "en";
+  var t = STRINGS[lang];
+  document.documentElement.lang = lang;
 
   // TODO before launch: replace with the real App Store URL once the listing
   // exists. Until then this points at a search so the button is never dead.
@@ -232,12 +273,19 @@
   var params = new URLSearchParams(window.location.search);
   var seed = params.get("seed");
   var rawDifficulty = parseInt(params.get("difficulty"), 10);
-  var difficultyName = DIFFICULTIES[rawDifficulty];
+  var difficultyName = DIFFICULTIES[lang][rawDifficulty];
 
   document.getElementById("store").href = APP_STORE_URL;
+  document.querySelector("#store .name").textContent = t.storeName;
+  document.querySelector("#store .sub").textContent = t.storeSub;
+  document.getElementById("openApp").textContent = t.openApp;
+  document.querySelector("main > footer").textContent = t.footer;
+  document.getElementById("eyebrow").textContent = t.eyebrow;
+  document.getElementById("title").textContent = t.title;
+  document.getElementById("lede").textContent = t.lede;
 
   if (seed && difficultyName) {
-    document.getElementById("difficulty").textContent = difficultyName + " puzzle";
+    document.getElementById("difficulty").textContent = difficultyName + t.suffix;
     document.getElementById("chip").hidden = false;
 
     // Offered as a button rather than fired on load: auto-opening a custom
@@ -250,10 +298,9 @@
   } else {
     // A malformed or bare link still has to land somewhere sensible.
     document.getElementById("card").classList.add("missing");
-    document.getElementById("eyebrow").textContent = "Sudoku";
-    document.getElementById("title").textContent = "Sudoku - Daily Brain Puzzles";
-    document.getElementById("lede").textContent =
-      "Classic Sudoku with six difficulty levels, a daily challenge, and puzzles you can share with friends.";
+    document.getElementById("eyebrow").textContent = t.bareEyebrow;
+    document.getElementById("title").textContent = t.bareTitle;
+    document.getElementById("lede").textContent = t.bareLede;
   }
 </script>
 
