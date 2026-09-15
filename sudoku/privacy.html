@@ -62,9 +62,9 @@
   <div class="summary">
     <p><strong>The short version:</strong> there is no account, and your puzzles
     and progress are never sent to us. They sync to your own private iCloud
-    account, which only you can read. The app shows ads, and the ad providers
-    collect data as described below. If you buy something, Apple handles the
-    payment and we never see your payment details.</p>
+    account, which only you can read. There is nothing to buy. The app shows
+    ads, and the ad providers collect data as described below — you decide
+    whether that data is used to choose ads for you.</p>
   </div>
 
   <h2>No account, no sign-up</h2>
@@ -89,54 +89,52 @@
   <strong>Settings → Delete All Data</strong> inside the app.</p>
 
   <h2>Advertising</h2>
-  <p>The app is free and supported by ads. Ads are delivered through
+  <p>The app is free and paid for by ads. Ads are delivered through
   <strong>Unity LevelPlay</strong>, which lets several ad networks compete to
   fill each ad slot. The networks that may serve an ad are
-  <strong>Unity Ads</strong> and <strong>Yandex Advertising Network</strong>.
-  We may add or remove networks over time; this page is updated when we do.</p>
+  <strong>ironSource Ads</strong>, <strong>Unity Ads</strong> and
+  <strong>Yandex Advertising Network</strong>. We may add or remove networks
+  over time; this page is updated when we do.</p>
   <p>To show ads, these providers may collect and process device information
   such as a device advertising identifier, device and operating system
   details, approximate location derived from your IP address, and data about
   how you interact with ads. We do not receive this data ourselves — we only
   see aggregate totals such as how many ads were shown.</p>
-  <p>On iOS the app asks your permission before any advertising identifier is
-  used for tracking. If you decline, you will still see ads, but they will not
-  be personalised. In regions where it is required, the app also shows a
-  consent form letting you choose how your data is used for advertising; you
-  can reopen it from the app's Settings at any time.</p>
+  <p>You are asked twice, about two different things, and both start as a no:</p>
+  <ul>
+    <li><strong>Whether ads may be chosen for you.</strong> Asked once, plainly,
+    and switched off unless you turn it on. You can change it whenever you like
+    in <strong>Settings → Ads</strong>, and the change applies to the next ad.</li>
+    <li><strong>Apple's tracking permission.</strong> iOS asks before any
+    advertising identifier is used. Declining is fine — you will still see ads,
+    they simply will not be personalised.</li>
+  </ul>
+  <p>Apple's own <strong>SKAdNetwork</strong> also tells an ad network, without
+  identifying you, that an install followed one of its ads. It is designed by
+  Apple so that measurement does not require identifying a person.</p>
   <p>Some ads are <strong>rewarded</strong>: you choose to watch one in
   exchange for coins, a hint or an extra chance. Nothing is collected
   differently for those — the only difference is that you opted in.</p>
-  <p><strong>If you have removed ads, this section still applies on the
-  occasions you choose to watch a rewarded video.</strong> Removing ads stops
-  the ads we show you; it does not remove rewarded videos, and on the times
-  you choose to watch one the ad provider collects the same data described
-  above. If you never watch one, none of this happens.</p>
+
+  <p><strong>The Yandex advertising library includes Yandex's own measurement
+  component (AppMetrica).</strong> It ships as part of their ad SDK and serves
+  their advertising and attribution, not us — we do not send anything to it,
+  read anything from it, or see reports from it. It is named here because it
+  is inside the app and you are entitled to know that.</p>
   <p>Each provider's own explanation of how it handles this data:</p>
   <ul>
     <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity — Player and App User Privacy Policy</a></li>
     <li><a href="https://yandex.com/legal/confidential/">Yandex — Privacy Policy</a></li>
   </ul>
 
-  <h2>Purchases and subscriptions</h2>
-  <p>The app offers optional purchases: an ad-free upgrade, coin packs, and
-  the <strong>Sudoku Plus</strong> subscription. All of them are processed by
-  <strong>Apple</strong> through the App Store.</p>
-  <p><strong>We never see your card, bank details or billing address.</strong>
-  Apple tells the app only whether a purchase is currently valid, so the app
-  knows what to unlock. Your purchase history is held by Apple under
-  <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>,
-  not by us.</p>
-  <p>What a purchase unlocks is stored on your device and in your own iCloud
-  account, the same as the rest of your progress.</p>
-
   <h2>What we do not do</h2>
   <ul>
     <li>We do not collect, receive or store your puzzles, stats or progress.</li>
-    <li>We do not use analytics or crash-reporting services.</li>
+    <li>We do not add analytics or crash-reporting of our own, and we never
+    receive a report about how you play.</li>
     <li>We do not sell data to anyone, because we do not hold any.</li>
     <li>We do not ask for contacts, photos, microphone or precise location.</li>
-    <li>We do not see or store payment information.</li>
+    <li>We do not sell anything, so there is no payment information to see.</li>
   </ul>
 
   <h2>Notifications</h2>
@@ -178,9 +176,10 @@
   <div class="summary">
     <p><strong>Kısacası:</strong> hesap yok ve bulmacalarınız ile ilerlemeniz
     bize hiçbir zaman gönderilmiyor. Bunlar yalnızca sizin okuyabileceğiniz özel
-    iCloud hesabınıza senkronize oluyor. Uygulama reklam gösteriyor ve reklam
-    sağlayıcıları aşağıda anlatıldığı gibi veri topluyor. Bir şey satın
-    alırsanız ödemeyi Apple yürütür, ödeme bilgilerinizi biz hiç görmeyiz.</p>
+    iCloud hesabınıza senkronize oluyor. Satın alınacak bir şey yok. Uygulama
+    reklam gösteriyor ve reklam sağlayıcıları aşağıda anlatıldığı gibi veri
+    topluyor — bu verinin size göre reklam seçmekte kullanılıp
+    kullanılmayacağına siz karar veriyorsunuz.</p>
   </div>
 
   <h2>Hesap yok, kayıt yok</h2>
@@ -206,9 +205,10 @@
   <strong>Ayarlar → Tüm Verileri Sil</strong> ile silebilirsiniz.</p>
 
   <h2>Reklamcılık</h2>
-  <p>Uygulama ücretsizdir ve reklamlarla desteklenir. Reklamlar, her reklam alanı
-  için birden çok ağın yarışmasını sağlayan <strong>Unity LevelPlay</strong>
-  üzerinden sunulur. Reklam gösterebilecek ağlar <strong>Unity Ads</strong> ve
+  <p>Uygulama ücretsizdir, masrafını reklamlar karşılar. Reklamlar, her reklam
+  alanı için birden çok ağın yarışmasını sağlayan <strong>Unity
+  LevelPlay</strong> üzerinden sunulur. Reklam gösterebilecek ağlar
+  <strong>ironSource Ads</strong>, <strong>Unity Ads</strong> ve
   <strong>Yandex Reklam Ağı</strong>'dır. Zaman içinde ağ ekleyip
   çıkarabiliriz; bunu yaptığımızda bu sayfa güncellenir.</p>
   <p>Reklamları gösterebilmek için bu sağlayıcılar; reklam kimliği, cihaz ve
@@ -216,45 +216,46 @@
   reklamlarla nasıl etkileşim kurduğunuza dair veriler gibi bilgileri toplayıp
   işleyebilir. Bu veriler bize ulaşmaz; biz yalnızca kaç reklam gösterildiği
   gibi toplam sayıları görürüz.</p>
-  <p>iOS'ta uygulama, herhangi bir reklam kimliği takip amacıyla kullanılmadan
-  önce izninizi ister. Reddederseniz yine reklam görürsünüz ama bunlar
-  kişiselleştirilmiş olmaz. Gerekli olan bölgelerde uygulama ayrıca verinizin
-  reklam için nasıl kullanılacağını seçebileceğiniz bir onay formu gösterir;
-  bunu istediğiniz zaman Ayarlar'dan yeniden açabilirsiniz.</p>
+  <p>Size iki ayrı şey soruluyor ve ikisi de <strong>hayır</strong> olarak
+  başlıyor:</p>
+  <ul>
+    <li><strong>Reklamların size göre seçilip seçilemeyeceği.</strong> Bir kez,
+    açıkça sorulur ve siz açmadıkça kapalıdır. <strong>Ayarlar → Ads</strong>
+    bölümünden istediğiniz zaman değiştirebilirsiniz; değişiklik bir sonraki
+    reklamda geçerli olur.</li>
+    <li><strong>Apple'ın takip izni.</strong> iOS, herhangi bir reklam kimliği
+    kullanılmadan önce sorar. Reddetmek sorun değil — yine reklam görürsünüz,
+    sadece kişiselleştirilmiş olmazlar.</li>
+  </ul>
+  <p>Apple'ın <strong>SKAdNetwork</strong> teknolojisi de bir reklam ağına,
+  sizi kimliklendirmeden, kendi reklamının ardından bir kurulum gerçekleştiğini
+  bildirir. Apple bunu, ölçümlemenin kişiyi tanımayı gerektirmemesi için
+  tasarladı.</p>
   <p>Bazı reklamlar <strong>ödüllüdür</strong>: coin, hint veya ek bir şans
   karşılığında izlemeyi siz seçersiniz. Onlarda farklı bir şey toplanmaz; tek
   fark izlemeyi sizin seçmiş olmanızdır.</p>
-  <p><strong>Reklamları kaldırdıysanız, ödüllü bir video izlemeyi seçtiğiniz
-  anlarda bu bölüm yine sizin için geçerlidir.</strong> Reklamları kaldırmak,
-  bizim gösterdiğimiz reklamları durdurur; ödüllü videoları kaldırmaz ve
-  izlemeyi seçtiğiniz her seferde reklam sağlayıcısı yukarıda anlatılan aynı
-  veriyi toplar. Hiç izlemezseniz bunların hiçbiri olmaz.</p>
+
+  <p><strong>Yandex reklam kütüphanesi, Yandex'in kendi ölçümleme bileşenini
+  (AppMetrica) içeriyor.</strong> Onların reklam SDK'sının bir parçası olarak
+  geliyor ve bize değil, onların reklamcılık ve atıf işine hizmet ediyor —
+  biz oraya bir şey göndermiyoruz, oradan bir şey okumuyoruz, rapor da
+  görmüyoruz. Burada adını anmamızın sebebi uygulamanın içinde olması ve bunu
+  bilmeye hakkın olması.</p>
   <p>Her sağlayıcının veriyi nasıl işlediğine dair kendi açıklaması:</p>
   <ul>
     <li><a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity — Oyuncu ve Uygulama Kullanıcısı Gizlilik Politikası</a></li>
     <li><a href="https://yandex.com/legal/confidential/">Yandex — Gizlilik Politikası</a></li>
   </ul>
 
-  <h2>Satın almalar ve abonelik</h2>
-  <p>Uygulama isteğe bağlı satın almalar sunar: reklamsız yükseltme, coin
-  paketleri ve <strong>Sudoku Plus</strong> aboneliği. Hepsi App Store üzerinden
-  <strong>Apple</strong> tarafından işlenir.</p>
-  <p><strong>Kartınızı, banka bilgilerinizi veya fatura adresinizi hiçbir zaman
-  görmeyiz.</strong> Apple uygulamaya yalnızca bir satın almanın geçerli olup
-  olmadığını bildirir; uygulama da neyi açacağını böyle bilir. Satın alma
-  geçmişiniz bizde değil, <a href="https://www.apple.com/legal/privacy/">Apple'ın
-  Gizlilik Politikası</a> kapsamında Apple'da tutulur.</p>
-  <p>Bir satın almanın neyi açtığı bilgisi, ilerlemenizin geri kalanı gibi
-  cihazınızda ve kendi iCloud hesabınızda saklanır.</p>
-
   <h2>Yapmadıklarımız</h2>
   <ul>
     <li>Bulmacalarınızı, istatistiklerinizi veya ilerlemenizi toplamayız, almayız
     ve saklamayız.</li>
-    <li>Analitik veya çökme raporlama hizmeti kullanmayız.</li>
+    <li>Kendimize ait analitik veya çökme raporlama eklemeyiz ve nasıl
+    oynadığınıza dair bize hiçbir rapor ulaşmaz.</li>
     <li>Kimseye veri satmayız, çünkü elimizde veri yok.</li>
     <li>Rehber, fotoğraf, mikrofon veya kesin konum istemeyiz.</li>
-    <li>Ödeme bilgisi görmez ve saklamayız.</li>
+    <li>Hiçbir şey satmıyoruz, dolayısıyla görülecek bir ödeme bilgisi yok.</li>
   </ul>
 
   <h2>Bildirimler</h2>
