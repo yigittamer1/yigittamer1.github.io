@@ -266,9 +266,10 @@
   var t = STRINGS[lang];
   document.documentElement.lang = lang;
 
-  // TODO before launch: replace with the real App Store URL once the listing
-  // exists. Until then this points at a search so the button is never dead.
-  var APP_STORE_URL = "https://apps.apple.com/search?term=sudoku%20daily%20brain%20puzzles";
+  // The real listing. Sudoku - Daily Brain Puzzles, Apple ID 6812304929.
+  // Links sent from inside the app live forever in other people's message
+  // threads, so this address has to be the one that keeps working.
+  var APP_STORE_URL = "https://apps.apple.com/app/id6812304929";
 
   var params = new URLSearchParams(window.location.search);
   var seed = params.get("seed");
