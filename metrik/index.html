@@ -152,7 +152,7 @@
 <div class="page">
   <p class="kicker">Metrik · Legal</p>
   <h1>Privacy Policy</h1>
-  <p class="dek">Last updated: September 9, 2026</p>
+  <p class="dek">Last updated: September 16, 2026</p>
 
   <nav class="lang-nav">
     <a href="#en">English</a>
@@ -175,25 +175,29 @@
       <thead><tr><th>Purpose</th><th>Destination</th><th>Data sent</th></tr></thead>
       <tbody>
         <tr><td>Currency exchange rates</td><td><code>api.frankfurter.dev</code></td><td>None — a public, ECB-based rate lookup only.</td></tr>
-        <tr><td>Advertising &amp; the SDKs it bundles</td><td>AppLovin MAX (mediating Unity Ads and Yandex Ads)</td><td>See the SDK table below — subject to the tracking permission described further down.</td></tr>
+        <tr><td>Advertising &amp; the SDKs it bundles</td><td>Unity LevelPlay (mediating Unity Ads, Yandex Ads, and Liftoff Monetize/Vungle)</td><td>See the SDK table below — subject to the advertising choice and tracking permission described further down.</td></tr>
       </tbody>
     </table>
 
     <h3>Advertising, and every SDK that comes with it</h3>
-    <p>The App is supported by advertising so it can remain free to use. Ads are served through AppLovin MAX, which mediates demand from two networks — Unity Ads and Yandex Ads. Each network's SDK brings along its own sub-components (for ad-quality measurement or crash reporting); every one of them ships an Apple-mandated privacy manifest, and this table reflects exactly what those manifests declare — not a guess:</p>
+    <p>The App is supported by advertising so it can remain free to use. Ads are served through Unity LevelPlay, which runs a real-time auction between three networks — Unity Ads, Yandex Ads, and Liftoff Monetize (Vungle) — and shows whichever wins for that particular ad request. Each network's SDK brings along its own sub-components (for ad-quality measurement or crash reporting); every one of them ships an Apple-mandated privacy manifest, and this table reflects exactly what those manifests declare — not a guess:</p>
     <table>
       <thead><tr><th>SDK</th><th>Why it's here</th><th>What it declares collecting</th></tr></thead>
       <tbody>
-        <tr><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin SDK</a></td><td>Ad mediation — picks which network's ad to show</td><td>Device/advertising identifiers to serve ads</td></tr>
-        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a>, incl. ironSource Ad Quality</td><td>One of the two ad networks</td><td>Device ID and performance/diagnostic data, for ad-quality analytics and app functionality — not linked to your identity</td></tr>
-        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a>, incl. its AppMetrica and KSCrash components</td><td>The other ad network</td><td>Device/advertising identifiers for ads; separately, Yandex's own AppMetrica toolkit collects crash and performance data, general usage data, and approximate (typically IP-based, not GPS) location for its own analytics — not linked to your identity</td></tr>
+        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity LevelPlay</a></td><td>Ad mediation — runs the auction between the three networks below and shows the winner</td><td>Device/advertising identifiers to serve and measure ads</td></tr>
+        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a>, incl. ironSource Ad Quality</td><td>One of the three ad networks</td><td>Device ID and performance/diagnostic data, for ad-quality analytics and app functionality — not linked to your identity</td></tr>
+        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a>, incl. its AppMetrica and KSCrash components</td><td>The second ad network</td><td>Device/advertising identifiers for ads; separately, Yandex's own AppMetrica toolkit collects crash and performance data, general usage data, and approximate (typically IP-based, not GPS) location for its own analytics — not linked to your identity</td></tr>
+        <tr><td><a href="https://liftoff.ai/privacy-policy/" target="_blank" rel="noopener">Liftoff Monetize (Vungle)</a></td><td>The third ad network</td><td>Device/advertising identifiers to serve and measure ads — not linked to your identity</td></tr>
       </tbody>
     </table>
     <p>None of these declare themselves as "tracking" under Apple's own definition. We still ask for App Tracking Transparency permission (below) because ad mediation can involve sharing device identifiers with more than one company — you get the same result either way, we just default to asking.</p>
     <p>The App itself never asks for your camera, photos, precise location, contacts, or microphone — it has no feature that would need them.</p>
 
+    <h3>Your advertising choice</h3>
+    <p>Before any advertising SDK is initialized, the App shows its own advertising-choice screen — in your device's language, whichever of the 17 the App supports — asking whether you allow or decline advertising data processing. Every feature of the App works identically either way; declining only limits how personalized the ads you see can be. You can change this choice at any time from <strong>More → Advertising choice</strong>.</p>
+
     <h3>App Tracking Transparency</h3>
-    <p>On iOS, the App asks for Apple's standard tracking permission a short moment after launch. Whether you allow or decline tracking, every feature of the App works exactly the same — declining only limits how personalized the ads you see can be.</p>
+    <p>Separately from the advertising choice above, iOS itself asks for Apple's own standard tracking permission a short moment after launch, once per install (Apple, not the App, decides whether and when to show this). Whether you allow or decline tracking, every feature of the App works exactly the same — declining only limits how personalized the ads you see can be.</p>
 
     <h3>Children's privacy</h3>
     <p>The App is a general-audience utility and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
@@ -232,25 +236,29 @@
       <thead><tr><th>Amaç</th><th>Hedef</th><th>Gönderilen veri</th></tr></thead>
       <tbody>
         <tr><td>Döviz kurları</td><td><code>api.frankfurter.dev</code></td><td>Yok — sadece herkese açık, ECB tabanlı kur bilgisi okunur.</td></tr>
-        <tr><td>Reklam ve beraberinde gelen SDK'lar</td><td>AppLovin MAX (Unity Ads ve Yandex Ads aracılığıyla)</td><td>Aşağıdaki SDK tablosuna bak — aşağıda açıklanan takip izni dahilinde.</td></tr>
+        <tr><td>Reklam ve beraberinde gelen SDK'lar</td><td>Unity LevelPlay (Unity Ads, Yandex Ads ve Liftoff Monetize/Vungle aracılığıyla)</td><td>Aşağıdaki SDK tablosuna bak — aşağıda açıklanan reklam tercihi ve takip izni dahilinde.</td></tr>
       </tbody>
     </table>
 
     <h3>Reklam, ve beraberinde gelen her SDK</h3>
-    <p>Uygulamanın ücretsiz kalabilmesi için reklam desteğiyle sunulur. Reklamlar, iki ağdan — Unity Ads ve Yandex Ads — talep toplayan AppLovin MAX aracılığıyla gösterilir. Her ağın SDK'sı kendi alt bileşenlerini de getiriyor (reklam kalitesi ölçümü veya çökme raporlama için); bunların hepsi Apple'ın zorunlu tuttuğu bir gizlilik manifestosuyla geliyor, ve bu tablo tahmin değil, tam olarak o manifestoların beyan ettiğini yansıtıyor:</p>
+    <p>Uygulamanın ücretsiz kalabilmesi için reklam desteğiyle sunulur. Reklamlar, üç ağ — Unity Ads, Yandex Ads ve Liftoff Monetize (Vungle) — arasında gerçek zamanlı bir açık artırma yürüten Unity LevelPlay aracılığıyla gösterilir; her istekte hangisi kazanırsa o gösterilir. Her ağın SDK'sı kendi alt bileşenlerini de getiriyor (reklam kalitesi ölçümü veya çökme raporlama için); bunların hepsi Apple'ın zorunlu tuttuğu bir gizlilik manifestosuyla geliyor, ve bu tablo tahmin değil, tam olarak o manifestoların beyan ettiğini yansıtıyor:</p>
     <table>
       <thead><tr><th>SDK</th><th>Neden burada</th><th>Ne topladığını beyan ediyor</th></tr></thead>
       <tbody>
-        <tr><td><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener">AppLovin SDK</a></td><td>Reklam aracılığı — hangi ağın reklamının gösterileceğine karar verir</td><td>Reklam gösterebilmek için cihaz/reklam kimlikleri</td></tr>
-        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a> (ironSource Ad Quality dahil)</td><td>İki reklam ağından biri</td><td>Reklam kalitesi analitiği ve uygulama işlevselliği için cihaz kimliği ve performans/tanılama verisi — kimliğinle eşleştirilmiyor</td></tr>
-        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a> (AppMetrica ve KSCrash bileşenleri dahil)</td><td>Diğer reklam ağı</td><td>Reklam için cihaz/reklam kimlikleri; ayrıca Yandex'in kendi AppMetrica araç seti, kendi analitiği için çökme ve performans verisi, genel kullanım verisi ve yaklaşık (genelde GPS değil, IP tabanlı) konum topluyor — kimliğinle eşleştirilmiyor</td></tr>
+        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity LevelPlay</a></td><td>Reklam aracılığı — aşağıdaki üç ağ arasında açık artırma yürütür, kazananı gösterir</td><td>Reklam gösterip ölçebilmek için cihaz/reklam kimlikleri</td></tr>
+        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a> (ironSource Ad Quality dahil)</td><td>Üç reklam ağından biri</td><td>Reklam kalitesi analitiği ve uygulama işlevselliği için cihaz kimliği ve performans/tanılama verisi — kimliğinle eşleştirilmiyor</td></tr>
+        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a> (AppMetrica ve KSCrash bileşenleri dahil)</td><td>İkinci reklam ağı</td><td>Reklam için cihaz/reklam kimlikleri; ayrıca Yandex'in kendi AppMetrica araç seti, kendi analitiği için çökme ve performans verisi, genel kullanım verisi ve yaklaşık (genelde GPS değil, IP tabanlı) konum topluyor — kimliğinle eşleştirilmiyor</td></tr>
+        <tr><td><a href="https://liftoff.ai/privacy-policy/" target="_blank" rel="noopener">Liftoff Monetize (Vungle)</a></td><td>Üçüncü reklam ağı</td><td>Reklam gösterip ölçebilmek için cihaz/reklam kimlikleri — kimliğinle eşleştirilmiyor</td></tr>
       </tbody>
     </table>
     <p>Bunların hiçbiri Apple'ın kendi tanımına göre "izleme" olarak beyan edilmiyor. Yine de Uygulama İzleme Şeffaflığı izni istiyoruz (aşağıda) çünkü reklam aracılığı, cihaz kimliklerinin birden fazla şirketle paylaşılmasını içerebiliyor — iki durumda da sonuç aynı, biz sadece varsayılan olarak soruyoruz.</p>
     <p>Uygulamanın kendisi kameranı, fotoğraflarını, hassas konumunu, kişilerini veya mikrofonunu asla istemez — bunlara ihtiyaç duyan hiçbir özelliği yok.</p>
 
+    <h3>Reklam tercihin</h3>
+    <p>Herhangi bir reklam SDK'sı başlatılmadan önce Uygulama, cihazının dilinde (desteklenen 17 dilden hangisiyse) kendi reklam tercihi ekranını gösterir ve reklam verisi işlenmesine izin verip vermeyeceğini sorar. Ne seçersen seç Uygulamanın tüm özellikleri aynı şekilde çalışır — reddetmen sadece gördüğün reklamların ne kadar kişiselleştirildiğini sınırlar. Bu tercihini istediğin zaman <strong>Diğer → Reklam tercihi</strong> yolundan değiştirebilirsin.</p>
+
     <h3>Uygulama İzleme Şeffaflığı (App Tracking Transparency)</h3>
-    <p>iOS'ta Uygulama, açılıştan kısa bir süre sonra Apple'ın standart izleme izni penceresini gösterir. İzni versen de vermesen de Uygulamanın tüm özellikleri birebir aynı şekilde çalışır — vermemen sadece gördüğün reklamların ne kadar kişiselleştirildiğini sınırlar.</p>
+    <p>Yukarıdaki reklam tercihinden ayrı olarak, iOS'un kendisi açılıştan kısa bir süre sonra, kurulum başına bir kez, Apple'ın kendi standart izleme izni penceresini gösterir (bunu ne zaman ve gösterip göstermeyeceğine Uygulama değil Apple karar verir). İzni versen de vermesen de Uygulamanın tüm özellikleri birebir aynı şekilde çalışır — vermemen sadece gördüğün reklamların ne kadar kişiselleştirildiğini sınırlar.</p>
 
     <h3>Çocukların gizliliği</h3>
     <p>Uygulama genel kitleye yönelik bir yardımcı araçtır, 13 yaş altı çocukları hedeflemez. Çocuklardan bilerek kişisel veri toplamayız.</p>
