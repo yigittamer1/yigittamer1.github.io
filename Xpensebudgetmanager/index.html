@@ -152,7 +152,7 @@
 <div class="page">
   <p class="kicker">Xpense Budget Manager · Legal</p>
   <h1>Privacy Policy</h1>
-  <p class="dek">Last updated: September 5, 2026</p>
+  <p class="dek">Last updated: September 23, 2026</p>
 
   <nav class="lang-nav">
     <a href="#en">English</a>
@@ -182,11 +182,12 @@
       <tbody>
         <tr><td>Currency exchange rates</td><td><code>api.frankfurter.dev</code> (European Central Bank reference rates)</td><td>None personal — only the currency pair and date being looked up.</td></tr>
         <tr><td>iCloud sync</td><td>Apple CloudKit (your own private database)</td><td>Your financial records, encrypted in transit and at rest by Apple, readable only by you.</td></tr>
+        <tr><td>Advertising</td><td>Unity LevelPlay and its configured advertising partners</td><td>Technical advertising data such as device and advertising identifiers, ad-delivery/interaction data, and limited diagnostic or performance data. Your financial records, receipt images, notes, and iCloud data are never sent to advertising partners.</td></tr>
       </tbody>
     </table>
 
     <h3>Advertising</h3>
-    <p>This version of Xpense Budget Manager does not include any advertising SDK. The App does not show ads, does not request App Tracking Transparency (ATT) permission, and does not send any data — device identifiers, usage data, or otherwise — to any advertising network. We do not use any analytics or crash-reporting SDK of our own; nothing about your usage of the App is measured or reported to us. If advertising is added in a future update, this policy will be updated in advance and the change will be clearly disclosed in the App Store release notes before it takes effect.</p>
+    <p>The App uses Unity LevelPlay mediation to request and display banner, native, interstitial, and optional rewarded ads from configured advertising partners, currently including ironSource Ads, Unity Ads, Liftoff Monetize, and Yandex Ads. The Yandex Mobile Ads SDK includes AppMetrica support components as a technical dependency; the App does not separately call AppMetrica for its own analytics. Before any advertising SDK starts, the App asks you to choose personalised or limited advertising. This choice controls advertising personalisation, not whether the App works: limited advertising still allows ads. After either choice, the App may show Apple’s App Tracking Transparency (ATT) prompt once; you can decline it and continue using the App with the advertising choice you made. Advertising partners may process device or advertising identifiers, ad-delivery and interaction data, and limited diagnostic or performance data to deliver, measure, limit, and protect advertising. We do not send your financial records, receipt images, notes, or iCloud data to advertising partners. You can revisit this choice at any time in Settings → Privacy and iCloud → Advertising Privacy; a new choice takes effect on the next app launch.</p>
 
     <h3>Permissions the App requests</h3>
     <table>
@@ -195,6 +196,7 @@
         <tr><td>Camera</td><td>To photograph a receipt so its text can be read on-device. Only requested the first time you tap "Scan receipt."</td><td>Yes — you can always add entries manually instead.</td></tr>
         <tr><td>Photos</td><td>To let you choose a receipt image from your photo library instead of the camera. Requested only when you tap 'Choose from Photos.'</td><td>You can grant access to your full library or pick specific photos using iOS's limited access option; the App only processes the receipt image you select, never scans the rest of your library, and does not permanently store the image.</td></tr>
         <tr><td>Notifications</td><td>To remind you locally when a recurring payment is due.</td><td>Yes — declining just means no reminders; everything else still works.</td></tr>
+        <tr><td>App Tracking Transparency</td><td>After your advertising choice, to ask whether advertising partners may track activity across apps and websites owned by other companies.</td><td>Yes — declining keeps the App usable and ads may continue in a limited, non-personalised form.</td></tr>
       </tbody>
     </table>
     <p>The App only processes the receipt image you select. It does not browse, scan, or access the rest of your photo library, and does not permanently store the image.</p>
@@ -207,7 +209,7 @@
     <p>Simply deleting the App from your device removes the local copy immediately, but a synced copy may remain in your private iCloud storage until you either use the button above beforehand, or remove it yourself via iOS Settings → [Your Name] → iCloud → Manage Account Storage → Xpense Budget Manager → Delete Data.</p>
 
     <h3>Your rights and choices</h3>
-    <p>Because your records live only on your device and in your own private iCloud account, most data-protection rights (access, correction, portability) are already in your hands by default — you can see, edit, or export (as CSV) everything at any time from within the App. To fully delete everything, use Settings → Delete All Data (see above). We do not sell, rent, or trade your personal information to anyone, under any circumstance.</p>
+    <p>Because your records live only on your device and in your own private iCloud account, most data-protection rights (access, correction, portability) are already in your hands by default — you can see, edit, or export (as CSV) everything at any time from within the App. To fully delete everything, use Settings → Delete All Data (see above). Advertising partners process their own technical data under their own privacy notices; you can change the App’s advertising choice at any time from Settings → Privacy and iCloud → Advertising Privacy.</p>
 
     <h3>Not financial advice</h3>
     <p>The App is a personal bookkeeping tool. It does not provide tax or accounting advice and is not an official accounting or banking service.</p>
@@ -250,11 +252,12 @@
       <tbody>
         <tr><td>Döviz kurları</td><td><code>api.frankfurter.dev</code> (Avrupa Merkez Bankası referans kurları)</td><td>Kişisel veri yok — yalnızca sorgulanan para birimi çifti ve tarih.</td></tr>
         <tr><td>iCloud senkronizasyonu</td><td>Apple CloudKit (kendi private veritabanın)</td><td>Finansal kayıtların, Apple tarafından aktarımda ve depoda şifrelenmiş, yalnızca senin okuyabileceğin şekilde.</td></tr>
+        <tr><td>Reklamlar</td><td>Unity LevelPlay ve yapılandırılmış reklam ortakları</td><td>Cihaz ve reklam kimlikleri, reklam sunumu/etkileşim verileri ile sınırlı tanılama veya performans verileri. Finansal kayıtların, fiş görsellerin, notların ve iCloud verilerin reklam ortaklarına asla gönderilmez.</td></tr>
       </tbody>
     </table>
 
     <h3>Reklamlar</h3>
-    <p>Xpense Bütçe Yöneticisi'nin bu sürümünde herhangi bir reklam SDK'sı bulunmamaktadır. Uygulama reklam göstermez, İzleme Şeffaflığı (ATT) izni istemez ve herhangi bir reklam ağına — cihaz kimliği, kullanım verisi ya da başka herhangi bir veri — göndermez. Kendi analitik ya da çökme raporlama SDK'mız da yok; uygulamayı kullanımınla ilgili hiçbir şey ölçülmüyor ya da bize raporlanmıyor. İleride reklam eklenirse bu politika önceden güncellenecek ve değişiklik yürürlüğe girmeden önce App Store sürüm notlarında açıkça belirtilecektir.</p>
+    <p>Uygulama banner, native, tam ekran ve isteğe bağlı ödüllü reklam istemek ve göstermek için Unity LevelPlay aracılığını kullanır. Yapılandırılmış reklam ortakları şu anda ironSource Ads, Unity Ads, Liftoff Monetize ve Yandex Ads'tir. Yandex Mobile Ads SDK'sı teknik bağımlılık olarak AppMetrica destek bileşenlerini içerir; Uygulama kendi analitiği için AppMetrica'yı ayrıca çağırmaz. Reklam SDK'ları başlamadan önce kişiselleştirilmiş veya sınırlı reklam tercihini sorarız. Bu tercih uygulamanın çalışıp çalışmayacağını değil, reklam kişiselleştirmesini belirler; sınırlı reklam seçeneğinde de reklam gösterilebilir. Her iki tercih sonrasında Apple'ın İzleme Şeffaflığı (ATT) istemi bir kez gösterilebilir; reddedebilir ve seçtiğin reklam tercihiyle Uygulamayı kullanmaya devam edebilirsin. Reklam ortakları reklam sunmak, ölçmek, sıklığını sınırlamak ve güvenliğini sağlamak için cihaz veya reklam kimlikleri, reklam sunumu/etkileşim verileri ile sınırlı tanılama ya da performans verilerini işleyebilir. Finansal kayıtların, fiş görsellerin, notların ve iCloud verilerin reklam ortaklarına asla gönderilmez. Bu tercihi dilediğin zaman Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin; yeni tercih bir sonraki uygulama açılışında uygulanır.</p>
 
     <h3>Uygulamanın istediği izinler</h3>
     <table>
@@ -263,6 +266,7 @@
         <tr><td>Kamera</td><td>Fişin fotoğrafını çekip metnini cihazda okuyabilmek için. Yalnızca ilk kez "Fiş tara"ya bastığında istenir.</td><td>Hayır — istersen her zaman elle kayıt girebilirsin.</td></tr>
         <tr><td>Fotoğraflar</td><td>Kamera yerine fotoğraf kitaplığından bir fiş görseli seçebilmen için. Yalnızca 'Fotoğraflardan Seç'e dokunduğunda istenir.</td><td>Tüm kitaplığa erişim verebilir ya da iOS'un sunduğu sınırlı erişim seçeneğiyle belirli fotoğrafları seçebilirsin; Uygulama yalnızca seçtiğin fiş görselini işler, kitaplığının geri kalanını hiç taramaz ve fiş görselini kalıcı olarak saklamaz.</td></tr>
         <tr><td>Bildirimler</td><td>Yinelenen bir ödemenin günü geldiğinde yerel olarak hatırlatmak için.</td><td>Hayır — reddedersen sadece hatırlatma gelmez, geri kalan her şey çalışmaya devam eder.</td></tr>
+        <tr><td>İzleme Şeffaflığı (ATT)</td><td>Reklam tercihin sonrasında, reklam ortaklarının diğer şirketlere ait uygulama ve sitelerdeki etkinliği izleyip izleyemeyeceğini sormak için.</td><td>Hayır — reddedersen Uygulama çalışmaya devam eder; reklamlar sınırlı, kişiselleştirilmemiş biçimde gösterilebilir.</td></tr>
       </tbody>
     </table>
     <p>Uygulama yalnızca seçtiğin fiş görselini işler. Fotoğraf kitaplığının geri kalanını taramaz, göz atmaz veya erişmez; görseli kalıcı olarak saklamaz.</p>

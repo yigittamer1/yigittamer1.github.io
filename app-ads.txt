@@ -1,3 +1,5 @@
+OWNERDOMAIN=yigittamer1.github.io
+ironsrc.com, 683057, DIRECT
 google.com, pub-8916717184522651, DIRECT, f08c47fec0942fa0
 e-planning.net, 2f3a04630ba9ba3f, RESELLER, c1ba615865ed87b2
 pubmatic.com, 165157, RESELLER, 5d62403b186f2ace
