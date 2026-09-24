@@ -14,6 +14,10 @@
 <meta property="og:site_name" content="Sudoku - Daily Brain Puzzles">
 <meta name="twitter:card" content="summary">
 
+<!-- Safari's own banner: "Open" when the app is installed, "View" when it is
+     not. The address is filled in by the script below. -->
+<meta name="apple-itunes-app" content="app-id=6812304929">
+
 <style>
   :root {
     --teal: #0EA5A5;
@@ -181,6 +185,9 @@
     border: 1.5px solid rgba(14, 165, 165, 0.35);
   }
 
+  p.note {
+    margin: 16px 0 0; text-align: center; font-size: 14px; color: var(--ink-2);
+  }
   footer {
     margin-top: 22px;
     font-size: 12.5px;
@@ -214,6 +221,7 @@
     </a>
     <a class="button secondary" id="openApp" href="#" hidden>I already have the app</a>
   </div>
+  <p class="note" id="redirectNote" hidden></p>
 
   <footer>
     Six difficulty levels, a daily challenge, and puzzles you can share.
@@ -225,7 +233,7 @@
   // declaration order, so anything appended there belongs here too.
   var DIFFICULTIES = {
     en: ["Easy", "Medium", "Hard", "Expert", "Master", "Extreme"],
-    tr: ["Kolay", "Orta", "Zor", "Uzman", "Usta", "Uç Nokta"]
+    tr: ["Kolay", "Orta", "Zor", "Uzman", "Usta", "Aşırı"]
   };
 
   // This page is most often opened from a message thread, on a phone, by
@@ -241,6 +249,7 @@
       storeName: "Get Sudoku\u00a0- Daily Brain Puzzles",
       storeSub: "Free on the App Store",
       openApp: "I already have the app",
+      redirecting: "Opening the App Store in a moment…",
       footer: "Six difficulty levels, a daily challenge, and puzzles you can share.",
       suffix: " puzzle",
       bareEyebrow: "Sudoku",
@@ -254,6 +263,7 @@
       storeName: "Sudoku\u00a0- Daily Brain Puzzles'ı indir",
       storeSub: "App Store'da ücretsiz",
       openApp: "Uygulama zaten bende",
+      redirecting: "App Store birazdan açılacak…",
       footer: "Altı zorluk seviyesi, günlük bulmaca ve paylaşabileceğin bulmacalar.",
       suffix: " bulmaca",
       bareEyebrow: "Sudoku",
@@ -303,6 +313,27 @@
     document.getElementById("title").textContent = t.bareTitle;
     document.getElementById("lede").textContent = t.bareLede;
   }
+
+  // Someone with the app installed never sees this page: iOS opens the link
+  // straight in the app. So a person who is looking at it on an iPhone has no
+  // app yet, and the useful thing is to take them to it. The wait is short
+  // but real, and "I already have the app" cancels it — that covers the one
+  // way to land here with the app installed, typing the address by hand.
+  var redirectTimer = null;
+  if (/iPhone|iPad|iPod/.test(navigator.userAgent)) {
+    var note = document.getElementById("redirectNote");
+    note.textContent = t.redirecting;
+    note.hidden = false;
+    redirectTimer = setTimeout(function () { window.location.href = APP_STORE_URL; }, 3000);
+    document.getElementById("openApp").addEventListener("click", function () {
+      clearTimeout(redirectTimer);
+      note.hidden = true;
+    });
+  }
+
+  // Tell Safari's banner which link to open the app with.
+  var banner = document.querySelector('meta[name="apple-itunes-app"]');
+  banner.content = "app-id=6812304929, app-argument=" + window.location.href;
 </script>
 
 </body>
