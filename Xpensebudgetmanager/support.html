@@ -54,6 +54,7 @@
     padding: 56px 24px 100px;
   }
   .page { max-width: 680px; margin: 0 auto; }
+  @media (max-width: 600px) { body { padding: 32px 16px 72px; } }
 
   .kicker {
     font-family: var(--font-mono);
@@ -162,7 +163,7 @@
   <section id="tr">
     <h2>01 — Türkçe</h2>
 
-    <p>Xpense Bütçe Yöneticisi ile ilgili bir sorun mu yaşıyorsun, bir öneri mi iletmek istiyorsun? Aşağıdaki adresten bize ulaşabilirsin — genellikle 1-2 iş günü içinde dönüş yapıyoruz.</p>
+    <p>Xpense Bütçe Yöneticisi ile ilgili bir sorun mu yaşıyorsun, bir öneri mi iletmek istiyorsun? Aşağıdaki adresten bize ulaşabilirsin; en kısa sürede yanıt vermeye çalışıyoruz.</p>
 
     <div class="contact-card">
       <div>
@@ -171,12 +172,11 @@
       </div>
       <a class="button" href="mailto:yigittamer99@gmail.com?subject=Xpense%20Budget%20Manager%20Destek">E-posta gönder</a>
     </div>
-    <p>Destek talebinde gönüllü olarak paylaştığın e-posta adresi, mesaj ve ekleri yalnızca talebine yanıt vermek için kullanır ve saklarız; reklam, analiz veya satış amacıyla kullanmayız. Gerekli olmadıkça fiş görselleri, finansal kayıtlar veya diğer hassas bilgileri e-postayla gönderme.</p>
 
     <h3>Sık sorulan sorular</h3>
     <div class="faq-item">
       <p class="faq-q">Ana Sayfa'da neden sadece bugünün kayıtları görünüyor?</p>
-      <p class="faq-a">Ana Sayfa bilinçli olarak yalnızca bugünü gösteriyor — "şu an neredeyim" sorusuna hızlı cevap vermek için. Geçmiş kayıtların tamamını, aylık/yıllık özetlerle birlikte Analiz sekmesinden görebilirsin.</p>
+      <p class="faq-a">Ana Sayfa'daki günlük kayıt listesi bugünü gösterir; üstteki Tüm kayıtları gör bağlantısından geçmişe ulaşabilirsin. Aylık/yıllık toplamlar ve kategori dağılımı Analiz sekmesindedir. Tekrarlayan işlemlerin bu aya ait planı ayrı bir kartta görünür.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Bir kaydı nasıl düzenlerim ya da silerim?</p>
@@ -188,19 +188,35 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Uygulamayı silip tekrar kurdum, verilerim geri gelir mi?</p>
-      <p class="faq-a">Aynı Apple Hesabıyla giriş yapılıysa ve daha önce "Tüm Verileri Sil" ile silinmediyse, evet — kayıtların iCloud'dan otomatik olarak geri yüklenir.</p>
+      <p class="faq-a">Kayıtların silmeden önce iCloud'a eşzamanlandıysa ve aynı Apple Hesabıyla giriş yaptıysan, uygulama yeniden kurulduğunda iCloud'daki kopya geri gelebilir. Yalnızca cihazda kalmış ve henüz eşzamanlanmamış kayıtlar geri yüklenemez.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">iCloud'dan çıkış yaptım (ya da hesap değiştirdim), verilerim ne olacak?</p>
-      <p class="faq-a">Cihazındaki kayıtlar silinmez, uygulama yerel kopyayla normal çalışmaya devam eder. Sadece senkronizasyon durur: yeni kayıtlar iCloud'a gitmez, başka cihazlardan bir şey inmez, tekrar giriş yapana kadar. Daha önce senkron olmuş kayıtların o hesabın iCloud'unda kalır, kaybolmaz — aynı hesaba dönünce senkron kaldığı yerden devam eder. Farklı bir hesaba geçersen, o hesap boş başlar; eski hesabına dönersen verilerin yine orada olur. Ayarlar ekranındaki "iCloud senkronizasyonu" satırından şu an aktif olup olmadığını her zaman görebilirsin.</p>
+      <p class="faq-a">iCloud'dan çıkış yapmak veya Apple Hesabını değiştirmek, eşzamanlama güncellenirken cihazda görünen kayıtları etkileyebilir; yerel kopyanın mutlaka aynı kalacağını garanti edemeyiz. Önce önemli kayıtlarını dışa aktar, eşzamanlamanın tamamlanmasını bekle ve hesap değişikliğinden sonra kayıtlarını kontrol et. Ayarlar'daki iCloud durumu bağlantının kullanılabilirliğini gösterir, her kaydın yüklendiğini tek başına doğrulamaz.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Verilerimi tamamen silmek istiyorum, nasıl yaparım?</p>
-      <p class="faq-a">Ayarlar → Tüm Verileri Sil. Bu, tüm kayıtları hem cihazından hem iCloud hesabından kalıcı olarak siler; onay istenir, geri alınamaz.</p>
+      <p class="faq-q">Finansal kayıtlarımı nasıl silerim?</p>
+      <p class="faq-a">Ayarlar → Tüm Verileri Sil, onaydan sonra cihazındaki finansal kayıtları siler. iCloud açıksa silme işlemi Apple'ın eşzamanlamasıyla iCloud'a yansır; çevrimdışıyken anında tamamlandığı doğrulanamaz. iCloud kopyasını doğrudan kaldırmak için iOS Ayarlar → [Adın] → iCloud → Hesap Depolamasını Yönet → Xpense Budget Manager → Veriyi Sil yolunu kullanabilirsin. Bu işlem destek e-postalarını veya reklam ortaklarının kendi teknik verilerini doğrudan silmez; ayrıntılar için Gizlilik Politikası'na bakabilirsin.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Fiş tarama ne kadar doğru çalışıyor, fotoğrafım nereye gidiyor?</p>
-      <p class="faq-a">Tarama tamamen cihazında, internete çıkmadan yapılır. Fotoğraf hiçbir yere yüklenmez ve okuma biter bitmez atılır. Tutar/tarih/mağaza bazen yanlış okunabilir — kaydetmeden önce kontrol edip elle düzeltebilirsin.</p>
+      <p class="faq-a">Fiş metni cihazında okunur; uygulama fotoğrafı kendi sunucusuna yüklemez veya finansal kayda kalıcı ek olarak saklamaz. Fişin dili uygulama dilinden farklı olabilir; Almanca “Summe” gibi toplam satırları da öneride dikkate alınır. Yine de tutar/tarih/mağaza yanlış okunabilir: önerilen tutarı ve diğer alanları kontrol edip gerekirse düzelt; Kaydet'e bastığında tutar son bir onay penceresinde gösterilir.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Özel kategori ekleyip silersem eski kayıtlarıma ne olur?</p>
+      <p class="faq-a">Yeni gider veya gelir ekranındaki Kategori ekle düğmesiyle özel kategori oluşturabilirsin. Silme yalnızca Ayarlar → Kategoriler bölümünde, özel kategoriler için kullanılabilir; yerleşik kategoriler silinmez. Sildiğin kategoriye bağlı eski kayıtlar, abonelikler ve tekrarlayan planlar silinmez; aynı türdeki yerleşik Diğer kategorisine taşınır. İstersen kayıtları daha sonra tek tek farklı kategorilere atayabilirsin.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Tekrarlayan gelir veya gideri nasıl eklerim? Abonelikten farkı ne?</p>
+      <p class="faq-a">Yeni gelir veya gider ekranında Tekrarlayan işlem seçeneğini açıp günlük, haftalık, aylık veya yıllık sıklığı seç. Süresiz bırakabilir ya da başlangıçtan sonra kaç tekrar yapılacağını belirleyebilirsin; son tarihi formda görürsün. Bu ayın planlanan toplamı Ana Sayfa'da ayın ilk gününden itibaren, gerçekleşmiş gelir/giderden ayrı görünür. Vadesi gelen tekrarlar uygulamayı o gün veya sonrasında açtığında kayda dönüşür; uygulama kapalıyken arka planda işlem yazılmaz. Abonelikler ise eskisi gibi ödeme onayından sonra gidere eklenir.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Tekrarlayan ödemeyi durdurursam eski kayıtlar silinir mi?</p>
+      <p class="faq-a">Hayır. Ana Sayfa'daki planlanan tutar kartından tekrarlayan planları açıp bir planı sola kaydırarak gelecekteki tekrarlarını durdurabilirsin. Daha önce kaydedilmiş gelir ve giderler geçmişte kalır. Tek bir eski kaydı silersen o vade yeniden oluşturulmaz; diğer tekrarlar devam eder.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Uygulama dilini ve ana para birimini nereden değiştiririm?</p>
+      <p class="faq-a">İkisini de Ayarlar'dan değiştirebilirsin. Yeni kullanıcıya tanıtımın ardından ana para birimi açıklanıp onaylatılır; özet ve analiz toplamları bu birimde gösterilir. Kayıtları başka para birimlerinde de girebilirsin. Destek ve gizlilik sayfaları yalnızca Türkçe ve İngilizce sunulur.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Döviz kurları ne kadar güncel?</p>
@@ -208,11 +224,15 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Abonelik hatırlatmaları gelmiyor.</p>
-      <p class="faq-a">Önce iOS Ayarları'ndan Xpense Bütçe Yöneticisi için bildirim izni verildiğinden emin ol. Uygulama içindeki Ayarlar → Bildirimler bölümünden abonelik hatırlatmalarını ve ödeme gününden 1 ya da 3 gün önceki erken uyarıyı yönetebilirsin. Erken uyarı seçilirse saat 10:00'da gelir; ödeme gününde 09:00'da hatırlatma gelir ve ödeme o gün onaylanmadıysa 21:00'da bir kez daha uyarır. Bildirimler tamamen cihazında planlanır, internete ihtiyaç duymaz.</p>
+      <p class="faq-a">iOS Ayarlar'da Xpense için bildirim izni, uygulamadaki Ayarlar → Bildirimler bölümünde de ilgili hatırlatma açık olmalı. İlk sistem izin isteği kurulumdan ve reklam tercihinden yaklaşık 10 saniye sonra gelir. Bildirimler uygulamada seçtiğin dilde ve cihazında planlanır; internete ihtiyaç duymaz. Günlük kayıt hatırlatması varsayılan olarak kapalıdır. Açarsan, uygulama o gün kayıt olduğunu planlama sırasında görürse bugünkü hatırlatmayı atlar. Tekrarlayan gelir/gider kayıtları ayrıca bildirim göndermez.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Uygulama reklam gösteriyor mu?</p>
-      <p class="faq-a">Evet. Uygulama Unity LevelPlay aracılığıyla banner, sayfa içi 300×250 banner, tam ekran ve isteğe bağlı ödüllü reklamlar gösterebilir; native reklam göstermez. İlk açılışta kişiselleştirilmiş veya sınırlı reklam tercihini sorar; sınırlı reklam seçeneğinde de reklam gösterilebilir. Her iki tercihten sonra Apple'ın ATT istemi bir kez gösterilebilir; reddetsen de uygulamayı kullanmaya devam edebilirsin. Tercihini Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin; yeni tercih sonraki açılışta uygulanır.</p>
+      <p class="faq-a">Evet. Uygulama Unity LevelPlay aracılığıyla banner reklamlar (inline 300×250 MREC bannerlar dahil), tam ekran ve isteğe bağlı ödüllü reklamlar gösterebilir. İlk açılışta kişiselleştirilmiş veya sınırlı reklam tercihini sorar; sınırlı reklam seçeneğinde de reklam gösterilebilir. Sınırlı reklamı seçersen ATT izni istenmez. Kişiselleştirilmiş reklamı seçersen, daha önce karar vermediysen ATT izni istenir; reddedersen sınırlı reklamlarla devam edersin. Tercihini Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin; yeni tercih sonraki açılışta uygulanır.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">AppMetrica neden uygulamada bulunuyor?</p>
+      <p class="faq-a">Yandex reklam bileşeni AppMetrica'yı bağımlılık olarak getirir ve reklam hizmeti için otomatik başlatır. Xpense onu ayrı bir analiz ürünü olarak kurmaz. Reklam ortaklarının teknik veri beyanları ve reklam tercihlerin hakkında ayrıntılar için <a href="index.html">Gizlilik Politikası</a> sayfasına bakabilirsin.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Verilerim nasıl kullanılıyor?</p>
@@ -225,7 +245,7 @@
   <section id="en">
     <h2>02 — English</h2>
 
-    <p>Running into an issue with Xpense Budget Manager, or have a suggestion? Reach out below — we typically respond within 1-2 business days.</p>
+    <p>Running into an issue with Xpense Budget Manager, or have a suggestion? Reach out below; we aim to respond as soon as we can.</p>
 
     <div class="contact-card">
       <div>
@@ -234,12 +254,11 @@
       </div>
       <a class="button" href="mailto:yigittamer99@gmail.com?subject=Xpense%20Budget%20Manager%20Support">Send an email</a>
     </div>
-    <p>We use and retain the email address, message, and attachments you voluntarily provide in a support request only to respond to that request; we do not use them for advertising, analytics, or sale. Please do not email receipt images, financial records, or other sensitive information unless it is necessary to resolve your request.</p>
 
     <h3>Frequently asked questions</h3>
     <div class="faq-item">
       <p class="faq-q">Why does Home only show today's entries now?</p>
-      <p class="faq-a">Home is deliberately scoped to today — a quick answer to "where do I stand right now." Your full history, with monthly/yearly summaries, is available in the Analytics tab.</p>
+      <p class="faq-a">Home's daily entry list shows today. Use View all records near the top to see your history; monthly/yearly totals and category breakdowns are in Analytics. This month's recurring plan appears in a separate card.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">How do I edit or delete an entry?</p>
@@ -251,19 +270,35 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">I deleted and reinstalled the app — will my data come back?</p>
-      <p class="faq-a">Yes, as long as you're signed into the same Apple Account and hadn't previously used "Delete All Data" — your records are restored automatically from iCloud.</p>
+      <p class="faq-a">Records can return after reinstalling if they synced to iCloud before you removed the App and you sign into the same Apple Account. Records that existed only on the device and had not synced cannot be restored from iCloud.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">I signed out of iCloud (or switched accounts) — what happens to my data?</p>
-      <p class="faq-a">Nothing on your device is deleted; the app keeps working normally with its local copy. Only syncing pauses: new entries stop going to iCloud, and nothing new comes down, until you sign back in. Records already synced stay safely in that account's iCloud storage. Switching to a different Apple Account starts that account fresh (empty) — your original data isn't lost, it's just waiting for you to sign back into that account. The "iCloud sync" row in Settings always shows whether you're currently active or off.</p>
+      <p class="faq-a">Signing out of iCloud or switching Apple Accounts can affect which records remain visible locally while sync updates. We cannot guarantee the local copy stays unchanged. Export important records first, allow syncing to finish, and check your records after the account change. The iCloud status in Settings shows availability; it does not by itself confirm that every record has uploaded.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">How do I permanently delete all my data?</p>
-      <p class="faq-a">Settings → Delete All Data. This permanently erases everything from both your device and your iCloud account, after a confirmation step. It cannot be undone.</p>
+      <p class="faq-q">How do I delete my financial records?</p>
+      <p class="faq-a">Settings → Delete All Data removes financial records from this device after confirmation. If iCloud is available, Apple's automatic sync propagates the deletion to iCloud; completion cannot be confirmed immediately while offline. To remove the iCloud copy directly, use iOS Settings → [Your Name] → iCloud → Manage Account Storage → Xpense Budget Manager → Delete Data. This action does not directly delete support emails or technical data held by advertising partners; see the Privacy Policy for details.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">How accurate is receipt scanning, and where does my photo go?</p>
-      <p class="faq-a">Scanning happens entirely on your device, with no network access. The photo is never uploaded anywhere and is discarded right after the text is read. The amount, date, or merchant may occasionally be misread — review and correct them before saving.</p>
+      <p class="faq-a">Receipt text is read on your device; the App does not upload the photo to a server or keep it as a permanent attachment to your financial entry. The receipt can be in a different language from the App; total labels such as German “Summe” are considered. The amount, date, or merchant may still be misread — review and correct them before saving. The amount appears again in a final confirmation alert when you tap Save.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What happens to entries when I delete a custom category?</p>
+      <p class="faq-a">You can create a custom category from the Add Category button on a new income or expense form. Deletion is available only under Settings → Categories and only for custom categories; built-in categories cannot be deleted. Existing entries, subscriptions, and recurring plans are preserved and moved to the built-in Other category of the same type. You can reassign entries individually afterward.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I add recurring income or expenses? How is that different from a subscription?</p>
+      <p class="faq-a">Turn on Recurring in a new income or expense form, choose daily, weekly, monthly, or yearly, then leave it open-ended or choose how many further intervals it runs. The form shows the final date when there is one. Home shows this month's planned totals from the first day, separate from actual income and spending. Due entries are recorded when you open the App on or after their date; nothing is posted in the background while the App is closed. Subscriptions still become expenses only after you confirm payment.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Does stopping a recurring payment delete its history?</p>
+      <p class="faq-a">No. Open recurring plans from the planned-totals card on Home, then swipe a plan left to stop future repeats. Existing income and expense entries stay in your history. If you delete one past entry, that occurrence will not be recreated; other repeats continue.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Where can I change the App language and main currency?</p>
+      <p class="faq-a">Both are available in Settings. New users are asked to confirm their main currency after onboarding; summaries and analytics use this currency. You can still record entries in other currencies. Support and privacy pages are available only in English and Turkish.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">How current are the exchange rates?</p>
@@ -271,11 +306,15 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">I'm not getting subscription reminders.</p>
-      <p class="faq-a">First, make sure notifications are allowed for Xpense Budget Manager in the iOS Settings app. In the app, go to Settings → Notifications to manage subscription reminders and an optional reminder 1 or 3 days before the due date. When selected, the early reminder is sent at 10:00; on the due date, a reminder is sent at 09:00 and, if the payment has not been confirmed that day, once more at 21:00. Reminders are scheduled entirely on your device and don't require an internet connection.</p>
+      <p class="faq-a">Check that iOS Settings allows Xpense notifications and the relevant reminder is enabled under the App's Settings → Notifications. The first system permission request is delayed until about 10 seconds after setup and the advertising choice. Reminders use the selected App language, are scheduled on your device, and don't require internet. Daily entry reminders are off by default; if enabled, the App skips today's reminder when it sees that you have recorded an entry while scheduling. Recurring income and expense entries do not send a separate notification.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Does the app show ads?</p>
-      <p class="faq-a">Yes. The App may show banner ads, inline 300×250 banner ads, interstitial ads, and optional rewarded ads through Unity LevelPlay; it does not show native ads. On first launch, you can choose personalised or limited advertising; limited advertising can still show ads. After either choice, Apple’s ATT prompt may be shown once. You can decline it and continue using the app. You can change the choice in Settings → Privacy and iCloud → Advertising Privacy; the new choice applies on the next launch.</p>
+      <p class="faq-a">Yes. The App may show banner ads (including inline 300×250 MREC banners), interstitial, and optional rewarded ads through Unity LevelPlay. On first launch, you can choose personalised or limited advertising; limited advertising can still show ads. Limited advertising does not request ATT. Choosing personalised advertising requests ATT if you have not already decided; declining it switches to limited advertising. You can change the choice in Settings → Privacy and iCloud → Advertising Privacy; the new choice applies on the next launch.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Why is AppMetrica included?</p>
+      <p class="faq-a">The Yandex advertising component brings in AppMetrica and initializes it for its ad service. Xpense does not integrate it as a separate analytics product. See the <a href="index.html">Privacy Policy</a> for the advertising partners' technical data declarations and your advertising choices.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">How is my data used?</p>

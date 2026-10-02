@@ -125,6 +125,11 @@
     font-size: 14px;
     margin: 8px 0 20px;
   }
+  .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  @media (max-width: 600px) {
+    body { padding: 32px 16px 72px; }
+    .table-scroll table { min-width: 560px; }
+  }
   th, td {
     text-align: left;
     padding: 8px 10px;
@@ -152,7 +157,7 @@
 <div class="page">
   <p class="kicker">Xpense Budget Manager · Legal</p>
   <h1>Privacy Policy</h1>
-  <p class="dek">Last updated: September 24, 2026</p>
+  <p class="dek">Last updated / Son güncelleme: October 2, 2026 / 2 Ekim 2026</p>
 
   <nav class="lang-nav">
     <a href="#en">English</a>
@@ -168,63 +173,63 @@
     <p>The App does not ask you to create an account, sign in, or provide your name, email, or any identifying information to use it. There is no login screen and no user profile on any server we operate.</p>
 
     <h3>Your financial records: on your device, synced only to your own iCloud</h3>
-    <p>Everything you record — expense and income entries, amounts, currencies, dates, merchant names, categories, notes, and recurring-payment ("subscription") schedules — is stored locally on your device. It is also synced, using Apple's CloudKit framework, to the private iCloud database tied to your own Apple Account.</p>
-    <p>This sync is opportunistic and private: it lets your records survive an app reinstall or move to a new device signed in with the same Apple Account. <strong>We cannot see, access, or receive a copy of this data</strong> — it never passes through any server we operate, and it is not shared with any third party. If you are not signed into iCloud, or your iCloud storage is full, the App simply continues to work with local-only storage; nothing breaks.</p>
-    <p>If you sign out of iCloud (or turn iCloud off) after having synced, your device keeps working normally with its local copy — nothing is deleted from the device. Only the syncing itself pauses: new changes stop going up, and nothing new comes down, until you sign back in. Records already synced to that Apple Account's private iCloud database stay there untouched; signing back into the same account resumes syncing right where it left off. Switching to a different Apple Account simply starts from that account's own (initially empty) iCloud data — your original account's data is not lost, just not visible until you sign back into it. Settings shows a live "iCloud sync: Active / Off" indicator so this is never ambiguous.</p>
-    <p>Your device's local copy is additionally protected with complete file encryption (<code>NSFileProtectionComplete</code>), meaning it cannot be read while your device is locked, even by other software on the device.</p>
+    <p>Everything you record — expense and income entries, amounts, currencies, dates, merchant names, categories, notes, subscription schedules, and separate recurring income/expense plans and occurrence records — is stored locally on your device. When iCloud is available, Apple's CloudKit framework also syncs these records to the private iCloud database tied to your Apple Account.</p>
+    <p>This sync is opportunistic and private: records that finish syncing may be restored after reinstalling or on another device signed in with the same Apple Account. <strong>We cannot see, access, or receive a copy of this financial data</strong> through any server we operate or our developer portal. If iCloud is unavailable, the App can continue with local storage, but changes made only on that device are not backed up by this sync.</p>
+    <p>Signing out of iCloud, disabling iCloud for the App, or switching Apple Accounts can change which records are available locally while Apple updates the sync state. Do not rely on a local copy surviving an account change: export important records before changing iCloud settings, confirm that changes have finished syncing, and check the App again afterward. A sync-status indicator in Settings shows whether iCloud is currently available; it is not proof that every pending record has uploaded.</p>
+    <p>The App requests complete file protection (<code>NSFileProtectionComplete</code>) for its local store, which helps protect the stored file while the device is locked.</p>
 
     <h3>Receipt scanning</h3>
-    <p>If you use the receipt-scanning feature, the photo you capture is processed entirely on your device using Apple's on-device Vision framework to read the amount, date, and merchant name. <strong>The photo itself is never uploaded anywhere, never stored, and is discarded from memory as soon as the text has been read.</strong></p>
+    <p>If you use receipt scanning, the image you take or select is processed on your device using Apple's Vision framework to suggest an amount, date, and merchant name. The App does not upload or permanently store the receipt image. It uses the image in memory for scan review and does not retain it as part of the saved financial record. Recognition can be wrong; review the suggestions before saving.</p>
 
     <h3>Network requests the App makes</h3>
+    <div class="table-scroll" role="region" aria-label="Network requests" tabindex="0">
     <table>
       <thead><tr><th>Purpose</th><th>Destination</th><th>Data sent</th></tr></thead>
       <tbody>
-        <tr><td>Currency exchange rates</td><td><code>api.frankfurter.dev</code> (European Central Bank reference rates)</td><td>None personal — only the currency pair and date being looked up.</td></tr>
-        <tr><td>iCloud sync</td><td>Apple CloudKit (your own private database)</td><td>Your financial records, encrypted in transit and at rest by Apple, readable only by you.</td></tr>
-        <tr><td>Advertising</td><td>Unity LevelPlay and its configured advertising partners</td><td>Technical advertising data such as device and advertising identifiers, ad-delivery/interaction data, approximate IP- or country-level location, and limited performance data. Your financial records, receipt images, notes, and iCloud data are never sent to advertising partners.</td></tr>
+        <tr><td>Currency exchange rates</td><td><code>api.frankfurter.dev</code> (European Central Bank reference rates)</td><td>The requested currency pair and date; no financial entries are included. As with any internet request, the service may also receive network information such as your IP address.</td></tr>
+        <tr><td>iCloud sync</td><td>Apple CloudKit (your own private database)</td><td>Your financial records, protected by Apple's iCloud security and available through your Apple Account; they are not visible in our developer portal.</td></tr>
+        <tr><td>Advertising</td><td>Unity LevelPlay and its configured advertising partners</td><td>Depending on the partner and your advertising choice, SDKs may process identifiers, ad interactions, diagnostics, performance information, and other data described in their privacy notices. The App does not intentionally provide your financial entries, receipt images, notes, or iCloud records to advertising SDKs.</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Advertising</h3>
-    <p>The App uses Unity LevelPlay mediation to request and display banner ads, inline 300×250 banner ads, interstitial ads, and optional rewarded ads from configured advertising partners, currently including ironSource Ads, Unity Ads, Liftoff Monetize, and Yandex Ads. It does not display native ads. The Yandex Mobile Ads SDK includes AppMetrica support components as a technical dependency; the App does not separately call AppMetrica for its own analytics. Before any advertising SDK starts, the App asks you to choose personalised or limited advertising. This choice controls advertising personalisation, not whether the App works: limited advertising still allows ads. After either choice, the App may show Apple’s App Tracking Transparency (ATT) prompt once; you can decline it and continue using the App with the advertising choice you made. Advertising partners may process device or advertising identifiers, ad-delivery and interaction data, approximate IP- or country-level location, and limited performance data to deliver, measure, limit, and protect advertising. We do not send your financial records, receipt images, notes, or iCloud data to advertising partners. You can revisit this choice at any time in Settings → Privacy and iCloud → Advertising Privacy; a new choice takes effect on the next app launch.</p>
+    <p>The App uses Unity LevelPlay mediation to request and display banner ads (including inline 300×250 MREC banners), interstitial ads, and optional rewarded ads from configured advertising partners, currently including ironSource Ads, Unity Ads, Liftoff Monetize, and Yandex Ads. Yandex Mobile Ads brings in AppMetrica components and, according to Yandex, initializes AppMetrica automatically for its advertising service; the App does not separately integrate AppMetrica as its own analytics product. Before advertising SDKs start, the App asks you to choose personalised or limited advertising. Limited advertising still allows ads. Choosing limited advertising does not request Apple's App Tracking Transparency (ATT) permission. Choosing personalised advertising requests ATT when its status has not yet been determined; if you decline, the App continues with limited advertising. Integrated SDK privacy manifests declare categories including device identifiers, ad interactions, diagnostics and performance information; some components also declare coarse location, purchase history, and other data types for analytics or app functionality. A manifest describes an SDK's declared data practices, not proof that every category is transmitted in every session. We do not intentionally provide your financial entries, receipt images, notes, or iCloud records to advertising SDKs. You can revisit this choice at any time in Settings → Privacy and iCloud → Advertising Privacy; a new choice takes effect on the next app launch.</p>
+    <p>The SDKs included in the current app build declare these Apple privacy data categories: device identifiers, advertising data, crash data, performance data, other diagnostic data, product interaction, coarse location, purchase history, and other data (such as technical device information). AppMetrica AdSupport declares that device identifiers may be linked to a person and used for tracking when permitted. “Purchase history” is an SDK/App Store data category, not the expense records you enter into Xpense. Some declarations are conditional on SDK configuration or permission; inclusion in a privacy manifest does not prove that each category is transmitted in every session. The App Store privacy label must account for data actually collected by these partners as well as by us.</p>
 
     <h3>Permissions the App requests</h3>
+    <div class="table-scroll" role="region" aria-label="App permissions" tabindex="0">
     <table>
       <thead><tr><th>Permission</th><th>Why</th><th>Optional?</th></tr></thead>
       <tbody>
         <tr><td>Camera</td><td>To photograph a receipt so its text can be read on-device. Only requested the first time you tap "Scan receipt."</td><td>Yes — you can always add entries manually instead.</td></tr>
-        <tr><td>Photos</td><td>To let you choose a receipt image from your photo library instead of the camera. Requested only when you tap 'Choose from Photos.'</td><td>You can grant access to your full library or pick specific photos using iOS's limited access option; the App only processes the receipt image you select, never scans the rest of your library, and does not permanently store the image.</td></tr>
-        <tr><td>Notifications</td><td>To remind you locally when a recurring payment is due.</td><td>Yes — declining just means no reminders; everything else still works.</td></tr>
-        <tr><td>App Tracking Transparency</td><td>After your advertising choice, to ask whether advertising partners may track activity across apps and websites owned by other companies.</td><td>Yes — declining keeps the App usable and ads may continue in a limited, non-personalised form.</td></tr>
+        <tr><td>Photo selection</td><td>The system Photos picker lets you select a receipt without granting the App access to your whole library.</td><td>No full-library permission is requested; only the image you choose is passed to the App for on-device processing.</td></tr>
+        <tr><td>Notifications</td><td>For enabled subscription, budget, and optional periodic reminders. The initial request is delayed until about 10 seconds after setup and the advertising choice.</td><td>Yes — declining just means no reminders; everything else still works.</td></tr>
+        <tr><td>App Tracking Transparency</td><td>Requested only when you choose personalised advertising, if permission has not already been determined.</td><td>Yes — declining keeps the App usable with limited advertising.</td></tr>
       </tbody>
     </table>
+    </div>
     <p>The App only processes the receipt image you select. It does not browse, scan, or access the rest of your photo library, and does not permanently store the image.</p>
 
     <h3>Notifications</h3>
-    <p>If you allow it, the App schedules local reminders for upcoming recurring-payment due dates. These user-visible reminders are generated and delivered entirely on your device — no server sends reminder content. CloudKit may use an invisible background system signal to refresh your private iCloud sync; it is not a user notification and carries no reminder content.</p>
-
-    <h3>Support communications</h3>
-    <p>If you email us for support, we receive and retain the information you voluntarily include, such as your name, email address, message, and any attachments. We use it only to respond to and manage your support request; we do not use it for advertising, analytics, or sale. Please do not email receipt images, financial records, or other sensitive information unless it is essential to resolving your request.</p>
+    <p>If you allow it, the App schedules enabled subscription, budget, and periodic reminders locally. A recurring income or expense plan does not create a separate notification; due entries are recorded when the App is opened on or after their date. Daily entry reminders are off by default; when enabled, the App skips today's reminder if an entry has already been recorded when it schedules it. User-visible reminders use the App's selected language and are generated and delivered on your device; no server sends reminder content. CloudKit may use an invisible background system signal to refresh your private iCloud sync; it is not a user notification and carries no reminder content.</p>
 
     <h3>Deleting your data</h3>
-    <p>Settings → <strong>Delete All Data</strong> permanently erases every entry, subscription, category, and cached exchange rate — from your device <em>and</em> from your private iCloud database — after a confirmation step. This cannot be undone.</p>
-    <p>Simply deleting the App from your device removes the local copy immediately, but a synced copy may remain in your private iCloud storage until you either use the button above beforehand, or remove it yourself via iOS Settings → [Your Name] → iCloud → Manage Account Storage → Xpense Budget Manager → Delete Data.</p>
+    <p>Settings → <strong>Delete All Data</strong> removes your financial records from this device after confirmation. When iCloud sync is available, the App sends those deletions to your private iCloud database through Apple's automatic synchronization; this may take time and cannot be confirmed instantly while offline. The action cannot be undone locally. To remove an iCloud copy directly, use iOS Settings → [Your Name] → iCloud → Manage Account Storage → Xpense Budget Manager → Delete Data.</p>
+    <p>Simply deleting the App from your device removes its local copy but does not itself delete records already synced to iCloud.</p>
 
     <h3>Your rights and choices</h3>
-    <p>Because your records live only on your device and in your own private iCloud account, most data-protection rights (access, correction, portability) are already in your hands by default — you can see, edit, or export (as CSV) everything at any time from within the App. To fully delete everything, use Settings → Delete All Data (see above). Advertising partners process their own technical data under their own privacy notices; you can change the App’s advertising choice at any time from Settings → Privacy and iCloud → Advertising Privacy.</p>
+    <p>You can view and correct your financial entries in the App and export supported records as CSV through the report feature. For deletion, use Settings → Delete All Data and allow iCloud to sync, or remove the iCloud copy directly as described above. Advertising partners process their own technical data under their own privacy notices; you can change the App’s advertising choice at any time from Settings → Privacy and iCloud → Advertising Privacy.</p>
+    <p>If you email us for support, we receive your email address and whatever you choose to include in the message or attachments. This correspondence is handled through our email provider, separately from your in-app financial records. Please avoid sending sensitive financial details or receipt images unless needed to explain the issue. You can ask us about deleting a support conversation at the contact address below.</p>
 
     <h3>Not financial advice</h3>
     <p>The App is a personal bookkeeping tool. It does not provide tax or accounting advice and is not an official accounting or banking service.</p>
 
-    <h3>Children's privacy</h3>
-    <p>The App is a general-audience utility and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
-
     <h3>Data retention</h3>
-    <p>We do not operate any backend server or database of our own, so we never hold a copy of your records to retain in the first place. Your data lives only on your device and in your own private iCloud account.</p>
+    <p>We do not operate a backend database for the financial records you enter in the App. Those records are stored on your device and, when syncing is available, in your private iCloud database. Advertising partners may separately retain the technical advertising data described above under their own privacy policies; the App's Delete All Data action does not directly erase data held by those partners.</p>
 
     <h3>Changes to this policy</h3>
-    <p>If this policy changes, the "Last updated" date above will be revised. Continued use of the App after a change constitutes acceptance of the updated policy.</p>
+    <p>If this policy changes, we will revise the "Last updated" date above. You can review the current version on this page.</p>
 
     <h3>Contact</h3>
     <p>Questions about this policy can be sent to <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a>.</p>
@@ -241,63 +246,63 @@
     <p>Uygulamayı kullanmak için hesap oluşturman, giriş yapman ya da adın, e-postan gibi kimlik bilgisi vermen gerekmiyor. İşlettiğimiz hiçbir sunucuda giriş ekranı ya da kullanıcı profili yok.</p>
 
     <h3>Finansal kayıtların: cihazında, yalnızca kendi iCloud'una senkronize</h3>
-    <p>Kaydettiğin her şey — gelir/gider kayıtları, tutarlar, para birimleri, tarihler, mağaza adları, kategoriler, notlar ve yinelenen ödeme ("abonelik") planları — cihazında yerel olarak saklanır. Ayrıca Apple'ın CloudKit çatısı kullanılarak, kendi Apple Hesabına bağlı private iCloud veritabanına da senkronize edilir.</p>
-    <p>Bu senkronizasyon fırsatçı ve tamamen özeldir: uygulamayı silip tekrar kurduğunda ya da aynı Apple Hesabıyla yeni bir cihaza geçtiğinde kayıtlarının kaybolmamasını sağlar. <strong>Biz bu veriyi göremeyiz, erişemeyiz, bir kopyasını alamayız</strong> — hiçbir zaman işlettiğimiz bir sunucudan geçmez, hiçbir üçüncü tarafla paylaşılmaz. iCloud'a giriş yapmadıysan ya da iCloud alanın doluysa, Uygulama sadece yerel depoyla çalışmaya devam eder; hiçbir şey bozulmaz.</p>
-    <p>Senkron olduktan sonra iCloud'dan çıkış yaparsan (ya da iCloud'u kapatırsan), cihazın yerel kopyayla normal çalışmaya devam eder — cihazdan hiçbir şey silinmez. Yalnızca senkronizasyon durur: yeni değişiklikler artık yukarı gitmez, başka cihazlardan bir şey inmez, tekrar giriş yapana kadar. O hesabın private iCloud'unda zaten senkron olmuş kayıtlar orada durur; aynı hesaba tekrar girdiğinde senkron kaldığı yerden devam eder. Farklı bir Apple Hesabına geçersen, o hesabın kendi (başta boş) iCloud verisiyle başlarsın — eski hesabının verisi kaybolmaz, sadece eski hesaba dönene kadar görünmez. Bunun belirsiz kalmaması için Ayarlar'da canlı bir "iCloud senkronizasyonu: Aktif / Kapalı" göstergesi bulunur.</p>
-    <p>Cihazındaki yerel kopya ayrıca tam dosya şifrelemesiyle (<code>NSFileProtectionComplete</code>) korunur — telefon kilitliyken, cihazdaki başka bir yazılım tarafından bile okunamaz.</p>
+    <p>Kaydettiğin her şey — gelir/gider kayıtları, tutarlar, para birimleri, tarihler, mağaza adları, kategoriler, notlar, abonelik planları ve bunlardan ayrı tekrarlayan gelir/gider planları ile gerçekleşme kayıtları — cihazında yerel olarak saklanır. iCloud kullanılabiliyorsa Apple'ın CloudKit çatısıyla kendi Apple Hesabına bağlı özel iCloud veritabanına da eşzamanlanır.</p>
+    <p>Bu eşzamanlama fırsatçı ve özeldir: eşzamanlanması tamamlanmış kayıtlar, uygulamayı yeniden kurduğunda veya aynı Apple Hesabıyla başka cihaza geçtiğinde geri gelebilir. <strong>Bu finansal veriyi işlettiğimiz bir sunucudan veya geliştirici panelimizden göremeyiz ve kopyasını alamayız.</strong> iCloud kullanılamadığında uygulama yerel depoyla çalışabilir; ancak yalnızca cihazda kalan değişiklikler bu yolla yedeklenmiş olmaz.</p>
+    <p>iCloud'dan çıkış yapmak, Uygulama için iCloud'u kapatmak veya Apple Hesabını değiştirmek, Apple eşzamanlama durumunu güncellerken cihazında hangi kayıtların göründüğünü etkileyebilir. Hesap değiştirirken yerel kopyanın mutlaka korunacağına güvenme: önemli kayıtlarını önce dışa aktar, bekleyen eşzamanlamanın bitmesini bekle ve işlemden sonra Uygulamayı tekrar kontrol et. Ayarlar'daki iCloud durumu, hizmetin kullanılabilirliğini gösterir; her kaydın yüklenmesini tek başına doğrulamaz.</p>
+    <p>Uygulama, yerel veri dosyası için tam dosya koruması (<code>NSFileProtectionComplete</code>) ister; bu, cihaz kilitliyken dosyanın korunmasına yardımcı olur.</p>
 
     <h3>Fiş tarama</h3>
-    <p>Fiş tarama özelliğini kullanırsan, çektiğin fotoğraf tutarı, tarihi ve mağaza adını okumak için tamamen cihazında, Apple'ın cihaz-üstü Vision çatısıyla işlenir. <strong>Fotoğrafın kendisi hiçbir yere yüklenmez, hiçbir yerde saklanmaz, metin okunur okunmaz bellekten atılır.</strong></p>
+    <p>Fiş tararsan çektiğin veya seçtiğin görsel; tutar, tarih ve mağaza adı önermek için cihazında Apple'ın Vision çatısıyla işlenir. Uygulama fiş görselini yüklemez veya kalıcı olarak saklamaz. Tarama incelemesi sırasında görseli bellekte kullanır; kaydedilen finansal kaydın parçası olarak tutmaz. Tanıma hatalı olabilir; kaydetmeden önce önerileri kontrol et.</p>
 
     <h3>Uygulamanın yaptığı ağ istekleri</h3>
+    <div class="table-scroll" role="region" aria-label="Ağ istekleri" tabindex="0">
     <table>
       <thead><tr><th>Amaç</th><th>Hedef</th><th>Gönderilen veri</th></tr></thead>
       <tbody>
-        <tr><td>Döviz kurları</td><td><code>api.frankfurter.dev</code> (Avrupa Merkez Bankası referans kurları)</td><td>Kişisel veri yok — yalnızca sorgulanan para birimi çifti ve tarih.</td></tr>
-        <tr><td>iCloud senkronizasyonu</td><td>Apple CloudKit (kendi private veritabanın)</td><td>Finansal kayıtların, Apple tarafından aktarımda ve depoda şifrelenmiş, yalnızca senin okuyabileceğin şekilde.</td></tr>
-        <tr><td>Reklamlar</td><td>Unity LevelPlay ve yapılandırılmış reklam ortakları</td><td>Cihaz ve reklam kimlikleri, reklam sunumu/etkileşim verileri, IP veya ülke düzeyinde yaklaşık konum ile sınırlı performans verileri. Finansal kayıtların, fiş görsellerin, notların ve iCloud verilerin reklam ortaklarına asla gönderilmez.</td></tr>
+        <tr><td>Döviz kurları</td><td><code>api.frankfurter.dev</code> (Avrupa Merkez Bankası referans kurları)</td><td>Sorgulanan para birimi çifti ve tarih; finansal kayıtların gönderilmez. Her internet isteğinde olduğu gibi hizmet IP adresin gibi ağ bilgilerini de alabilir.</td></tr>
+        <tr><td>iCloud senkronizasyonu</td><td>Apple CloudKit (kendi özel veritabanın)</td><td>Finansal kayıtların Apple'ın iCloud güvenliğiyle korunur ve Apple Hesabın üzerinden erişilebilir; geliştirici panelimizde görünmez.</td></tr>
+        <tr><td>Reklamlar</td><td>Unity LevelPlay ve yapılandırılmış reklam ortakları</td><td>Ortağa ve reklam tercihine göre SDK'lar kimlikleri, reklam etkileşimlerini, tanılama ve performans bilgilerini ve kendi gizlilik açıklamalarındaki diğer verileri işleyebilir. Uygulama finansal kayıtlarını, fiş görsellerini, notlarını veya iCloud kayıtlarını reklam SDK'larına kasıtlı olarak sağlamaz.</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>Reklamlar</h3>
-    <p>Uygulama Unity LevelPlay aracılığıyla banner, sayfa içi 300×250 banner, tam ekran ve isteğe bağlı ödüllü reklamlar ister ve gösterebilir. Native reklam göstermez. Yapılandırılmış reklam ortakları şu anda ironSource Ads, Unity Ads, Liftoff Monetize ve Yandex Ads'tir. Yandex Mobile Ads SDK'sı teknik bağımlılık olarak AppMetrica destek bileşenlerini içerir; Uygulama kendi analitiği için AppMetrica'yı ayrıca çağırmaz. Reklam SDK'ları başlamadan önce kişiselleştirilmiş veya sınırlı reklam tercihini sorarız. Bu tercih uygulamanın çalışıp çalışmayacağını değil, reklam kişiselleştirmesini belirler; sınırlı reklam seçeneğinde de reklam gösterilebilir. Her iki tercih sonrasında Apple'ın İzleme Şeffaflığı (ATT) istemi bir kez gösterilebilir; reddedebilir ve seçtiğin reklam tercihiyle Uygulamayı kullanmaya devam edebilirsin. Reklam ortakları reklam sunmak, ölçmek, sıklığını sınırlamak ve güvenliğini sağlamak için cihaz veya reklam kimlikleri, reklam sunumu/etkileşim verileri, IP veya ülke düzeyinde yaklaşık konum ile sınırlı performans verilerini işleyebilir. Finansal kayıtların, fiş görsellerin, notların ve iCloud verilerin reklam ortaklarına asla gönderilmez. Bu tercihi dilediğin zaman Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin; yeni tercih bir sonraki uygulama açılışında uygulanır.</p>
+    <p>Uygulama banner reklamlar (inline 300×250 MREC bannerlar dahil), tam ekran reklamlar ve isteğe bağlı ödüllü reklamlar istemek ve göstermek için Unity LevelPlay aracılığını kullanır. Yapılandırılmış reklam ortakları şu anda ironSource Ads, Unity Ads, Liftoff Monetize ve Yandex Ads'tir. Yandex Mobile Ads, AppMetrica bileşenlerini bağımlılık olarak getirir ve Yandex'in açıklamasına göre reklam hizmeti için AppMetrica'yı otomatik başlatır; Uygulama, AppMetrica'yı kendi analitik ürünü olarak ayrıca entegre etmez. Reklam SDK'ları başlamadan önce kişiselleştirilmiş veya sınırlı reklam tercihini sorarız. Sınırlı reklam seçeneğinde de reklam gösterilebilir. Sınırlı reklam seçimi Apple'ın İzleme Şeffaflığı (ATT) iznini istemez. Kişiselleştirilmiş reklam seçimi, izin durumu henüz belirlenmediyse ATT iznini ister; reddedilirse uygulama sınırlı reklamlarla devam eder. Entegre SDK'ların gizlilik bildirimlerinde cihaz kimlikleri, reklam etkileşimleri, tanılama ve performans bilgileri; bazı bileşenlerde yaklaşık konum, satın alma geçmişi ve başka veri türleri de beyan edilir. Bir SDK bildirimi, her veri türünün her oturumda aktarıldığının kanıtı değildir. Finansal kayıtlarını, fiş görsellerini, notlarını veya iCloud kayıtlarını reklam SDK'larına kasıtlı olarak sağlamayız. Bu tercihi dilediğin zaman Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin; yeni tercih bir sonraki uygulama açılışında uygulanır.</p>
+    <p>Mevcut uygulama derlemesindeki SDK'lar Apple'ın şu gizlilik veri türlerini beyan eder: cihaz kimlikleri, reklam verileri, çökme verileri, performans verileri, diğer tanılama verileri, ürün etkileşimi, yaklaşık konum, satın alma geçmişi ve diğer veriler (örneğin teknik cihaz bilgileri). AppMetrica AdSupport, izin verildiğinde cihaz kimliklerinin kişiyle ilişkilendirilebileceğini ve izleme için kullanılabileceğini bildirir. “Satın alma geçmişi”, SDK/App Store veri kategorisidir; Xpense'e elle girdiğin gider kayıtları anlamına gelmez. Bazı beyanlar SDK ayarına veya izne bağlıdır; gizlilik bildiriminde bulunmaları her türün her oturumda aktarıldığını kanıtlamaz. App Store gizlilik etiketi yalnızca bizim değil, bu ortakların fiilen topladığı verileri de kapsamalıdır.</p>
 
     <h3>Uygulamanın istediği izinler</h3>
+    <div class="table-scroll" role="region" aria-label="Uygulama izinleri" tabindex="0">
     <table>
       <thead><tr><th>İzin</th><th>Neden</th><th>Zorunlu mu?</th></tr></thead>
       <tbody>
         <tr><td>Kamera</td><td>Fişin fotoğrafını çekip metnini cihazda okuyabilmek için. Yalnızca ilk kez "Fiş tara"ya bastığında istenir.</td><td>Hayır — istersen her zaman elle kayıt girebilirsin.</td></tr>
-        <tr><td>Fotoğraflar</td><td>Kamera yerine fotoğraf kitaplığından bir fiş görseli seçebilmen için. Yalnızca 'Fotoğraflardan Seç'e dokunduğunda istenir.</td><td>Tüm kitaplığa erişim verebilir ya da iOS'un sunduğu sınırlı erişim seçeneğiyle belirli fotoğrafları seçebilirsin; Uygulama yalnızca seçtiğin fiş görselini işler, kitaplığının geri kalanını hiç taramaz ve fiş görselini kalıcı olarak saklamaz.</td></tr>
-        <tr><td>Bildirimler</td><td>Yinelenen bir ödemenin günü geldiğinde yerel olarak hatırlatmak için.</td><td>Hayır — reddedersen sadece hatırlatma gelmez, geri kalan her şey çalışmaya devam eder.</td></tr>
-        <tr><td>İzleme Şeffaflığı (ATT)</td><td>Reklam tercihin sonrasında, reklam ortaklarının diğer şirketlere ait uygulama ve sitelerdeki etkinliği izleyip izleyemeyeceğini sormak için.</td><td>Hayır — reddedersen Uygulama çalışmaya devam eder; reklamlar sınırlı, kişiselleştirilmemiş biçimde gösterilebilir.</td></tr>
+        <tr><td>Fotoğraf seçimi</td><td>Sistem Fotoğraflar seçicisi, tüm arşive erişim vermeden fiş seçmeni sağlar.</td><td>Tüm fotoğraf arşivi izni istenmez; yalnızca seçtiğin görsel cihaz içi işleme için Uygulamaya verilir.</td></tr>
+        <tr><td>Bildirimler</td><td>Etkinleştirdiğin abonelik, bütçe ve isteğe bağlı dönemsel hatırlatmalar için. İlk izin isteği kurulum ve reklam tercihinden yaklaşık 10 saniye sonraya ertelenir.</td><td>Hayır — reddedersen sadece hatırlatma gelmez, geri kalan her şey çalışmaya devam eder.</td></tr>
+        <tr><td>İzleme Şeffaflığı (ATT)</td><td>Yalnızca kişiselleştirilmiş reklam seçersen ve izin durumu daha önce belirlenmemişse istenir.</td><td>Hayır — reddedersen Uygulama sınırlı reklamlarla çalışmaya devam eder.</td></tr>
       </tbody>
     </table>
+    </div>
     <p>Uygulama yalnızca seçtiğin fiş görselini işler. Fotoğraf kitaplığının geri kalanını taramaz, göz atmaz veya erişmez; görseli kalıcı olarak saklamaz.</p>
 
     <h3>Bildirimler</h3>
-    <p>İzin verirsen, Uygulama yaklaşan yinelenen ödeme günleri için yerel hatırlatmalar planlar. Kullanıcıya görünen bu hatırlatmalar tamamen cihazında oluşturulur ve iletilir; hiçbir sunucu hatırlatma içeriği göndermez. CloudKit, private iCloud senkronizasyonunu yenilemek için görünmeyen bir arka plan sistem sinyali kullanabilir; bu kullanıcı bildirimi değildir ve hatırlatma içeriği taşımaz.</p>
-
-    <h3>Destek iletişimleri</h3>
-    <p>Destek için bize e-posta gönderirsen, adın, e-posta adresin, mesajın ve eklerin gibi gönüllü olarak paylaştığın bilgileri alır ve saklarız. Bu bilgileri yalnızca destek talebini yanıtlamak ve yönetmek için kullanırız; reklam, analiz veya satış amacıyla kullanmayız. Talebini çözmek için zorunlu olmadıkça fiş görselleri, finansal kayıtlar veya diğer hassas bilgileri e-postayla göndermemeni rica ederiz.</p>
+    <p>İzin verirsen, Uygulama etkinleştirdiğin abonelik, bütçe ve dönemsel hatırlatmaları yerel olarak planlar. Tekrarlayan gelir/gider planları ayrı bir bildirim oluşturmaz; vadesi gelen kayıtlar uygulama vade gününde veya sonrasında açıldığında işlenir. Günlük kayıt hatırlatması varsayılan olarak kapalıdır; açarsan uygulama planlama sırasında bugün kayıt olduğunu görürse bugünkü hatırlatmayı atlar. Kullanıcıya görünen hatırlatmalar uygulamada seçtiğin dilde ve cihazında oluşturulup iletilir; hiçbir sunucu hatırlatma içeriği göndermez. CloudKit, özel iCloud eşzamanlamasını yenilemek için görünmeyen bir arka plan sistem sinyali kullanabilir; bu kullanıcı bildirimi değildir ve hatırlatma içeriği taşımaz.</p>
 
     <h3>Verini silmek</h3>
-    <p>Ayarlar → <strong>Tüm Verileri Sil</strong>, bir onay adımından sonra tüm kayıtları, abonelikleri, kategorileri ve kur önbelleğini — hem cihazından hem private iCloud veritabanından — kalıcı olarak siler. Bu işlem geri alınamaz.</p>
-    <p>Uygulamayı cihazından silmek yerel kopyayı hemen kaldırır, ama senkronize kopya, yukarıdaki butonu önceden kullanmadıysan ya da iOS Ayarlar → [Adın] → iCloud → Hesap Depolamasını Yönet → Xpense Budget Manager → Veriyi Sil yolunu izlemediysen private iCloud alanında kalabilir.</p>
+    <p>Ayarlar → <strong>Tüm Verileri Sil</strong>, onaydan sonra finansal kayıtlarını bu cihazdan siler. iCloud eşzamanlaması kullanılabiliyorsa uygulama bu silmeleri Apple'ın otomatik eşzamanlamasıyla özel iCloud veritabanına iletir; işlem zaman alabilir ve çevrimdışıyken anında tamamlandığı doğrulanamaz. Yerel silme geri alınamaz. iCloud kopyasını doğrudan silmek için iOS Ayarlar → [Adın] → iCloud → Hesap Depolamasını Yönet → Xpense Budget Manager → Veriyi Sil yolunu kullanabilirsin.</p>
+    <p>Uygulamayı cihazından kaldırmak yerel kopyayı siler, fakat iCloud'a daha önce eşzamanlanmış kayıtları tek başına silmez.</p>
 
     <h3>Haklarının ve tercihlerin</h3>
-    <p>Kayıtların yalnızca cihazında ve kendi private iCloud hesabında yaşadığı için, veri koruma haklarının çoğu (erişim, düzeltme, taşınabilirlik) zaten varsayılan olarak elinde — uygulama içinden her şeyi istediğin zaman görebilir, düzenleyebilir ya da (CSV olarak) dışa aktarabilirsin. Tamamen silmek için Ayarlar → Tüm Verileri Sil'i kullan (yukarıya bak). Kişisel verilerini hiçbir koşulda, hiç kimseye satmıyoruz, kiralamıyoruz, takas etmiyoruz.</p>
+    <p>Finansal kayıtlarını uygulamada görebilir ve düzeltebilir; desteklenen kayıtları rapor özelliğiyle CSV olarak dışa aktarabilirsin. Silmek için Ayarlar → Tüm Verileri Sil'i kullanıp iCloud eşzamanlamasına zaman tanı veya iCloud kopyasını yukarıdaki yoldan doğrudan sil. Reklam ortakları kendi teknik verilerini kendi gizlilik bildirimlerine göre işler; uygulamanın reklam tercihini istediğin zaman Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin.</p>
+    <p>Destek için bize e-posta gönderirsen e-posta adresini ve mesajına ya da eklerine koymayı seçtiğin bilgileri alırız. Bu yazışma, uygulama içindeki finansal kayıtlarından ayrı olarak e-posta sağlayıcımız üzerinden işlenir. Sorunu anlatmak için gerekli değilse hassas finansal ayrıntı veya fiş görseli göndermemeni öneririz. Destek yazışmasının silinmesi hakkında aşağıdaki adresten bize ulaşabilirsin.</p>
 
     <h3>Finansal tavsiye değildir</h3>
     <p>Uygulama kişisel bir kayıt tutma aracıdır. Vergi ya da muhasebe danışmanlığı vermez, resmi bir muhasebe ya da bankacılık hizmeti değildir.</p>
 
-    <h3>Çocukların gizliliği</h3>
-    <p>Uygulama genel kitleye yönelik bir araçtır, 13 yaş altı çocukları hedeflemez. Çocuklardan bilerek kişisel veri toplamayız.</p>
-
     <h3>Veri saklama</h3>
-    <p>Kendi işlettiğimiz bir sunucu/veritabanı olmadığı için zaten elimizde saklayacağımız bir kopyan hiç oluşmuyor. Verilerin yalnızca cihazında ve kendi private iCloud hesabında yaşıyor.</p>
+    <p>Uygulamaya girdiğin finansal kayıtlar için kendimize ait bir sunucu/veritabanı işletmiyoruz. Bu kayıtlar cihazında ve eşzamanlama kullanılabiliyorsa kendi özel iCloud veritabanında saklanır. Reklam ortakları ise yukarıda açıklanan teknik reklam verilerini kendi gizlilik politikalarına göre ayrıca saklayabilir; Uygulamadaki Tüm Verileri Sil işlemi ortakların elindeki verileri doğrudan silmez.</p>
 
     <h3>Bu politikadaki değişiklikler</h3>
-    <p>Politika değişirse yukarıdaki "Son güncelleme" tarihi güncellenir. Değişiklikten sonra Uygulamayı kullanmaya devam etmen, güncellenmiş politikayı kabul ettiğin anlamına gelir.</p>
+    <p>Politika değişirse yukarıdaki "Son güncelleme" tarihini güncelleriz. Güncel metni bu sayfadan inceleyebilirsin.</p>
 
     <h3>İletişim</h3>
     <p>Bu politikayla ilgili sorular için: <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
