@@ -18,7 +18,7 @@
     --font-mono: ui-monospace, "SF Mono", "Menlo", "Cascadia Code", monospace;
     --font-body: -apple-system, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   }
-
+ 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
       --bg: #0c1017;
@@ -43,7 +43,7 @@
     --rule: #262e3d;
     --rule-strong: #3a424d;
   }
-
+ 
   * { box-sizing: border-box; }
   body {
     background: var(--bg);
@@ -54,7 +54,7 @@
     padding: 56px 24px 100px;
   }
   .page { max-width: 680px; margin: 0 auto; }
-
+ 
   .kicker {
     font-family: var(--font-mono);
     font-size: 12px;
@@ -70,7 +70,7 @@
     text-wrap: balance;
   }
   .dek { color: var(--text-muted); font-size: 15px; margin: 0 0 40px; }
-
+ 
   .lang-nav {
     display: flex;
     gap: 8px;
@@ -87,7 +87,7 @@
     border-radius: 999px;
   }
   .lang-nav a:hover { border-color: var(--accent); color: var(--accent-strong); }
-
+ 
   section { margin: 44px 0; scroll-margin-top: 24px; }
   h2 {
     font-family: var(--font-mono);
@@ -112,13 +112,13 @@
     border-radius: 4px;
     padding: 0.1em 0.4em;
   }
-
+ 
   .divider {
     margin: 56px 0;
     border: none;
     border-top: 2px dashed var(--rule-strong);
   }
-
+ 
   table {
     width: 100%;
     border-collapse: collapse;
@@ -143,7 +143,7 @@
     text-transform: uppercase;
     color: var(--text-muted);
   }
-
+ 
   .foot {
     margin-top: 56px;
     padding-top: 18px;
@@ -157,30 +157,30 @@
 <div class="page">
   <p class="kicker">Xpense Budget Manager · Legal</p>
   <h1>Privacy Policy</h1>
-  <p class="dek">Last updated / Son güncelleme: October 6, 2026 / 6 Ekim 2026</p>
-
+  <p class="dek">Last updated / Son güncelleme: October 7, 2026 / 7 Ekim 2026</p>
+ 
   <nav class="lang-nav">
     <a href="#en">English</a>
     <a href="#tr">Türkçe</a>
   </nav>
-
+ 
   <section id="en">
     <h2>01 — English</h2>
-
+ 
     <p>Xpense Budget Manager ("the App") is a personal expense and income tracker developed by an individual developer ("we", "us"). This policy explains what information the App handles, where it goes, and how you can remove it.</p>
-
+ 
     <h3>No account, no sign-in</h3>
     <p>The App does not ask you to create an account, sign in, or provide your name, email, or any identifying information to use it. There is no login screen and no user profile on any server we operate.</p>
-
+ 
     <h3>Your financial records: on your device, synced only to your own iCloud</h3>
     <p>Your income and expense entries, budgets, categories, notes, recurring plans, subscription schedules, and payment confirmations are stored on your device. When your iCloud account is available and the device has an internet connection, Apple's CloudKit framework can also sync these records to the private iCloud database tied to your Apple Account.</p>
     <p>This sync is automatic, opportunistic, and private: records that finish syncing may be restored after reinstalling or on another device signed in with the same Apple Account. <strong>We cannot see, access, or receive a copy of this financial data</strong> through any server we operate or our developer portal. The App can continue storing entries locally while offline; changes that have not yet synced are not backed up by this sync.</p>
     <p>Signing out of iCloud, disabling iCloud for the App, or switching Apple Accounts can change which records are available locally while Apple updates the sync state. Do not rely on a local copy surviving an account change: export important records before changing iCloud settings, allow time for changes to sync, and check the App again afterward. The iCloud indicator in Settings shows account availability; it does not confirm internet connectivity or that every pending record has uploaded.</p>
     <p>The App requests complete file protection (<code>NSFileProtectionComplete</code>) for its local store, which helps protect the stored file while the device is locked.</p>
-
+ 
     <h3>Receipt scanning</h3>
     <p>If you use receipt scanning, the image you take or select is processed on your device using Apple's Vision framework to suggest an amount, date, and merchant name. The App does not upload or permanently store the receipt image. It uses the image in memory for scan review and does not retain it as part of the saved financial record. Recognition can be wrong; review the suggestions before saving.</p>
-
+ 
     <h3>Network requests the App makes</h3>
     <div class="table-scroll" role="region" aria-label="Network requests" tabindex="0">
     <table>
@@ -193,11 +193,12 @@
     </table>
     </div>
     <p>Exchange rates are fetched when needed, not on a fixed schedule. Previously fetched rates for a currency pair are kept on the device. If a rate cannot be fetched while offline, the App can use a suitable saved rate for that pair; if none exists, the entry is still saved but its conversion to your main currency remains pending and is excluded from converted totals until resolved. No amount or merchant details are sent in a rate request.</p>
-
+ 
     <h3>Advertising</h3>
     <p>The App uses Unity LevelPlay mediation to request and display banner ads (including inline 300×250 MREC banners), interstitial ads, and optional rewarded ads from configured advertising partners, currently including ironSource Ads, Unity Ads, Liftoff Monetize, and Yandex Ads. Yandex Mobile Ads brings in AppMetrica components and, according to Yandex, initializes AppMetrica automatically for its advertising service; the App does not separately integrate AppMetrica as its own analytics product. Before advertising SDKs start, the App asks you to choose personalised or limited advertising. Limited advertising still allows ads. Choosing limited advertising does not request Apple's App Tracking Transparency (ATT) permission. Choosing personalised advertising requests ATT when its status has not yet been determined; if you decline, the App continues with limited advertising. The SDK manifests describe declared data practices, not proof that every category is transmitted in every session. You can revisit this choice at any time in Settings → Privacy and iCloud → Advertising Privacy. The new choice applies immediately to new ad requests; previously loaded ads are discarded. Choosing limited advertising does not revoke a previously granted iOS ATT permission, which you can change separately in iOS Settings.</p>
-    <p>Our App Store privacy label lists the following data types, based on our own handling and on the privacy manifests of the advertising SDKs integrated in the App: coarse location, device identifiers, advertising data, product interaction, purchase history, crash data, performance data, other diagnostic data, other data types, and customer support content. Our App Store privacy label shows Identifiers, Usage Data, and Location under “Data Used to Track You.” If you choose personalised advertising and allow tracking in Apple's App Tracking Transparency (ATT) prompt, advertising partners may link some data in these categories with data from other companies' apps and websites for targeted advertising and ad measurement. Purchase history is listed because an AppMetrica component included through Yandex Mobile Ads declares it; the App itself does not offer in-app purchases. Customer support content applies only when you choose to email us. We do not intentionally send your in-app financial entries, notes, or receipt images to advertising partners. If you include any of these in a support email, we receive what you choose to send.</p>
-
+    <p>Our App Store privacy label lists the following data types, based on our own handling and on the privacy manifests of the advertising SDKs integrated in the App: coarse location, device identifiers, advertising data, performance data, product interaction, crash data, other diagnostic data, other data types, and customer support content. Of these, device identifiers (Device ID), advertising data, and coarse location are listed as linked to you and as used for tracking; performance data and customer support content are listed as linked to you but not used for tracking; product interaction, crash data, other diagnostic data, and other data types are listed as not linked to you. If you choose personalised advertising and allow tracking in Apple's App Tracking Transparency (ATT) prompt, advertising partners may link some data in these categories with data from other companies' apps and websites for targeted advertising and ad measurement. The App has no in-app purchases, so our privacy label does not list purchase history. Some SDK privacy manifests, such as an AppMetrica component included through Yandex Mobile Ads, list purchase history as a possible category, and that component includes an automatic revenue-tracking feature. The App itself does not report purchase or revenue events, and because it has no purchase transactions, we do not expect such data to be generated. If that changes, we will update our privacy label and this policy. Customer support content applies only when you choose to email us. We do not intentionally send your in-app financial entries, notes, or receipt images to advertising partners. If you include any of these in a support email, we receive what you choose to send.</p>
+    <p>Advertising partners handle data under their own privacy notices: <a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity</a> (Unity Ads, LevelPlay, and ironSource), <a href="https://liftoff.ai/privacy-policy/" rel="noopener">Liftoff</a> (Liftoff Monetize, formerly Vungle), and <a href="https://yandex.com/legal/confidential/" rel="noopener">Yandex</a> (including AppMetrica).</p>
+ 
     <h3>Permissions the App requests</h3>
     <div class="table-scroll" role="region" aria-label="App permissions" tabindex="0">
     <table>
@@ -210,50 +211,50 @@
       </tbody>
     </table>
     </div>
-
+ 
     <h3>Notifications</h3>
     <p>If you allow it, the App schedules enabled subscription, recurring-entry, budget, and periodic reminders locally. A recurring income or expense reminder does not itself create a financial record: a due entry is added only after you confirm it in the App. Daily entry reminders are off by default; when enabled, the App skips today's reminder if an entry has already been recorded when it schedules it. User-visible reminders use the App's selected language and are generated and delivered on your device; no server sends reminder content. CloudKit may use an invisible background system signal to refresh your private iCloud sync; it is not a user notification and carries no reminder content.</p>
-
+ 
     <h3>Deleting your data</h3>
     <p>Settings → <strong>Delete All Data</strong> removes your financial records from this device after confirmation. When iCloud sync is available, the App sends those deletions to your private iCloud database through Apple's automatic synchronization; this may take time and cannot be confirmed instantly while offline. The action cannot be undone locally. To remove an iCloud copy directly, use iOS Settings → [Your Name] → iCloud → Manage Account Storage → Xpense Budget Manager → Delete Data.</p>
     <p>Simply deleting the App from your device removes its local copy but does not itself delete records already synced to iCloud.</p>
-
+ 
     <h3>Your rights and choices</h3>
     <p>You can view and correct your financial entries in the App and export supported records as CSV through the report feature. For deletion, use Settings → Delete All Data and allow iCloud to sync, or remove the iCloud copy directly as described above. Advertising partners process their own technical data under their own privacy notices; you can change the App’s advertising choice at any time from Settings → Privacy and iCloud → Advertising Privacy.</p>
     <p>If you email us for support, we receive your email address and whatever you choose to include in the message or attachments. This correspondence is handled through our email provider, separately from your in-app financial records. Please avoid sending sensitive financial details or receipt images unless needed to explain the issue. You can ask us about deleting a support conversation at the contact address below.</p>
-
+ 
     <h3>Not financial advice</h3>
     <p>The App is a personal bookkeeping tool. It does not provide tax or accounting advice and is not an official accounting or banking service.</p>
-
+ 
     <h3>Data retention</h3>
     <p>We do not operate a backend database for the financial records you enter in the App. Those records are stored on your device and, when syncing is available, in your private iCloud database. Advertising partners may separately retain the technical advertising data described above under their own privacy policies; the App's Delete All Data action does not directly erase data held by those partners.</p>
-
+ 
     <h3>Changes to this policy</h3>
     <p>If this policy changes, we will revise the "Last updated" date above. You can review the current version on this page.</p>
-
+ 
     <h3>Contact</h3>
     <p>Questions about this policy can be sent to <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a>.</p>
   </section>
-
+ 
   <hr class="divider" />
-
+ 
   <section id="tr">
     <h2>02 — Türkçe</h2>
-
+ 
     <p>Xpense Bütçe Yöneticisi ("Uygulama"), bağımsız bir geliştirici ("biz") tarafından geliştirilen kişisel bir gelir/gider takip uygulamasıdır. Bu metin, Uygulamanın hangi bilgileri nasıl işlediğini, nereye gittiğini ve nasıl silebileceğini açıklar.</p>
-
+ 
     <h3>Hesap yok, giriş yok</h3>
     <p>Uygulamayı kullanmak için hesap oluşturman, giriş yapman ya da adın, e-postan gibi kimlik bilgisi vermen gerekmiyor. İşlettiğimiz hiçbir sunucuda giriş ekranı ya da kullanıcı profili yok.</p>
-
+ 
     <h3>Finansal kayıtların: cihazında, yalnızca kendi iCloud'una senkronize</h3>
     <p>Gelir ve gider kayıtların, bütçelerin, kategorilerin, notların, tekrarlayan işlem planların, abonelik planların ve ödeme onayların cihazında saklanır. iCloud hesabın kullanılabiliyorsa ve cihazın internete bağlıysa Apple'ın CloudKit çatısı bu kayıtları kendi Apple Hesabına bağlı özel iCloud veritabanına da eşzamanlayabilir.</p>
     <p>Bu eşzamanlama otomatik, fırsatçı ve özeldir: eşzamanlanması tamamlanmış kayıtlar, uygulamayı yeniden kurduğunda veya aynı Apple Hesabıyla başka cihaza geçtiğinde geri gelebilir. <strong>Bu finansal veriyi işlettiğimiz bir sunucudan veya geliştirici panelimizden göremeyiz ve kopyasını alamayız.</strong> Uygulama çevrimdışıyken kayıtları cihazında tutmaya devam edebilir; henüz eşzamanlanmamış değişiklikler bu yolla yedeklenmiş olmaz.</p>
     <p>iCloud'dan çıkış yapmak, Uygulama için iCloud'u kapatmak veya Apple Hesabını değiştirmek, Apple eşzamanlama durumunu güncellerken cihazında hangi kayıtların göründüğünü etkileyebilir. Hesap değiştirirken yerel kopyanın mutlaka korunacağına güvenme: önemli kayıtlarını önce dışa aktar, değişikliklerin eşzamanlanması için zaman tanı ve işlemden sonra Uygulamayı tekrar kontrol et. Ayarlar'daki iCloud durumu, hesabının kullanılabilirliğini gösterir; internet bağlantısını veya her kaydın yüklenmesini doğrulamaz.</p>
     <p>Uygulama, yerel veri dosyası için tam dosya koruması (<code>NSFileProtectionComplete</code>) ister; bu, cihaz kilitliyken dosyanın korunmasına yardımcı olur.</p>
-
+ 
     <h3>Fiş tarama</h3>
     <p>Fiş tararsan çektiğin veya seçtiğin görsel; tutar, tarih ve mağaza adı önermek için cihazında Apple'ın Vision çatısıyla işlenir. Uygulama fiş görselini yüklemez veya kalıcı olarak saklamaz. Tarama incelemesi sırasında görseli bellekte kullanır; kaydedilen finansal kaydın parçası olarak tutmaz. Tanıma hatalı olabilir; kaydetmeden önce önerileri kontrol et.</p>
-
+ 
     <h3>Uygulamanın yaptığı ağ istekleri</h3>
     <div class="table-scroll" role="region" aria-label="Ağ istekleri" tabindex="0">
     <table>
@@ -266,11 +267,12 @@
     </table>
     </div>
     <p>Döviz kurları belirli aralıklarla değil, gerektiğinde alınır. Aynı para birimi çifti için daha önce alınmış kurlar cihazda saklanır. Çevrimdışıyken yeni kur alınamazsa o çift için uygun bir kayıtlı kur kullanılabilir; hiç yoksa kayıt yine saklanır ancak ana para birimine çevrimi beklemede kalır ve çözülene kadar çevrilmiş toplamlara katılmaz. Kur isteğinde tutar veya mağaza bilgisi gönderilmez.</p>
-
+ 
     <h3>Reklamlar</h3>
     <p>Uygulama banner reklamlar (inline 300×250 MREC bannerlar dahil), tam ekran reklamlar ve isteğe bağlı ödüllü reklamlar istemek ve göstermek için Unity LevelPlay aracılığını kullanır. Yapılandırılmış reklam ortakları şu anda ironSource Ads, Unity Ads, Liftoff Monetize ve Yandex Ads'tir. Yandex Mobile Ads, AppMetrica bileşenlerini bağımlılık olarak getirir ve Yandex'in açıklamasına göre reklam hizmeti için AppMetrica'yı otomatik başlatır; Uygulama, AppMetrica'yı kendi analitik ürünü olarak ayrıca entegre etmez. Reklam SDK'ları başlamadan önce kişiselleştirilmiş veya sınırlı reklam tercihini sorarız. Sınırlı reklam seçeneğinde de reklam gösterilebilir. Sınırlı reklam seçimi Apple'ın İzleme Şeffaflığı (ATT) iznini istemez. Kişiselleştirilmiş reklam seçimi, izin durumu henüz belirlenmediyse ATT iznini ister; reddedilirse uygulama sınırlı reklamlarla devam eder. SDK bildirimleri beyan edilen veri işleme uygulamalarını anlatır; her veri türünün her oturumda aktarıldığını kanıtlamaz. Bu tercihi dilediğin zaman Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin. Yeni tercih yeni reklam isteklerine hemen uygulanır; önceki tercihle yüklenen reklamlar kullanılmaz. Sınırlı reklam seçimi, daha önce verilmiş iOS ATT iznini kaldırmaz; bu izni iOS Ayarlar'dan ayrıca değiştirebilirsin.</p>
-    <p>App Store gizlilik etiketimizde, kendi veri işleme uygulamalarımıza ve Uygulamaya entegre reklam SDK'larının gizlilik bildirimlerine dayanarak şu veri türleri yer alır: yaklaşık konum, cihaz kimlikleri, reklam verileri, ürün etkileşimi, satın alma geçmişi, çökme verileri, performans verileri, diğer tanılama verileri, diğer veri türleri ve müşteri desteği içeriği. App Store gizlilik etiketimizin “Seni İzlemek İçin Kullanılan Veriler” bölümünde tanımlayıcılar, kullanım verileri ve konum kategorileri yer alır. Kişiselleştirilmiş reklamları seçip Apple'ın Uygulama İzleme Şeffaflığı (ATT) isteminde izlemeye izin verirsen reklam ortakları, bu kategorilerdeki bazı verileri hedefli reklamlar ve reklam ölçümü için başka şirketlerin uygulama ve web sitelerindeki verilerle ilişkilendirebilir. Satın alma geçmişi, Yandex Mobile Ads aracılığıyla gelen bir AppMetrica bileşeni bunu beyan ettiği için listelenir; Uygulamanın kendisi uygulama içi satın alma sunmaz. Müşteri desteği içeriği yalnızca bize e-posta göndermeyi seçtiğinde söz konusu olur. Uygulamadaki finansal kayıtlarını, notlarını veya fiş görsellerini reklam ortaklarına kasıtlı olarak göndermeyiz. Bunlardan birini destek e-postasına eklersen göndermeyi seçtiğin içeriği alırız.</p>
-
+    <p>App Store gizlilik etiketimizde, kendi veri işleme uygulamalarımıza ve Uygulamaya entegre reklam SDK'larının gizlilik bildirimlerine dayanarak şu veri türleri yer alır: yaklaşık konum, cihaz kimlikleri, reklam verileri, performans verileri, ürün etkileşimi, çökme verileri, diğer tanılama verileri, diğer veri türleri ve müşteri desteği içeriği. Bunlardan cihaz kimlikleri (Device ID), reklam verileri ve yaklaşık konum kimliğinle ilişkilendirilen ve takip için kullanılan veriler olarak; performans verileri ve müşteri desteği içeriği kimliğinle ilişkilendirilen ancak takip için kullanılmayan veriler olarak; ürün etkileşimi, çökme verileri, diğer tanılama verileri ve diğer veri türleri ise kimliğinle ilişkilendirilmeyen veriler olarak beyan edilmiştir. Kişiselleştirilmiş reklamları seçip Apple'ın Uygulama İzleme Şeffaflığı (ATT) isteminde izlemeye izin verirsen reklam ortakları, bu kategorilerdeki bazı verileri hedefli reklamlar ve reklam ölçümü için başka şirketlerin uygulama ve web sitelerindeki verilerle ilişkilendirebilir. Uygulamada uygulama içi satın alma bulunmadığı için gizlilik etiketimizde satın alma geçmişi yer almaz. Yandex Mobile Ads aracılığıyla gelen AppMetrica bileşeni gibi bazı SDK gizlilik bildirimleri satın alma geçmişini olası bir kategori olarak listeler; bu bileşen otomatik gelir takibi özelliği de içerir. Uygulamanın kendisi satın alma veya gelir olayı bildirmez ve satın alma işlemi bulunmadığı için böyle bir verinin oluşmasını beklemiyoruz. Bu değişirse gizlilik etiketimizi ve bu politikayı güncelleriz. Müşteri desteği içeriği yalnızca bize e-posta göndermeyi seçtiğinde söz konusu olur. Uygulamadaki finansal kayıtlarını, notlarını veya fiş görsellerini reklam ortaklarına kasıtlı olarak göndermeyiz. Bunlardan birini destek e-postasına eklersen göndermeyi seçtiğin içeriği alırız.</p>
+    <p>Reklam ortakları verileri kendi gizlilik bildirimlerine göre işler: <a href="https://unity.com/legal/privacy-policy" rel="noopener">Unity</a> (Unity Ads, LevelPlay ve ironSource), <a href="https://liftoff.ai/privacy-policy/" rel="noopener">Liftoff</a> (Liftoff Monetize, eski adıyla Vungle) ve <a href="https://yandex.com/legal/confidential/" rel="noopener">Yandex</a> (AppMetrica dahil).</p>
+ 
     <h3>Uygulamanın istediği izinler</h3>
     <div class="table-scroll" role="region" aria-label="Uygulama izinleri" tabindex="0">
     <table>
@@ -283,32 +285,33 @@
       </tbody>
     </table>
     </div>
-
+ 
     <h3>Bildirimler</h3>
     <p>İzin verirsen, Uygulama etkinleştirdiğin abonelik, tekrarlayan işlem, bütçe ve dönemsel hatırlatmaları yerel olarak planlar. Tekrarlayan gelir/gider hatırlatması kendi başına finansal kayıt oluşturmaz; vadesi gelen işlem yalnızca Uygulamada onayladığında kaydedilir. Günlük kayıt hatırlatması varsayılan olarak kapalıdır; açarsan uygulama planlama sırasında bugün kayıt olduğunu görürse bugünkü hatırlatmayı atlar. Kullanıcıya görünen hatırlatmalar uygulamada seçtiğin dilde ve cihazında oluşturulup iletilir; hiçbir sunucu hatırlatma içeriği göndermez. CloudKit, özel iCloud eşzamanlamasını yenilemek için görünmeyen bir arka plan sistem sinyali kullanabilir; bu kullanıcı bildirimi değildir ve hatırlatma içeriği taşımaz.</p>
-
+ 
     <h3>Verini silmek</h3>
     <p>Ayarlar → <strong>Tüm Verileri Sil</strong>, onaydan sonra finansal kayıtlarını bu cihazdan siler. iCloud eşzamanlaması kullanılabiliyorsa uygulama bu silmeleri Apple'ın otomatik eşzamanlamasıyla özel iCloud veritabanına iletir; işlem zaman alabilir ve çevrimdışıyken anında tamamlandığı doğrulanamaz. Yerel silme geri alınamaz. iCloud kopyasını doğrudan silmek için iOS Ayarlar → [Adın] → iCloud → Hesap Depolamasını Yönet → Xpense Budget Manager → Veriyi Sil yolunu kullanabilirsin.</p>
     <p>Uygulamayı cihazından kaldırmak yerel kopyayı siler, fakat iCloud'a daha önce eşzamanlanmış kayıtları tek başına silmez.</p>
-
+ 
     <h3>Haklarının ve tercihlerin</h3>
     <p>Finansal kayıtlarını uygulamada görebilir ve düzeltebilir; desteklenen kayıtları rapor özelliğiyle CSV olarak dışa aktarabilirsin. Silmek için Ayarlar → Tüm Verileri Sil'i kullanıp iCloud eşzamanlamasına zaman tanı veya iCloud kopyasını yukarıdaki yoldan doğrudan sil. Reklam ortakları kendi teknik verilerini kendi gizlilik bildirimlerine göre işler; uygulamanın reklam tercihini istediğin zaman Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin.</p>
     <p>Destek için bize e-posta gönderirsen e-posta adresini ve mesajına ya da eklerine koymayı seçtiğin bilgileri alırız. Bu yazışma, uygulama içindeki finansal kayıtlarından ayrı olarak e-posta sağlayıcımız üzerinden işlenir. Sorunu anlatmak için gerekli değilse hassas finansal ayrıntı veya fiş görseli göndermemeni öneririz. Destek yazışmasının silinmesi hakkında aşağıdaki adresten bize ulaşabilirsin.</p>
-
+ 
     <h3>Finansal tavsiye değildir</h3>
     <p>Uygulama kişisel bir kayıt tutma aracıdır. Vergi ya da muhasebe danışmanlığı vermez, resmi bir muhasebe ya da bankacılık hizmeti değildir.</p>
-
+ 
     <h3>Veri saklama</h3>
     <p>Uygulamaya girdiğin finansal kayıtlar için kendimize ait bir sunucu/veritabanı işletmiyoruz. Bu kayıtlar cihazında ve eşzamanlama kullanılabiliyorsa kendi özel iCloud veritabanında saklanır. Reklam ortakları ise yukarıda açıklanan teknik reklam verilerini kendi gizlilik politikalarına göre ayrıca saklayabilir; Uygulamadaki Tüm Verileri Sil işlemi ortakların elindeki verileri doğrudan silmez.</p>
-
+ 
     <h3>Bu politikadaki değişiklikler</h3>
     <p>Politika değişirse yukarıdaki "Son güncelleme" tarihini güncelleriz. Güncel metni bu sayfadan inceleyebilirsin.</p>
-
+ 
     <h3>İletişim</h3>
     <p>Bu politikayla ilgili sorular için: <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
   </section>
-
+ 
   <div class="foot">Xpense Bütçe Yöneticisi / Xpense Budget Manager · Gizlilik Politikası / Privacy Policy</div>
 </div>
 </body>
 </html>
+ 
