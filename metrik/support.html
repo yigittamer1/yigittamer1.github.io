@@ -183,11 +183,27 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Döviz kurları ne kadar güncel?</p>
-      <p class="faq-a">Kurlar, Avrupa Merkez Bankası referans kurlarına dayanan herkese açık bir servisten (Frankfurter) çekilir ve periyodik olarak yenilenir. Döviz ekranındaki "Kur güncelleme" satırından en son ne zaman yenilendiğini görebilir, yenile butonuyla elle güncelleyebilirsin. İnternet yoksa en son önbelleğe alınan kur kullanılır — büyük miktarlı veya resmi işlemlerde bu kurlara güvenmemeni öneririz.</p>
+      <p class="faq-a">Kurlar, Avrupa Merkez Bankası referans kurlarına dayanan herkese açık bir servisten (Frankfurter, api.frankfurter.dev) çekilir. Uygulama bir döviz dönüştürmesini açtığında kurları yeniler; ekrandaki <strong>Kurları yenile</strong> düğmesiyle elle de güncelleyebilirsin. Ekrandaki durum satırı kurların güncel mi ("Güncel kurlar") yoksa önbellekten mi ("Çevrimdışı — önbellekteki kurlar") geldiğini ve ne zaman güncellendiğini gösterir. İnternet yoksa en son önbelleğe alınan kur kullanılır — büyük miktarlı veya resmi işlemlerde bu kurlara güvenmemeni öneririz.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Uygulama neden reklam gösteriyor?</p>
-      <p class="faq-a">Uygulama ücretsiz kullanılabilsin diye, Unity Ads, Yandex Ads ve Liftoff Monetize (Vungle) arasında açık artırma yürüten Unity LevelPlay aracılığıyla reklam gösteriyoruz. İlk açılışta reklam verisi işlenmesine izin verip vermeyeceğini soran bir ekran çıkar; bu tercihini istediğin zaman <strong>Ayarlar → Reklam tercihi</strong> yolundan değiştirebilirsin. Ne seçersen seç, Uygulamanın hiçbir özelliği etkilenmez; ayrıca izleme izni verip vermemen de hiçbir özelliği etkilemez.</p>
+      <p class="faq-q">Uygulama neden reklam gösteriyor? Ne zaman ve nerede çıkıyor?</p>
+      <p class="faq-a">Reklamlar Metrik'i ücretsiz tutar. Tek reklam biçimi bannerdır; tüm sekmelerde ekranın altında görünür. Reklamlar Unity LevelPlay üzerinden ironSource Ads, Unity Ads ve Liftoff Monetize'dan gelir. Reklamları kapatan bir ayar veya satın alma yoktur.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Reklam tercihimi nasıl değiştiririm?</p>
+      <p class="faq-a">Alt sekme çubuğundan <strong>Ayarlar</strong>'a dokun → <strong>Reklam tercihi</strong> satırını aç ve <strong>İzin ver</strong> ya da <strong>Reddet</strong>'i seç. Reddet dokunduğun anda geçerli olur; İzin ver ise o ekranı kapattığında işlenir ve gerekirse iOS'tan izleme izni istenir. Yeni tercihin, en geç Metrik'i bir sonraki açışında reklamlara uygulanır.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Reddet'i seçtim, neden hâlâ reklam görüyorum?</p>
+      <p class="faq-a">İki seçenekte de reklam çıkar. Reddet, Uygulamanın reklam şirketlerine reklamlarını kişiselleştirmemelerini söylemesi ve iOS'tan izleme izni istememesi demektir; reklamları kapatmaz. İki seçenekte de reklam şirketleri IP adresin, cihaz türün ve reklamlarla etkileşimin gibi teknik verileri alır. Ayrıntılar için <a href="index.html">Gizlilik Politikası</a>'na bak.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">İzleme izni nedir, nasıl geri alırım?</p>
+      <p class="faq-a">İzleme izni, iOS'un Metrik'in seni takip edip edemeyeceğini sorduğu ayrı bir iOS ayarıdır. iOS bunu yalnızca <strong>İzin ver</strong>'i seçersen ve Metrik için daha önce hiç sormadıysa sorar; <strong>Reddet</strong>'te hiç sormaz. İzni vermezsen ya da iOS buna izin vermiyorsa tercihin Reddet olarak kaydedilir. Geri almak için iOS <strong>Ayarlar → Gizlilik ve Güvenlik → İzleme</strong> bölümünde Metrik'i kapat. İzleme iOS'ta kapalıyken uygulamadaki tercihin İzin ver olarak kalabilir; bu durumda Ayarlar → Reklam tercihi ekranı, izlemenin kapalı olduğunu söyleyen bir not ve <strong>Ayarları Aç</strong> düğmesi gösterir. Reklam şirketlerine rıza vermediğinin bildirilmesini istiyorsan orada <strong>Reddet</strong>'i seç.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Reklamlarla ilgili bir sorum var, kime yazabilirim?</p>
+      <p class="faq-a">Yukarıdaki adrese yazabilirsin: yigittamer99@gmail.com.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Hesap makinesi nasıl çalışıyor?</p>
@@ -225,11 +241,27 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">How current are the exchange rates?</p>
-      <p class="faq-a">Rates come from a public service based on European Central Bank reference rates (Frankfurter) and are refreshed periodically. The Currency screen shows when the rate was last updated, and you can refresh manually. If there's no internet connection, the last cached rate is used — we don't recommend relying on these rates for large or official transactions.</p>
+      <p class="faq-a">Rates come from a public service based on European Central Bank reference rates (Frankfurter, api.frankfurter.dev). The app refreshes them when you open a currency conversion, and you can refresh manually with the <strong>Refresh rates</strong> button on that screen. The status line shows whether the rates are live ("Live rates") or from the cache ("Offline — cached rates") and when they were updated. If there's no internet connection, the last cached rate is used — we don't recommend relying on these rates for large or official transactions.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Why does the app show ads?</p>
-      <p class="faq-a">We show ads via Unity LevelPlay, which runs an auction between Unity Ads, Yandex Ads, and Liftoff Monetize (Vungle), so the app can remain free to use. On first launch, a screen asks whether you allow advertising data processing — you can change this choice anytime from <strong>Settings → Advertising choice</strong>. Either choice, and allowing or declining tracking, never affects any feature.</p>
+      <p class="faq-q">Why does the app show ads, and when and where?</p>
+      <p class="faq-a">Ads keep Metrik free. The only ads are banners, shown at the bottom of the screen on every tab. They come from ironSource Ads, Unity Ads and Liftoff Monetize through Unity LevelPlay. There is no setting or purchase that turns ads off.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I change my advertising choice?</p>
+      <p class="faq-a">Tap <strong>Settings</strong> in the bottom tab bar → open <strong>Advertising Choice</strong> and pick <strong>Allow</strong> or <strong>Decline</strong>. Decline takes effect as soon as you tap it; Allow is processed when you close that screen, and iOS asks for tracking permission if needed. Your new choice applies to ads at the latest the next time you open Metrik.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I chose Decline. Why do I still see ads?</p>
+      <p class="faq-a">Both choices show ads. Decline means the app tells the ad companies not to personalize your ads and doesn't ask iOS for tracking permission; it does not turn ads off. With either choice, the ad companies receive technical data such as your IP address, device type and how you interact with ads. See the <a href="index.html">Privacy Policy</a> for details.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">What is the tracking permission, and how do I take it back?</p>
+      <p class="faq-a">The tracking permission is a separate iOS setting: iOS asks whether Metrik may track you. It asks only if you choose <strong>Allow</strong> and only if it has never asked about Metrik before; with <strong>Decline</strong> it never asks. If you don't allow tracking, or iOS doesn't allow it, your choice is saved as Decline. To take the permission back, turn Metrik off in iOS <strong>Settings → Privacy &amp; Security → Tracking</strong>. If tracking is off in iOS while your choice in the app is still Allow, Settings → Advertising Choice shows a note that tracking is turned off, with an <strong>Open Settings</strong> button. If you want the ad companies told that you do not consent, choose <strong>Decline</strong> there.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">I have a question about ads. Who can I write to?</p>
+      <p class="faq-a">Write to the address above: yigittamer99@gmail.com.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">How does the calculator work?</p>

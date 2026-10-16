@@ -152,7 +152,7 @@
 <div class="page">
   <p class="kicker">Metrik · Legal</p>
   <h1>Privacy Policy</h1>
-  <p class="dek">Last updated: September 16, 2026</p>
+  <p class="dek">Last updated: October 16, 2026</p>
 
   <nav class="lang-nav">
     <a href="#en">English</a>
@@ -164,119 +164,264 @@
 
     <p>Metrik ("the App") is a unit conversion and calculator utility developed by an individual developer ("we", "us"). This policy explains what information the App handles and how. Metrik is available in 17 languages; this policy applies regardless of which language you use the App in.</p>
 
+    <p><strong>The short version:</strong> there is no account, and your conversions, favorites and settings are never sent to us. They stay on your device. The App shows banner ads from ironSource Ads, Unity Ads and Liftoff Monetize, through Unity LevelPlay, and contains their software. These companies receive technical data such as your IP address and device type; your conversions, favorites and settings are not shared with them. You choose Allow or Decline for advertising — both show ads — and you can change it in Settings → Advertising Choice. Your new choice applies to ads at the latest the next time you open Metrik. The only other network request is for currency exchange rates, which contains none of your data. There are no purchases. The only personal data we receive ourselves is what you send us by email.</p>
+
     <h3>No account, no personal profile</h3>
-    <p>The App does not require you to create an account, sign in, or provide any personal information to use it. There are no user profiles.</p>
+    <p>The App does not create an account for you and never asks for your name, email address or password. There are no user profiles.</p>
 
     <h3>What stays on your device</h3>
-    <p>Your category and unit preferences, favorites, recent conversions, selected language, and appearance (light/dark) setting are stored locally on your device using Apple's standard <code>UserDefaults</code> storage. This information is never transmitted to us and we have no access to it.</p>
+    <p>Your favorites, recently used conversions, selected language, appearance (light/dark) setting, cached currency rates, an app-rating prompt counter, and your advertising choice are stored locally on your device using Apple's standard <code>UserDefaults</code> storage. This information is never transmitted to us and we have no access to it.</p>
 
     <h3>Network requests the App makes</h3>
     <table>
       <thead><tr><th>Purpose</th><th>Destination</th><th>Data sent</th></tr></thead>
       <tbody>
-        <tr><td>Currency exchange rates</td><td><code>api.frankfurter.dev</code></td><td>None — a public, ECB-based rate lookup only.</td></tr>
-        <tr><td>Advertising &amp; the SDKs it bundles</td><td>Unity LevelPlay (mediating Unity Ads, Yandex Ads, and Liftoff Monetize/Vungle)</td><td>See the SDK table below — subject to the advertising choice and tracking permission described further down.</td></tr>
+        <tr><td>Currency exchange rates</td><td><code>api.frankfurter.dev</code></td><td>None of your data — a public, ECB-based rate lookup only. Like any server, it can see your IP address.</td></tr>
+        <tr><td>Banner ads</td><td>Unity LevelPlay (mediating ironSource Ads, Unity Ads, and Liftoff Monetize)</td><td>See Advertising below — only after you have made your advertising choice.</td></tr>
       </tbody>
     </table>
 
-    <h3>Advertising, and every SDK that comes with it</h3>
-    <p>The App is supported by advertising so it can remain free to use. Ads are served through Unity LevelPlay, which runs a real-time auction between three networks — Unity Ads, Yandex Ads, and Liftoff Monetize (Vungle) — and shows whichever wins for that particular ad request. Each network's SDK brings along its own sub-components (for ad-quality measurement or crash reporting); every one of them ships an Apple-mandated privacy manifest, and this table reflects exactly what those manifests declare — not a guess:</p>
+    <h3>Advertising</h3>
+    <p>Ads keep Metrik free. The only ads are banners, shown at the bottom of the screen on every tab. There is no setting or purchase that turns them off.</p>
+    <p>Ads come from ironSource Ads, Unity Ads and Liftoff Monetize, through Unity LevelPlay. Each company's own privacy policy explains what it does with the data it receives:</p>
+    <ul>
+      <li>ironSource Ads: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Game Player and App User Privacy Policy</a> (Unity)</li>
+      <li>Unity Ads and Unity LevelPlay: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Game Player and App User Privacy Policy</a> (Unity)</li>
+      <li>Liftoff Monetize: <a href="https://liftoff.ai/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> (Liftoff)</li>
+    </ul>
+    <p>With either choice, these companies receive technical data such as your IP address, device type and how you interact with ads, to show and measure ads and to prevent fraud. Your conversions, favorites and settings are not shared with them.</p>
+    <p>Each ad SDK ships its own Apple privacy manifest. This is what those manifests, as bundled in the App, declare:</p>
     <table>
-      <thead><tr><th>SDK</th><th>Why it's here</th><th>What it declares collecting</th></tr></thead>
+      <thead><tr><th>SDK</th><th>Why it's here</th><th>What its privacy manifest declares</th></tr></thead>
       <tbody>
-        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity LevelPlay</a></td><td>Ad mediation — runs the auction between the three networks below and shows the winner</td><td>Device/advertising identifiers to serve and measure ads</td></tr>
-        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a>, incl. ironSource Ad Quality</td><td>One of the three ad networks</td><td>Device ID and performance/diagnostic data, for ad-quality analytics and app functionality — not linked to your identity</td></tr>
-        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a>, incl. its AppMetrica and KSCrash components</td><td>The second ad network</td><td>Device/advertising identifiers for ads; separately, Yandex's own AppMetrica toolkit collects crash and performance data, general usage data, and approximate (typically IP-based, not GPS) location for its own analytics — not linked to your identity</td></tr>
-        <tr><td><a href="https://liftoff.ai/privacy-policy/" target="_blank" rel="noopener">Liftoff Monetize (Vungle)</a></td><td>The third ad network</td><td>Device/advertising identifiers to serve and measure ads — not linked to your identity</td></tr>
+        <tr><td>Unity LevelPlay (incl. ironSource Ads)</td><td>Ad mediation — runs the auction between the networks and shows the winner</td><td>No collected data types declared</td></tr>
+        <tr><td>Unity Ads</td><td>One of the ad networks</td><td>No collected data types declared</td></tr>
+        <tr><td>Liftoff Monetize</td><td>One of the ad networks</td><td>No collected data types declared</td></tr>
+        <tr><td>ironSource Ad Quality</td><td>Component of Unity LevelPlay</td><td>Device ID, performance data and other diagnostic data, for analytics and app functionality — not linked to you and not used for tracking</td></tr>
       </tbody>
     </table>
-    <p>None of these declare themselves as "tracking" under Apple's own definition. We still ask for App Tracking Transparency permission (below) because ad mediation can involve sharing device identifiers with more than one company — you get the same result either way, we just default to asking.</p>
-    <p>The App itself never asks for your camera, photos, precise location, contacts, or microphone — it has no feature that would need them.</p>
+    <p>Metrik's privacy label on the App Store lists the data collected through the App. Apart from Customer Support, all of it is collected by the ad companies' software, not by the App's own code:</p>
+    <ul>
+      <li><strong>Device ID</strong> — such as your device's advertising ID (only if you allow tracking in iOS) and identifiers the ad software uses. Linked to you; may be used to track you.</li>
+      <li><strong>Advertising Data</strong> — the ad software may collect data about the ads you have seen. Linked to you; may be used to track you.</li>
+      <li><strong>Coarse Location</strong> — the ad software may collect an approximate location. The App never asks iOS for your location. Linked to you; may be used to track you.</li>
+      <li><strong>Product Interaction</strong> — how you interact with ads (for example whether an ad was shown or tapped). Not linked to you; not used to track you.</li>
+      <li><strong>Performance Data</strong> — about how the ad software runs. Linked to you; not used to track you.</li>
+      <li><strong>Other Diagnostic Data</strong> — other technical data about the ad software. Not linked to you; not used to track you.</li>
+      <li><strong>Other Data Types</strong> — the ad software may collect other technical data. Linked to you; not used to track you.</li>
+      <li><strong>User ID</strong> — the ad software may assign an ID (Metrik has no accounts). Linked to you; not used to track you.</li>
+      <li><strong>Customer Support</strong> — emails you choose to send us (see Support emails). Linked to you; not used to track you; used only for app functionality.</li>
+    </ul>
+    <p>Under Apple's rules, an app and the companies whose software it contains may track you only if you allow it in iOS, and Metrik asks iOS for that only when you choose Allow (see Your advertising choice).</p>
+    <p>The App's own code never reads your device's advertising ID. The ad networks can use it only if you have allowed Metrik to track you in iOS.</p>
+    <p>The ad software starts only after you make your advertising choice.</p>
+    <p>Unity LevelPlay includes a component, ironSource Ad Quality. According to its own privacy manifest, it collects a device identifier, performance data and other diagnostic data for analytics and app functionality, and this data is not linked to you and not used for tracking. The App Store label above shows all of the ad software together.</p>
 
     <h3>Your advertising choice</h3>
-    <p>Before any advertising SDK is initialized, the App shows its own advertising-choice screen — in your device's language, whichever of the 17 the App supports — asking whether you allow or decline advertising data processing. Every feature of the App works identically either way; declining only limits how personalized the ads you see can be. You can change this choice at any time from <strong>Settings → Advertising choice</strong>.</p>
+    <p>The first time you open Metrik, the App shows a screen called <strong>Ads in Metrik</strong>. It cannot be closed without a choice, and the ad software does not start until you make one. It has two buttons, <strong>Allow</strong> and <strong>Decline</strong>:</p>
+    <ul>
+      <li><strong>Allow:</strong> ads can be based on your activity in other apps and websites, using your device's advertising ID. iOS may ask whether Metrik may track you. The App tells Unity LevelPlay that you consent to personalization.</li>
+      <li><strong>Decline:</strong> the App tells the ad companies not to personalize your ads and won't ask to track you. You'll still see ads, but they may be less relevant.</li>
+    </ul>
+    <p>Both choices show ads. With Decline, the ad companies still receive the technical data described under Advertising; Decline asks for ads that are not personalized, it does not stop data being sent. There is no setting that turns ads off.</p>
+    <p>iOS asks for tracking permission only if you choose Allow, and only if iOS has never asked about Metrik before. With Decline, iOS never asks. If you do not allow tracking, or iOS does not allow it, your choice is saved as Decline.</p>
+    <p>Your choice in the App and the iOS tracking permission are two separate switches. Choosing Decline does not take back a tracking permission you already gave in iOS; to take it back, turn Metrik off in iOS Settings → Privacy &amp; Security → Tracking. If you chose Allow and later turn tracking off in iOS Settings, your choice in the App stays Allow and the App keeps telling the ad companies that you consent, but iOS no longer gives them your advertising ID. Settings → Advertising Choice then shows a note that tracking is turned off for Metrik in iOS, with an Open Settings button. If you want the ad companies told that you do not consent, choose Decline there. If you later turn tracking back on in iOS, your advertising ID is available to them again as long as your choice in the App is still Allow.</p>
+    <p>You can change your choice at any time in <strong>Settings → Advertising Choice</strong>. Decline takes effect as soon as you tap it. Allow is processed when you close that screen: the App then asks iOS for tracking permission if it has never been asked, saves your final choice and reloads the banner. Either way, your new choice applies to ads at the latest the next time you open Metrik.</p>
+    <p>Your choice is kept only on this device. It is not synced anywhere or sent to us — the ad software receives only the consent signal described above. If you delete and reinstall the App, you are asked again.</p>
 
-    <h3>App Tracking Transparency</h3>
-    <p>Separately from the advertising choice above, iOS itself asks for Apple's own standard tracking permission a short moment after launch, once per install (Apple, not the App, decides whether and when to show this). Whether you allow or decline tracking, every feature of the App works exactly the same — declining only limits how personalized the ads you see can be.</p>
+    <h3>Currency exchange rates</h3>
+    <p>The currency converter uses reference exchange rates published by the European Central Bank, which the App fetches from a public service, <code>api.frankfurter.dev</code>, that needs no key. The App makes this request when you open a currency conversion or tap the refresh button, and keeps the last result on your device so it works offline. The request carries no data about you, no account and no advertising ID. As with any server, the service can see your IP address when it receives the request. The service is run by a third party, not by us.</p>
 
-    <h3>Children's privacy</h3>
-    <p>The App is a general-audience utility and is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+    <h3>Support emails</h3>
+    <p>When you email us, we receive your email address and whatever you choose to put in your message or attachments. We use it only to answer and resolve your request. Your email is delivered and stored by our email provider, Google (which provides our email). We do not pass support emails to advertising partners. Unless it is needed to describe the problem, we suggest not including personal information. The Send Feedback row in Settings opens a blank email addressed to us with the subject "Metrik Feedback"; the App adds nothing else to it, such as your device or app version. We keep support emails for as long as we need them to answer your request. If you would like your emails deleted, write to us from the same address and we will delete them from our mailbox.</p>
 
-    <h3>Your rights (EEA, UK, and similar regions)</h3>
-    <p>We ourselves don't hold any personal data about you — nothing we collect identifies you, and there's no account or server-side profile to access, correct, or delete. Any data collection that could count as "personal data" under GDPR/UK GDPR happens inside the advertising SDKs described above, on their own servers. To exercise access, correction, deletion, portability, or objection rights over that data, use the relevant network's own privacy tools (linked above) or contact them directly; you can also lodge a complaint with your local data protection authority at any time.</p>
+    <h3>This website</h3>
+    <p>This site is hosted on GitHub Pages. When you open these pages — including from the App — GitHub may process your IP address and other standard connection details, for example in its server logs, under its own privacy statement. These pages run no analytics, set no cookies and load no fonts, scripts or other files from other websites.</p>
 
-    <h3>California residents (CCPA/CPRA)</h3>
-    <p>We do not sell your personal information, and we have no mechanism to do so — we don't collect any ourselves. Ad partners may process device/advertising identifiers as described above; declining App Tracking Transparency limits this. You can reach us at the contact address below with any CCPA-related request.</p>
+    <h3>What we do not do</h3>
+    <ul>
+      <li>We do not collect, receive or store your conversions, favorites or settings.</li>
+      <li>We do not add analytics or crash reporting of our own. If you have chosen to share diagnostics with app developers in iOS Settings, Apple may pass us anonymous, aggregate crash and usage statistics. They cannot tell us who you are.</li>
+      <li>Apart from emails you choose to send us, the App sends nothing about you to us. We do not sell those emails or pass them to advertising partners.</li>
+      <li>We do not ask for your camera, photos, location, contacts, microphone or notifications. The only permission the App can ask iOS for is tracking, and only if you choose Allow.</li>
+      <li>We do not sell anything, so there is no payment information to see.</li>
+    </ul>
 
-    <h3>Data retention and deletion</h3>
-    <p>Since we do not operate any backend server or database, we do not retain any of your data. Deleting the App from your device removes all locally stored preferences immediately.</p>
+    <h3>Why we use data, and on what basis</h3>
+    <ul>
+      <li><strong>The App's features</strong> — keeping your favorites, recent conversions, settings and choices on your device: needed to provide the App you use. We never receive this data.</li>
+      <li><strong>Ad personalization</strong> — ads based on your activity in other apps and websites, using your advertising ID: your consent, which you give by choosing Allow and allowing tracking when iOS asks. You can withdraw it at any time (see Your rights).</li>
+      <li><strong>Showing ads with either choice</strong> — the technical data described under Advertising, used to show and measure ads and to prevent fraud: our legitimate interest in offering the App free of charge, paid for by ads, and in preventing ad fraud. The ad companies describe the legal basis they rely on in their own privacy policies.</li>
+      <li><strong>Currency rates</strong> — the request to the exchange-rate service: needed to provide the feature you ask for when you open a currency conversion.</li>
+      <li><strong>Support emails</strong> — to answer and resolve your request: our legitimate interest in answering the people who write to us.</li>
+      <li><strong>This website</strong> — GitHub's processing when you open these pages: our legitimate interest in publishing them.</li>
+    </ul>
+    <p>Data is collected automatically — by the App on your device, by the ad companies' software inside the App, by the exchange-rate service when the App asks for rates, and by GitHub when you open these pages — and by email, when you write to us.</p>
+
+    <h3>How long data is kept</h3>
+    <ul>
+      <li>What the App keeps on your device stays there until you remove it or delete the App. Deleting the App removes everything it stores locally, but not data the ad software keeps on your device itself.</li>
+      <li>Support emails: for as long as we need them to answer your request. If you ask, we delete them from our mailbox.</li>
+      <li>The ad companies, GitHub and the exchange-rate service keep the data they receive themselves; we do not control it.</li>
+    </ul>
+
+    <h3>International transfers</h3>
+    <p>The ad companies, Google (which provides our email), GitHub and the exchange-rate service may process data in countries other than the one you live in. The ad companies, Google and GitHub each explain in their own privacy policies where they process data and which safeguards they use for such transfers. We have no information about where the exchange-rate service runs its servers.</p>
+
+    <h3>Your rights</h3>
+    <p>Depending on where you live, you may have the right to access the personal data held about you, to have it corrected or deleted, to restrict its use, to receive it in a portable form, to object to its use and to withdraw your consent at any time.</p>
+    <ul>
+      <li><strong>Data in the App:</strong> everything the App keeps is on your device. Apart from emails you send us, there is no file for us to hand over or delete. You can remove favorites from the Favorites tab and clear recent conversions with Clear on the Convert tab; deleting the App removes everything it stores locally.</li>
+      <li><strong>Emails you send us:</strong> write to us to ask for a copy or to have them deleted.</li>
+      <li><strong>Withdrawing consent to personalized ads:</strong> choose Decline in Settings → Advertising Choice, and turn Metrik off in iOS Settings → Privacy &amp; Security → Tracking. Withdrawing does not undo what happened before.</li>
+      <li><strong>Your right to object:</strong> you can object at any time to your data being used for personalized advertising, in the same way: choose Decline and turn tracking off. Ads are still shown with Decline, and with either choice the ad companies receive the technical data described under Advertising; there is no setting that turns ads off, so the only way to stop that completely is to stop using the App.</li>
+      <li><strong>Data the ad companies hold:</strong> they keep it under their own policies; to use your rights over it, contact them through the privacy policies linked under Advertising.</li>
+      <li><strong>Complaints:</strong> you have the right to complain to the data protection authority where you live.</li>
+    </ul>
+    <p>If you live in California and have a privacy request, write to us at the address below. If you have a question about any of this, write to us and a person will answer.</p>
+
+    <h3>Children</h3>
+    <p>Metrik is a general-audience utility and is not directed at children under 13. The App does not ask your age, and it does not tell the ad companies whether a player is a child. We do not knowingly collect personal information from children. If you are under 16, please ask a parent or guardian before you make your advertising choice — the choice screen says the same.</p>
 
     <h3>Changes to this policy</h3>
-    <p>If this policy changes, the "Last updated" date above will be revised. Continued use of the App after a change constitutes acceptance of the updated policy.</p>
+    <p>If this policy changes, the "Last updated" date above will change with it.</p>
 
     <h3>Contact</h3>
-    <p>Questions about this policy can be sent to <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a>.</p>
+    <p>Yiğit Tamer is responsible for the personal data described in this policy that we handle (the controller); the ad companies handle the data they receive under their own privacy policies. Questions about this policy can be sent to <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a>.</p>
   </section>
 
   <hr class="divider" />
 
   <section id="tr">
     <h2>02 — Türkçe</h2>
+    <p class="dek">Son güncelleme: 16 Ekim 2026</p>
 
     <p>Metrik ("Uygulama"), bağımsız bir geliştirici ("biz") tarafından geliştirilen bir birim çevirici ve hesap makinesi yardımcı uygulamasıdır. Bu metin, Uygulamanın hangi bilgileri nasıl işlediğini açıklar. Metrik 17 dilde sunulur; bu politika, Uygulamayı hangi dilde kullandığından bağımsız olarak geçerlidir.</p>
 
+    <p><strong>Kısacası:</strong> hesap yok ve dönüştürmelerin, favorilerin ve ayarların bize hiçbir zaman gönderilmiyor; hepsi cihazında kalıyor. Uygulama, Unity LevelPlay üzerinden ironSource Ads, Unity Ads ve Liftoff Monetize'ın banner reklamlarını gösterir ve bu şirketlerin yazılımını içerir. Bu şirketler IP adresin ve cihaz türün gibi teknik veriler alır; dönüştürmelerin, favorilerin ve ayarların onlarla paylaşılmaz. Reklamlar için İzin ver veya Reddet'ten birini seçersin — ikisinde de reklam çıkar — ve bunu Ayarlar → Reklam tercihi bölümünden değiştirebilirsin. Yeni tercihin, en geç Metrik'i bir sonraki açışında reklamlara uygulanır. Reklam dışındaki tek ağ isteği döviz kurları içindir ve senin hiçbir verini içermez. Satın alma yok. Bizim doğrudan aldığımız tek kişisel veri, bize e-postayla gönderdiklerindir.</p>
+
     <h3>Hesap yok, kişisel profil yok</h3>
-    <p>Uygulamayı kullanmak için hesap oluşturman, giriş yapman ya da herhangi bir kişisel bilgi vermen gerekmiyor. Kullanıcı profili bulunmuyor.</p>
+    <p>Uygulama senin için hesap oluşturmaz; adını, e-posta adresini veya parolanı asla istemez. Kullanıcı profili bulunmuyor.</p>
 
     <h3>Cihazında kalan bilgiler</h3>
-    <p>Kategori/birim tercihlerin, favorilerin, son kullanılan dönüşümlerin, seçtiğin dil ve görünüm (açık/koyu) ayarın, Apple'ın standart <code>UserDefaults</code> deposu ile sadece cihazında saklanır. Bu bilgiler bize hiçbir şekilde iletilmez, erişimimiz yoktur.</p>
+    <p>Favorilerin, son kullandıkların, seçtiğin dil, görünüm (açık/koyu) ayarın, önbelleğe alınan döviz kurları, uygulama değerlendirme istemi sayacı ve reklam tercihin, Apple'ın standart <code>UserDefaults</code> deposu ile sadece cihazında saklanır. Bu bilgiler bize hiçbir şekilde iletilmez, erişimimiz yoktur.</p>
 
     <h3>Uygulamanın yaptığı ağ istekleri</h3>
     <table>
       <thead><tr><th>Amaç</th><th>Hedef</th><th>Gönderilen veri</th></tr></thead>
       <tbody>
-        <tr><td>Döviz kurları</td><td><code>api.frankfurter.dev</code></td><td>Yok — sadece herkese açık, ECB tabanlı kur bilgisi okunur.</td></tr>
-        <tr><td>Reklam ve beraberinde gelen SDK'lar</td><td>Unity LevelPlay (Unity Ads, Yandex Ads ve Liftoff Monetize/Vungle aracılığıyla)</td><td>Aşağıdaki SDK tablosuna bak — aşağıda açıklanan reklam tercihi ve takip izni dahilinde.</td></tr>
+        <tr><td>Döviz kurları</td><td><code>api.frankfurter.dev</code></td><td>Senin hiçbir verin yok — sadece herkese açık, ECB tabanlı kur bilgisi okunur. Her sunucu gibi IP adresini görebilir.</td></tr>
+        <tr><td>Banner reklamlar</td><td>Unity LevelPlay (ironSource Ads, Unity Ads ve Liftoff Monetize aracılığıyla)</td><td>Aşağıdaki Reklam bölümüne bak — yalnızca reklam tercihini yaptıktan sonra.</td></tr>
       </tbody>
     </table>
 
-    <h3>Reklam, ve beraberinde gelen her SDK</h3>
-    <p>Uygulamanın ücretsiz kalabilmesi için reklam desteğiyle sunulur. Reklamlar, üç ağ — Unity Ads, Yandex Ads ve Liftoff Monetize (Vungle) — arasında gerçek zamanlı bir açık artırma yürüten Unity LevelPlay aracılığıyla gösterilir; her istekte hangisi kazanırsa o gösterilir. Her ağın SDK'sı kendi alt bileşenlerini de getiriyor (reklam kalitesi ölçümü veya çökme raporlama için); bunların hepsi Apple'ın zorunlu tuttuğu bir gizlilik manifestosuyla geliyor, ve bu tablo tahmin değil, tam olarak o manifestoların beyan ettiğini yansıtıyor:</p>
+    <h3>Reklam</h3>
+    <p>Reklamlar Metrik'i ücretsiz tutar. Tek reklam biçimi bannerdır; tüm sekmelerde ekranın altında görünür. Bunları kapatan bir ayar veya satın alma yoktur.</p>
+    <p>Reklamlar, Unity LevelPlay üzerinden ironSource Ads, Unity Ads ve Liftoff Monetize'dan gelir. Her şirketin aldığı verilerle ne yaptığını kendi gizlilik politikası anlatır:</p>
+    <ul>
+      <li>ironSource Ads: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Game Player and App User Privacy Policy</a> (Unity)</li>
+      <li>Unity Ads ve Unity LevelPlay: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy" target="_blank" rel="noopener">Game Player and App User Privacy Policy</a> (Unity)</li>
+      <li>Liftoff Monetize: <a href="https://liftoff.ai/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> (Liftoff)</li>
+    </ul>
+    <p>İki seçenekte de bu şirketler, reklamları göstermek, ölçmek ve dolandırıcılığı önlemek için IP adresin, cihaz türün ve reklamlarla nasıl etkileşime girdiğin gibi teknik veriler alır. Dönüştürmelerin, favorilerin ve ayarların onlarla paylaşılmaz.</p>
+    <p>Her reklam SDK'sı kendi Apple gizlilik manifestosuyla gelir. Uygulamaya dahil edilen bu manifestoların beyan ettikleri şunlardır:</p>
     <table>
-      <thead><tr><th>SDK</th><th>Neden burada</th><th>Ne topladığını beyan ediyor</th></tr></thead>
+      <thead><tr><th>SDK</th><th>Neden burada</th><th>Gizlilik manifestosu ne beyan ediyor</th></tr></thead>
       <tbody>
-        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity LevelPlay</a></td><td>Reklam aracılığı — aşağıdaki üç ağ arasında açık artırma yürütür, kazananı gösterir</td><td>Reklam gösterip ölçebilmek için cihaz/reklam kimlikleri</td></tr>
-        <tr><td><a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener">Unity Ads</a> (ironSource Ad Quality dahil)</td><td>Üç reklam ağından biri</td><td>Reklam kalitesi analitiği ve uygulama işlevselliği için cihaz kimliği ve performans/tanılama verisi — kimliğinle eşleştirilmiyor</td></tr>
-        <tr><td><a href="https://yandex.com/legal/mobileads_sdk_agreement/" target="_blank" rel="noopener">Yandex Ads</a> (AppMetrica ve KSCrash bileşenleri dahil)</td><td>İkinci reklam ağı</td><td>Reklam için cihaz/reklam kimlikleri; ayrıca Yandex'in kendi AppMetrica araç seti, kendi analitiği için çökme ve performans verisi, genel kullanım verisi ve yaklaşık (genelde GPS değil, IP tabanlı) konum topluyor — kimliğinle eşleştirilmiyor</td></tr>
-        <tr><td><a href="https://liftoff.ai/privacy-policy/" target="_blank" rel="noopener">Liftoff Monetize (Vungle)</a></td><td>Üçüncü reklam ağı</td><td>Reklam gösterip ölçebilmek için cihaz/reklam kimlikleri — kimliğinle eşleştirilmiyor</td></tr>
+        <tr><td>Unity LevelPlay (ironSource Ads dahil)</td><td>Reklam aracılığı — ağlar arasında açık artırma yürütür, kazananı gösterir</td><td>Toplanan veri türü beyan edilmemiş</td></tr>
+        <tr><td>Unity Ads</td><td>Reklam ağlarından biri</td><td>Toplanan veri türü beyan edilmemiş</td></tr>
+        <tr><td>Liftoff Monetize</td><td>Reklam ağlarından biri</td><td>Toplanan veri türü beyan edilmemiş</td></tr>
+        <tr><td>ironSource Ad Quality</td><td>Unity LevelPlay'in bir bileşeni</td><td>Analitik ve uygulama işlevselliği için cihaz kimliği, performans verisi ve diğer tanılama verisi — seninle ilişkilendirilmiyor ve takip için kullanılmıyor</td></tr>
       </tbody>
     </table>
-    <p>Bunların hiçbiri Apple'ın kendi tanımına göre "izleme" olarak beyan edilmiyor. Yine de Uygulama İzleme Şeffaflığı izni istiyoruz (aşağıda) çünkü reklam aracılığı, cihaz kimliklerinin birden fazla şirketle paylaşılmasını içerebiliyor — iki durumda da sonuç aynı, biz sadece varsayılan olarak soruyoruz.</p>
-    <p>Uygulamanın kendisi kameranı, fotoğraflarını, hassas konumunu, kişilerini veya mikrofonunu asla istemez — bunlara ihtiyaç duyan hiçbir özelliği yok.</p>
+    <p>Metrik'in App Store'daki gizlilik etiketi, uygulama aracılığıyla toplanan verileri listeler. Müşteri Desteği dışındakilerin hepsini uygulamanın kendi kodu değil, reklam şirketlerinin yazılımı toplar:</p>
+    <ul>
+      <li><strong>Cihaz Kimliği</strong> — örneğin cihazının reklam kimliği (yalnızca iOS'ta takibe izin verirsen) ve reklam yazılımının kullandığı tanıtıcılar. Seninle ilişkilendirilir; seni takip etmek için kullanılabilir.</li>
+      <li><strong>Reklam Verileri</strong> — reklam yazılımı gördüğün reklamlara dair veri toplayabilir. Seninle ilişkilendirilir; seni takip etmek için kullanılabilir.</li>
+      <li><strong>Yaklaşık Konum</strong> — reklam yazılımı yaklaşık bir konum toplayabilir. Uygulama iOS'tan konumunu hiçbir zaman istemez. Seninle ilişkilendirilir; seni takip etmek için kullanılabilir.</li>
+      <li><strong>Ürün Etkileşimi</strong> — reklamlarla nasıl etkileşime girdiğin (örneğin bir reklamın gösterilip gösterilmediği ya da ona dokunulup dokunulmadığı). Seninle ilişkilendirilmez; takip için kullanılmaz.</li>
+      <li><strong>Performans Verileri</strong> — reklam yazılımının nasıl çalıştığına dair. Seninle ilişkilendirilir; takip için kullanılmaz.</li>
+      <li><strong>Diğer Tanılama Verileri</strong> — reklam yazılımına ait diğer teknik veriler. Seninle ilişkilendirilmez; takip için kullanılmaz.</li>
+      <li><strong>Diğer Veri Türleri</strong> — reklam yazılımı başka teknik veriler toplayabilir. Seninle ilişkilendirilir; takip için kullanılmaz.</li>
+      <li><strong>Kullanıcı Kimliği</strong> — reklam yazılımı bir kimlik atayabilir (Metrik'te hesap yoktur). Seninle ilişkilendirilir; takip için kullanılmaz.</li>
+      <li><strong>Müşteri Desteği</strong> — bize göndermeyi seçtiğin e-postalar (bkz. Destek e-postaları). Seninle ilişkilendirilir; takip için kullanılmaz; yalnızca uygulama işlevselliği için kullanılır.</li>
+    </ul>
+    <p>Apple'ın kurallarına göre bir uygulama ve içerdiği yazılımların şirketleri seni ancak iOS'ta izin verirsen takip edebilir; Metrik bu izni iOS'tan yalnızca İzin ver'i seçtiğinde ister (bkz. Reklam tercihin).</p>
+    <p>Uygulamanın kendi kodu cihazının reklam kimliğini hiçbir zaman okumaz. Reklam ağları onu ancak iOS'ta Metrik'in seni takip etmesine izin verdiysen kullanabilir.</p>
+    <p>Reklam yazılımı ancak reklam tercihini yaptıktan sonra başlar.</p>
+    <p>Unity LevelPlay, ironSource Ad Quality adlı bir bileşen içerir. Kendi gizlilik manifestine göre bu bileşen, analitik ve uygulama işlevselliği amacıyla bir cihaz tanıtıcısı, performans verisi ve diğer tanılama verilerini toplar; bu veriler seninle ilişkilendirilmez ve takip için kullanılmaz. Yukarıdaki App Store etiketi, reklam yazılımlarının tamamını birlikte gösterir.</p>
 
     <h3>Reklam tercihin</h3>
-    <p>Herhangi bir reklam SDK'sı başlatılmadan önce Uygulama, cihazının dilinde (desteklenen 17 dilden hangisiyse) kendi reklam tercihi ekranını gösterir ve reklam verisi işlenmesine izin verip vermeyeceğini sorar. Ne seçersen seç Uygulamanın tüm özellikleri aynı şekilde çalışır — reddetmen sadece gördüğün reklamların ne kadar kişiselleştirildiğini sınırlar. Bu tercihini istediğin zaman <strong>Ayarlar → Reklam tercihi</strong> yolundan değiştirebilirsin.</p>
+    <p>Metrik'i ilk açtığında Uygulama <strong>Metrik'te reklamlar</strong> adlı bir ekran gösterir. Bu ekran seçim yapılmadan kapatılamaz ve sen seçim yapana kadar reklam yazılımı başlamaz. Ekranda iki düğme vardır: <strong>İzin ver</strong> ve <strong>Reddet</strong>:</p>
+    <ul>
+      <li><strong>İzin ver:</strong> reklamlar, cihazının reklam kimliği kullanılarak diğer uygulamalardaki ve web sitelerindeki etkinliğine göre belirlenebilir. iOS, Metrik'in seni takip edip edemeyeceğini sorabilir. Uygulama, Unity LevelPlay'e kişiselleştirmeye rıza verdiğini bildirir.</li>
+      <li><strong>Reddet:</strong> Uygulama, reklam şirketlerine reklamlarını kişiselleştirmemelerini söyler ve seni takip etmek için izin istemez. Yine reklam görürsün, ancak bunlar daha az ilgili olabilir.</li>
+    </ul>
+    <p>İki seçenekte de reklam çıkar. Reddet'te reklam şirketleri Reklam bölümünde anlatılan teknik verileri yine alır; Reddet kişiselleştirilmemiş reklam istemek demektir, veri gönderilmesini durdurmaz. Reklamları kapatan bir ayar yoktur.</p>
+    <p>iOS takip iznini yalnızca İzin ver'i seçersen ve yalnızca iOS Metrik için daha önce hiç sormamışsa sorar. Reddet'te iOS hiç sormaz. Takibe izin vermezsen ya da iOS buna izin vermiyorsa tercihin Reddet olarak kaydedilir.</p>
+    <p>Uygulamadaki tercihin ile iOS takip izni iki ayrı anahtardır. Reddet'i seçmek, iOS'ta daha önce verdiğin takip iznini geri almaz; geri almak için iOS Ayarlar → Gizlilik ve Güvenlik → İzleme bölümünde Metrik'i kapat. İzin ver'i seçtikten sonra takibi iOS Ayarları'nda kapatırsan uygulamadaki tercihin İzin ver olarak kalır ve Uygulama reklam şirketlerine rıza verdiğini bildirmeye devam eder, ama iOS artık onlara reklam kimliğini vermez. Bu durumda Ayarlar → Reklam tercihi, Metrik için izlemenin iOS'ta kapalı olduğunu söyleyen bir notu Ayarları Aç düğmesiyle birlikte gösterir. Reklam şirketlerine rıza vermediğinin bildirilmesini istiyorsan orada Reddet'i seç. Takibi daha sonra iOS'ta yeniden açarsan, uygulamadaki tercihin hâlâ İzin ver olduğu sürece reklam kimliğin onlara yeniden sağlanır.</p>
+    <p>Tercihini istediğin zaman <strong>Ayarlar → Reklam tercihi</strong> bölümünden değiştirebilirsin. Reddet, dokunduğun anda geçerli olur. İzin ver ise o ekranı kapattığında işlenir: Uygulama, daha önce hiç sorulmadıysa iOS'tan takip izni ister, nihai tercihini kaydeder ve banner'ı yeniden yükler. Her iki durumda da yeni tercihin, en geç Metrik'i bir sonraki açışında reklamlara uygulanır.</p>
+    <p>Tercihin yalnızca bu cihazda tutulur. Hiçbir yere senkronize edilmez ve bize gönderilmez — reklam yazılımı yalnızca yukarıda anlatılan rıza sinyalini alır. Uygulamayı silip yeniden kurarsan sana yeniden sorulur.</p>
 
-    <h3>Uygulama İzleme Şeffaflığı (App Tracking Transparency)</h3>
-    <p>Yukarıdaki reklam tercihinden ayrı olarak, iOS'un kendisi açılıştan kısa bir süre sonra, kurulum başına bir kez, Apple'ın kendi standart izleme izni penceresini gösterir (bunu ne zaman ve gösterip göstermeyeceğine Uygulama değil Apple karar verir). İzni versen de vermesen de Uygulamanın tüm özellikleri birebir aynı şekilde çalışır — vermemen sadece gördüğün reklamların ne kadar kişiselleştirildiğini sınırlar.</p>
+    <h3>Döviz kuru verisi</h3>
+    <p>Döviz çevirici, Avrupa Merkez Bankası'nın yayımladığı referans kurları kullanır; Uygulama bunları anahtar gerektirmeyen herkese açık bir servisten, <code>api.frankfurter.dev</code>'den çeker. Uygulama bu isteği bir döviz dönüştürmesini açtığında veya yenile düğmesine dokunduğunda yapar ve son sonucu cihazında tutar; böylece internet olmadan da çalışır. İstek senin hakkında hiçbir veri, hesap veya reklam kimliği içermez. Her sunucu gibi servis, isteği aldığında IP adresini görebilir. Servisi biz değil, bir üçüncü taraf işletir.</p>
 
-    <h3>Çocukların gizliliği</h3>
-    <p>Uygulama genel kitleye yönelik bir yardımcı araçtır, 13 yaş altı çocukları hedeflemez. Çocuklardan bilerek kişisel veri toplamayız.</p>
+    <h3>Destek e-postaları</h3>
+    <p>Bize e-posta gönderdiğinde e-posta adresini ve mesajına ya da eklerine koymayı seçtiğin her şeyi alırız. Bunu yalnızca talebini yanıtlamak ve çözmek için kullanırız. E-postan, e-posta sağlayıcımız Google (e-postamızı sağlar) tarafından iletilir ve saklanır. Destek e-postalarını reklam ortaklarına iletmeyiz. Sorunu anlatmak için gerekmedikçe kişisel bilgi eklememeni öneririz. Ayarlar'daki Geri Bildirim Gönder satırı, bize adreslenmiş, "Metrik Feedback" konulu boş bir e-posta açar; Uygulama buna cihazın ya da uygulama sürümün gibi başka bir şey eklemez. Destek e-postalarını, talebini yanıtlamak için ihtiyaç duyduğumuz süre boyunca saklarız. E-postalarının silinmesini istersen aynı adresten bize yaz, onları posta kutumuzdan sileriz.</p>
 
-    <h3>Haklarınız (AB, İngiltere ve benzeri bölgeler)</h3>
-    <p>Biz kendimiz senin hakkında hiçbir kişisel veri tutmuyoruz — topladığımız hiçbir şey seni kimliklendirmiyor, erişilecek/düzeltilecek/silinecek bir hesap ya da sunucu tarafı profil yok. GDPR/UK GDPR kapsamında "kişisel veri" sayılabilecek herhangi bir toplama, yukarıda açıklanan reklam SDK'larının kendi sunucularında gerçekleşir. Bu veriler üzerinde erişim, düzeltme, silme, taşınabilirlik veya itiraz haklarını kullanmak için ilgili ağın kendi gizlilik araçlarını (yukarıda bağlantılı) kullanabilir veya onlarla doğrudan iletişime geçebilirsin; istediğin zaman yerel veri koruma otoritene de şikayette bulunabilirsin.</p>
+    <h3>Bu web sitesi</h3>
+    <p>Bu site GitHub Pages üzerinde barındırılır. Bu sayfaları açtığında — Uygulamadan açtığında da — GitHub, kendi gizlilik beyanı kapsamında IP adresini ve diğer standart bağlantı ayrıntılarını, örneğin sunucu günlüklerinde, işleyebilir. Bu sayfalar analitik çalıştırmaz, çerez koymaz ve başka sitelerden font, script ya da başka dosya yüklemez.</p>
 
-    <h3>Kaliforniya sakinleri (CCPA/CPRA)</h3>
-    <p>Kişisel bilgini satmıyoruz, ve bunu yapabilecek bir mekanizmamız da yok — kendimiz hiçbir şey toplamıyoruz. Reklam ortakları yukarıda açıklandığı gibi cihaz/reklam kimliklerini işleyebilir; Uygulama İzleme Şeffaflığı'nı reddetmen bunu sınırlar. CCPA ile ilgili herhangi bir talebin için aşağıdaki iletişim adresinden bize ulaşabilirsin.</p>
+    <h3>Yapmadıklarımız</h3>
+    <ul>
+      <li>Dönüştürmelerini, favorilerini veya ayarlarını toplamayız, almayız, saklamayız.</li>
+      <li>Kendi analitiğimizi veya çökme raporlamamızı eklemeyiz. iOS Ayarları'nda uygulama geliştiricileriyle tanılama paylaşmayı seçtiysen Apple bize anonim, toplu çökme ve kullanım istatistikleri iletebilir. Bunlar bize senin kim olduğunu söylemez.</li>
+      <li>Bize göndermeyi seçtiğin e-postalar dışında Uygulama senin hakkında bize hiçbir şey göndermez. Bu e-postaları satmayız ve reklam ortaklarına iletmeyiz.</li>
+      <li>Kameranı, fotoğraflarını, konumunu, kişilerini, mikrofonunu veya bildirimlerini istemeyiz. Uygulamanın iOS'tan isteyebileceği tek izin takip izni, o da yalnızca İzin ver'i seçersen.</li>
+      <li>Hiçbir şey satmayız, dolayısıyla görülecek bir ödeme bilgisi yok.</li>
+    </ul>
 
-    <h3>Veri saklama ve silme</h3>
-    <p>Herhangi bir sunucu/veritabanı işletmediğimiz için hiçbir verini bizde tutmuyoruz. Uygulamayı cihazından silmen, tüm yerel tercihleri anında kaldırır.</p>
+    <h3>Veriyi neden ve hangi dayanakla kullanıyoruz</h3>
+    <ul>
+      <li><strong>Uygulamanın özellikleri</strong> — favorilerini, son dönüştürmelerini, ayarlarını ve tercihlerini cihazında tutmak: kullandığın uygulamayı sunmak için gerekli. Bu verileri biz hiçbir zaman almayız.</li>
+      <li><strong>Reklam kişiselleştirme</strong> — reklam kimliğin kullanılarak diğer uygulamalardaki ve web sitelerindeki etkinliğine dayalı reklamlar: rızan; İzin ver'i seçip iOS sorduğunda takibe izin vererek verirsin. Bunu istediğin zaman geri çekebilirsin (bkz. Haklar).</li>
+      <li><strong>İki seçimde de reklam gösterme</strong> — Reklam bölümünde anlatılan teknik veriler, reklamları göstermek ve ölçmek ve reklam sahtekârlığını önlemek için kullanılır: Uygulamayı reklamlarla karşılanan ücretsiz bir hizmet olarak sunmakta ve reklam sahtekârlığını önlemekte meşru menfaatimiz. Reklam şirketleri dayandıkları hukuki dayanağı kendi gizlilik politikalarında açıklar.</li>
+      <li><strong>Döviz kurları</strong> — kur servisine yapılan istek: bir döviz dönüştürmesi açtığında istediğin özelliği sunmak için gerekli.</li>
+      <li><strong>Destek e-postaları</strong> — talebini yanıtlamak ve çözmek için: bize yazanlara yanıt vermekte meşru menfaatimiz.</li>
+      <li><strong>Bu web sitesi</strong> — bu sayfaları açtığında GitHub'ın işlemesi: sayfaları yayımlamakta meşru menfaatimiz.</li>
+    </ul>
+    <p>Veri otomatik olarak toplanır — cihazında Uygulama tarafından, Uygulamanın içindeki reklam şirketlerinin yazılımı tarafından, Uygulama kur istediğinde kur servisi tarafından ve bu sayfaları açtığında GitHub tarafından — ve bize yazdığında e-posta yoluyla.</p>
+
+    <h3>Veriler ne kadar süre saklanır</h3>
+    <ul>
+      <li>Uygulamanın cihazında tuttukları, sen kaldırana veya Uygulamayı silene kadar orada kalır. Uygulamayı silmek yerel olarak sakladığı her şeyi kaldırır, ama reklam yazılımının cihazında kendi tuttuğu verileri kaldırmaz.</li>
+      <li>Destek e-postaları: talebini yanıtlamak için ihtiyaç duyduğumuz süre boyunca. İstersen onları posta kutumuzdan sileriz.</li>
+      <li>Reklam şirketleri, GitHub ve kur servisi aldıkları verileri kendileri saklar; bunun üzerinde denetimimiz yoktur.</li>
+    </ul>
+
+    <h3>Uluslararası aktarımlar</h3>
+    <p>Reklam şirketleri, Google (e-postamızı sağlar), GitHub ve kur servisi verileri yaşadığın ülke dışındaki ülkelerde işleyebilir. Reklam şirketleri, Google ve GitHub, verileri nerede işlediklerini ve bu tür aktarımlar için hangi güvenceleri kullandıklarını kendi gizlilik politikalarında açıklar. Kur servisinin sunucularını nerede çalıştırdığına dair bir bilgimiz yok.</p>
+
+    <h3>Haklar</h3>
+    <p>Yaşadığın yere bağlı olarak hakkında tutulan kişisel verilere erişme, bunların düzeltilmesini veya silinmesini isteme, kullanımını kısıtlama, taşınabilir biçimde alma, kullanımına itiraz etme ve rızanı istediğin zaman geri çekme haklarına sahip olabilirsin.</p>
+    <ul>
+      <li><strong>Uygulamadaki veriler:</strong> Uygulamanın tuttuğu her şey cihazındadır. Bize gönderdiğin e-postalar dışında teslim edebileceğimiz ya da silebileceğimiz bir dosya yoktur. Favorilerini Favoriler sekmesinden kaldırabilir, son dönüştürmeleri Dönüştür sekmesindeki Temizle ile silebilirsin; Uygulamayı silmek yerel olarak sakladığı her şeyi kaldırır.</li>
+      <li><strong>Bize gönderdiğin e-postalar:</strong> bir kopyasını istemek ya da silinmesini istemek için bize yaz.</li>
+      <li><strong>Reklam kişiselleştirmeye verdiğin rızayı geri çekmek:</strong> Ayarlar → Reklam tercihi bölümünde Reddet'i seç ve iOS Ayarlar → Gizlilik ve Güvenlik → İzleme bölümünde Metrik'i kapat. Geri çekmek, daha önce olanları geri almaz.</li>
+      <li><strong>İtiraz hakkın:</strong> verilerinin kişiselleştirilmiş reklam için kullanılmasına istediğin zaman aynı yolla itiraz edebilirsin: Reddet'i seç ve izlemeyi kapat. Reddet'te de reklam gösterilir ve iki seçimde de reklam şirketleri Reklam bölümünde anlatılan teknik verileri alır; reklamları kapatan bir ayar yoktur, dolayısıyla bunu tamamen durdurmanın tek yolu Uygulamayı kullanmayı bırakmaktır.</li>
+      <li><strong>Reklam şirketlerindeki veriler:</strong> bunları kendi politikalarına göre tutarlar; bunlar üzerindeki haklarını kullanmak için Reklam bölümünde bağlantısı verilen gizlilik politikaları üzerinden onlara başvur.</li>
+      <li><strong>Şikayet:</strong> yaşadığın yerdeki veri koruma otoritesine şikayette bulunma hakkın var.</li>
+    </ul>
+    <p>Kaliforniya'da yaşıyorsan ve bir gizlilik talebin varsa aşağıdaki adrese yaz. Bunların herhangi biriyle ilgili bir sorun varsa bize yaz, bir insan yanıtlayacaktır.</p>
+
+    <h3>Çocuklar</h3>
+    <p>Metrik genel kitleye yönelik bir yardımcı araçtır, 13 yaş altı çocukları hedeflemez. Uygulama yaşını sormaz ve oyuncunun çocuk olup olmadığını reklam şirketlerine bildirmez. Çocuklardan bilerek kişisel veri toplamayız. 16 yaşından küçüksen reklam tercihini yapmadan önce lütfen bir ebeveyne veya vasiye danış — tercih ekranı da aynısını söyler.</p>
 
     <h3>Bu politikadaki değişiklikler</h3>
-    <p>Politika değişirse yukarıdaki "Son güncelleme" tarihi güncellenir. Değişiklikten sonra Uygulamayı kullanmaya devam etmen, güncellenmiş politikayı kabul ettiğin anlamına gelir.</p>
+    <p>Politika değişirse yukarıdaki "Son güncelleme" tarihi de değişir.</p>
 
     <h3>İletişim</h3>
-    <p>Bu politikayla ilgili sorular için: <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
+    <p>Yiğit Tamer, bu politikada anlatılan ve bizim işlediğimiz kişisel verilerden sorumludur (veri sorumlusu); reklam şirketleri aldıkları veriyi kendi gizlilik politikalarına göre işler. Bu politikayla ilgili sorular için: <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
   </section>
 
   <div class="foot">Metrik — Bu sayfa, App Store Connect'te "Privacy Policy URL" alanına eklenmek üzere hazırlanmıştır.</div>
