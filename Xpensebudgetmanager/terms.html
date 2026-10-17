@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Xpense Budget Manager — Terms of Service</title>
+<style>
+  :root {
+    --bg: #f5f6f7;
+    --surface: #ffffff;
+    --surface-2: #eef1f2;
+    --text: #1b1f27;
+    --text-muted: #5b6572;
+    --accent: #6952d8;
+    --accent-strong: #4f3bb0;
+    --rule: #d8dce1;
+    --rule-strong: #b9c0c7;
+    --font-mono: ui-monospace, "SF Mono", "Menlo", "Cascadia Code", monospace;
+    --font-body: -apple-system, "SF Pro Text", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  }
+ 
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0c1017;
+      --surface: #161c26;
+      --surface-2: #202836;
+      --text: #e7e9ec;
+      --text-muted: #98a2ae;
+      --accent: #7c6cf5;
+      --accent-strong: #a396ff;
+      --rule: #262e3d;
+      --rule-strong: #3a424d;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0c1017;
+    --surface: #161c26;
+    --surface-2: #202836;
+    --text: #e7e9ec;
+    --text-muted: #98a2ae;
+    --accent: #7c6cf5;
+    --accent-strong: #a396ff;
+    --rule: #262e3d;
+    --rule-strong: #3a424d;
+  }
+ 
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 56px 24px 100px;
+  }
+  .page { max-width: 680px; margin: 0 auto; }
+ 
+  .kicker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  h1 {
+    font-size: clamp(24px, 4vw, 30px);
+    line-height: 1.25;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+  .dek { color: var(--text-muted); font-size: 15px; margin: 0 0 40px; }
+ 
+  .lang-nav {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 40px;
+  }
+  .lang-nav a {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-decoration: none;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    padding: 6px 12px;
+    border-radius: 999px;
+  }
+  .lang-nav a:hover { border-color: var(--accent); color: var(--accent-strong); }
+ 
+  section { margin: 44px 0; scroll-margin-top: 24px; }
+  h2 {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+    margin: 0 0 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule-strong);
+  }
+  h3 { font-size: 16px; margin: 24px 0 6px; }
+  p { margin: 0 0 14px; max-width: 66ch; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; max-width: 60ch; }
+  a { color: var(--accent-strong); }
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--surface-2);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    padding: 0.1em 0.4em;
+  }
+ 
+  .divider {
+    margin: 56px 0;
+    border: none;
+    border-top: 2px dashed var(--rule-strong);
+  }
+ 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    margin: 8px 0 20px;
+  }
+  .table-scroll { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  @media (max-width: 600px) {
+    body { padding: 32px 16px 72px; }
+    .table-scroll table { min-width: 560px; }
+  }
+  th, td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  th {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+ 
+  .foot {
+    margin-top: 56px;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+    color: var(--text-muted);
+    font-size: 13px;
+  }
+  .foot a { color: var(--accent-strong); }
+  .summary {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    border-radius: 4px 12px 12px 4px;
+    padding: 16px 20px;
+    margin: 0 0 14px;
+  }
+  .summary p { margin: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+  <p class="kicker">Xpense Budget Manager · Legal</p>
+  <h1>Terms of Service</h1>
+  <p class="dek">Last updated / Son güncelleme: October 17, 2026 / 17 Ekim 2026</p>
+
+  <nav class="lang-nav">
+    <a href="#en">English</a>
+    <a href="#tr">Türkçe</a>
+  </nav>
+
+  <section id="en">
+    <h2>01 — English</h2>
+
+    <p>A Turkish translation of these terms follows the English text. If the two differ, the English text applies.</p>
+
+    <h3>The short version</h3>
+    <div class="summary">
+      <p>Xpense Budget Manager is free, with ads and no in-app purchases. There is no account: your records stay on your device and in your own private iCloud, never with us. It is a bookkeeping tool, not financial, tax or accounting advice.</p>
+    </div>
+
+    <h3>These terms and Apple's Standard EULA</h3>
+    <p>Xpense Budget Manager ("Xpense", "the App") is provided by <strong>Yiğit Tamer</strong> ("we", "us"). Your licence to use the App is granted under Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Licensed Application End User License Agreement</a> (the "Standard EULA"). These terms are additional terms that apply alongside it. If anything in these terms conflicts with the Standard EULA, the Standard EULA applies. When you tap <em>Accept &amp; Continue</em> on the App's first screen, you agree to these terms and to the <a href="index.html">Privacy Policy</a>.</p>
+
+    <h3>Using the app</h3>
+    <p>Xpense is free to download and use. You may use it for personal use. Please don't try to reverse-engineer it, tamper with how it works, or use it in a way that breaks the law. The App can send local reminder notifications if you allow them in iOS. You can change your answer at any time in iOS Settings; the <a href="index.html">Privacy Policy</a> and the <a href="support.html">Support</a> page have the details.</p>
+
+    <h3>Ads</h3>
+    <p>The App shows ads: banners on some screens (including inline 300×250 MREC banners), a full-screen ad every now and then after you save entries, and a rewarded video you can choose to watch to export a CSV report. The ads come from ironSource Ads, Unity Ads and Liftoff Monetize, through Unity LevelPlay.</p>
+    <p>Before you start using the App, it asks you to choose Personalized or Limited ads. You can change this at any time in Settings → Privacy and iCloud → Advertising privacy. Your new choice applies to ads at the latest the next time you open Xpense. Both choices show ads. With Personalized, the App tells the ad networks you agree to personalized ads and may ask iOS for tracking permission; with Limited, it tells them not to personalize your ads and does not ask iOS for tracking permission. There is no setting that turns ads off. The <a href="index.html">Privacy Policy</a> explains both choices and what data the ad networks receive.</p>
+    <p>These ad networks, and Apple for iCloud sync, are third parties: their own terms and privacy policies apply to what they do, and the Privacy Policy links to the ad networks' policies. The ads you see are supplied by the ad networks. If you see one that isn't appropriate, you can tell us with Settings → Privacy and iCloud → Advertising privacy → Report an ad.</p>
+    <p>There are no in-app purchases: nothing in the App can be paid for with real money. If that changes, this page and the <a href="index.html">Privacy Policy</a> will be updated before it does.</p>
+
+    <h3>Rewarded video</h3>
+    <p>The rewarded video is optional and is offered in one place: when you export a CSV report from Analytics. If you watch it, you can export the report. If no video can be loaded or shown, or it is closed before the reward is earned, the App offers one more try; if that also fails, you can export the CSV without an ad.</p>
+
+    <h3>Your data</h3>
+    <p>We don't operate a server for your records. Your entries, budgets, categories, notes, recurring plans and subscriptions are stored on your device and, if you use iCloud, in your own private iCloud account. Keeping that data is therefore between you, your device and Apple; please see the <a href="index.html">Privacy Policy</a>. Settings → Delete All Data removes your records from this device and, through Apple's sync, from your iCloud account.</p>
+    <p>The ad networks that show ads in the App receive some technical data from your device; the <a href="index.html">Privacy Policy</a> explains what, and how to change your ad choice.</p>
+
+    <h3>Reports and CSV exports</h3>
+    <p>A CSV report can contain your financial entries, including notes and merchant names. When you export one, you choose where it goes through the iOS share sheet. We don't receive it. You are responsible for where you send or save the file, who can see it, and what you do with it.</p>
+
+    <h3>Exchange rates</h3>
+    <p>When an entry is in a currency other than your main currency, the App can convert it using exchange rates fetched from api.frankfurter.dev (European Central Bank reference rates). The rates are for information only. We don't guarantee that they are accurate, complete or current, and a saved rate may be older than today's rate. Please don't rely on them for large or official transactions.</p>
+
+    <h3>Receipt scanning</h3>
+    <p>Receipt scanning reads text on your device and suggests an amount, date and merchant. It can make mistakes. You are responsible for checking the suggestions and correcting them before you save.</p>
+
+    <h3>Not financial, tax or accounting advice</h3>
+    <p>Xpense is a personal bookkeeping tool. Nothing in the App or on this site is financial, tax, legal or accounting advice, and the App is not an official accounting or banking service. Totals, budgets and reports are only as accurate as the entries and rates behind them.</p>
+
+    <h3>Warranty and liability</h3>
+    <p>The Standard EULA's terms on warranty and on limitation of liability apply to the App. We try to keep it working correctly, but we can't promise that it will always be available or error-free, or that your records or synced data will never be lost. Export important records from time to time. Nothing in these terms limits liability that cannot be limited by law, or rights you have under mandatory consumer law.</p>
+
+    <h3>Apple's role</h3>
+    <p>This agreement is between <strong>you and us</strong>, not between you and Apple. Apple is not responsible for the App or its content.</p>
+    <ul>
+      <li><strong>We, not Apple, are responsible for support and maintenance</strong> of the App. Apple has no obligation to provide either.</li>
+      <li>If the App fails to conform to any applicable warranty, you may notify Apple, and Apple will refund the purchase price of the App to you. To the maximum extent permitted by law, Apple has no other warranty obligation whatsoever with respect to the App.</li>
+      <li>We, not Apple, are responsible for addressing any claim that the App infringes someone's intellectual property rights.</li>
+      <li><strong>Apple and its subsidiaries are third-party beneficiaries of these terms</strong>, and on your acceptance of them Apple has the right to enforce them against you.</li>
+    </ul>
+
+    <h3>Changes</h3>
+    <p>These terms may change; the date at the top of this page will change with them. If we make an important change, we may ask you to accept the terms again in the App. Continuing to use the App after a change means you accept it.</p>
+
+    <h3>About this site</h3>
+    <p>This site is hosted on GitHub Pages; GitHub may process visitors' IP addresses, for example in its server logs. These pages run no analytics, set no cookies and load no fonts, scripts or other files from other websites.</p>
+
+    <h3>Contact</h3>
+    <p>Yiğit Tamer · <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="tr">
+    <h2>02 — Türkçe</h2>
+
+    <p>Bu metin İngilizce sürümün Türkçe çevirisidir. Bir uyuşmazlık durumunda İngilizce metin esas alınır.</p>
+
+    <h3>Kısacası</h3>
+    <div class="summary">
+      <p>Xpense Bütçe Yöneticisi ücretsizdir; reklam gösterir, uygulama içi satın alması yoktur. Hesap yok: kayıtların cihazında ve kendi özel iCloud'unda kalır, asla bizde değil. Bir kayıt tutma aracıdır; finansal, vergi ya da muhasebe tavsiyesi değildir.</p>
+    </div>
+
+    <h3>Bu koşullar ve Apple'ın Standart EULA'sı</h3>
+    <p>Xpense Bütçe Yöneticisi'ni ("Xpense", "Uygulama") <strong>Yiğit Tamer</strong> ("biz") sunar. Uygulamayı kullanma lisansın Apple'ın <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Licensed Application End User License Agreement</a> ("Standart EULA") kapsamında verilir. Bu koşullar, onunla birlikte geçerli olan ek koşullardır. Bu koşullardaki bir hüküm Standart EULA ile çelişirse Standart EULA uygulanır. Uygulamanın ilk ekranında <em>Kabul et ve devam et</em> düğmesine dokunduğunda bu koşulları ve <a href="index.html#tr">Gizlilik Politikası</a>'nı kabul etmiş olursun.</p>
+
+    <h3>Uygulamayı kullanmak</h3>
+    <p>Xpense'i indirmek ve kullanmak ücretsizdir. Kişisel kullanım içindir. Lütfen tersine mühendislik yapmaya, çalışma biçimini kurcalamaya veya hukuka aykırı bir şekilde kullanmaya çalışma. Uygulama, iOS'ta izin verirsen yerel hatırlatma bildirimleri gönderebilir. Cevabını istediğin zaman iOS Ayarları'nda değiştirebilirsin; ayrıntılar <a href="index.html#tr">Gizlilik Politikası</a>'nda ve <a href="support.html#tr">Destek</a> sayfasında.</p>
+
+    <h3>Reklamlar</h3>
+    <p>Uygulama reklam gösterir: bazı ekranlarda banner (inline 300×250 MREC bannerlar dahil), kayıt ekledikten sonra ara sıra tam ekran bir reklam ve CSV raporu dışa aktarmak için izlemeyi seçebileceğin ödüllü bir video. Reklamları Unity LevelPlay üzerinden ironSource Ads, Unity Ads ve Liftoff Monetize sunar.</p>
+    <p>Uygulamayı kullanmaya başlamadan önce Uygulama senden Kişiselleştirilmiş ya da Kişiselleştirilmemiş (sınırlı) reklamlar arasında seçim yapmanı ister. Bunu istediğin zaman Ayarlar → Gizlilik ve iCloud → Reklam gizliliği bölümünden değiştirebilirsin. Yeni tercihin, en geç Xpense'i bir sonraki açtığında reklamlara uygulanır. İki seçenekte de reklam gösterilir. Kişiselleştirilmiş'te Uygulama, reklam ağlarına kişiselleştirilmiş reklamları kabul ettiğini bildirir ve iOS'tan izleme izni isteyebilir; Kişiselleştirilmemiş'te onlara reklamlarını kişiselleştirmemelerini söyler ve iOS'tan izleme izni istemez. Reklamları kapatan bir ayar yoktur. İki seçeneği ve reklam ağlarının hangi verileri aldığını <a href="index.html#tr">Gizlilik Politikası</a> anlatır.</p>
+    <p>Bu reklam ağları ve iCloud eşzamanlamasını sağlayan Apple üçüncü taraflardır: yaptıklarına kendi koşulları ve gizlilik politikaları uygulanır; reklam ağlarının politikalarına Gizlilik Politikası'nda bağlantı verilir. Gördüğün reklamları reklam ağları sağlar. Uygunsuz bir reklam görürsen bunu Ayarlar → Gizlilik ve iCloud → Reklam gizliliği → Reklam bildir ile bize iletebilirsin.</p>
+    <p>Uygulama içi satın alma yok: Uygulamada gerçek parayla ödenebilecek bir şey yoktur. Bu değişirse, değişmeden önce bu sayfa ve <a href="index.html#tr">Gizlilik Politikası</a> güncellenir.</p>
+
+    <h3>Ödüllü video</h3>
+    <p>Ödüllü video isteğe bağlıdır ve tek bir yerde sunulur: Analiz'den CSV raporu dışa aktarırken. İzlersen raporu dışa aktarabilirsin. Hiçbir video yüklenemez veya gösterilemezse ya da ödül kazanılmadan kapatılırsa Uygulama bir kez daha denemeni önerir; o da olmazsa CSV'yi reklamsız dışa aktarabilirsin.</p>
+
+    <h3>Verilerin</h3>
+    <p>Kayıtların için bir sunucu işletmiyoruz. Kayıtların, bütçelerin, kategorilerin, notların, tekrarlayan işlem planların ve aboneliklerin cihazında ve iCloud kullanıyorsan kendi özel iCloud hesabında saklanır. Dolayısıyla bu verinin saklanması senin, cihazının ve Apple'ın arasındadır; lütfen <a href="index.html#tr">Gizlilik Politikası</a>'na bak. Ayarlar → Tüm Verileri Sil, kayıtlarını bu cihazdan ve Apple'ın eşzamanlamasıyla iCloud hesabından siler.</p>
+    <p>Uygulamada reklam gösteren ağlar cihazından bazı teknik veriler alır; neleri aldıklarını ve reklam tercihini nasıl değiştireceğini <a href="index.html#tr">Gizlilik Politikası</a> açıklar.</p>
+
+    <h3>Raporlar ve CSV dışa aktarma</h3>
+    <p>Bir CSV raporu, notlar ve mağaza adları dahil finansal kayıtlarını içerebilir. Dışa aktardığında dosyanın nereye gideceğini iOS paylaşım sayfasından sen seçersin. Dosya bize ulaşmaz. Dosyayı nereye gönderdiğinden veya kaydettiğinden, kimlerin görebileceğinden ve onunla ne yaptığından sen sorumlusun.</p>
+
+    <h3>Döviz kurları</h3>
+    <p>Bir kayıt ana para biriminden farklı bir para biriminde olduğunda Uygulama, api.frankfurter.dev'den (Avrupa Merkez Bankası referans kurları) alınan döviz kurlarıyla çevrim yapabilir. Kurlar yalnızca bilgi amaçlıdır. Doğru, eksiksiz veya güncel olduklarını garanti etmeyiz; kayıtlı bir kur bugünkü kurdan eski olabilir. Büyük miktarlı veya resmi işlemlerde bu kurlara güvenme.</p>
+
+    <h3>Fiş tarama</h3>
+    <p>Fiş tarama, metni cihazında okur ve bir tutar, tarih ve mağaza önerir. Hata yapabilir. Önerileri kontrol etmek ve kaydetmeden önce düzeltmek senin sorumluluğundadır.</p>
+
+    <h3>Finansal, vergi veya muhasebe tavsiyesi değildir</h3>
+    <p>Xpense kişisel bir kayıt tutma aracıdır. Uygulamadaki veya bu sitedeki hiçbir şey finansal, vergi, hukuki ya da muhasebe tavsiyesi değildir; Uygulama resmi bir muhasebe ya da bankacılık hizmeti değildir. Toplamlar, bütçeler ve raporlar, arkasındaki kayıtlar ve kurlar kadar doğrudur.</p>
+
+    <h3>Garanti ve sorumluluk</h3>
+    <p>Uygulamaya, Standart EULA'nın garanti ve sorumluluğun sınırlandırılmasına ilişkin hükümleri uygulanır. Uygulamanın doğru çalışması için çaba gösteriyoruz, ancak her zaman kullanılabilir veya hatasız olacağını, kayıtlarının ya da eşzamanlanan verinin hiç kaybolmayacağını taahhüt edemeyiz. Önemli kayıtlarını zaman zaman dışa aktar. Bu koşullardaki hiçbir ifade, hukuken sınırlandırılamayan sorumluluğu ya da emredici tüketici hukukundan doğan haklarını sınırlamaz.</p>
+
+    <h3>Apple'ın rolü</h3>
+    <p>Bu sözleşme <strong>seninle bizim aramızdadır</strong>, seninle Apple arasında değil. Apple, Uygulamadan veya içeriğinden sorumlu değildir.</p>
+    <ul>
+      <li>Uygulamanın destek ve bakımından <strong>Apple değil biz sorumluyuz</strong>. Apple'ın bunları sağlama yükümlülüğü yoktur.</li>
+      <li>Uygulama geçerli bir garantiye uygun değilse Apple'a bildirebilirsin; Apple Uygulamanın satın alma bedelini sana iade eder. Hukukun izin verdiği azami ölçüde Apple'ın Uygulamaya ilişkin başka hiçbir garanti yükümlülüğü yoktur.</li>
+      <li>Uygulamanın birinin fikri mülkiyet haklarını ihlal ettiği yönündeki taleplerle Apple değil biz ilgileniriz.</li>
+      <li><strong>Apple ve bağlı kuruluşları bu koşulların üçüncü taraf lehtarlarıdır</strong> ve sen koşulları kabul ettiğinde Apple bunları sana karşı uygulama hakkına sahip olur.</li>
+    </ul>
+
+    <h3>Değişiklikler</h3>
+    <p>Bu koşullar değişebilir; değiştiğinde sayfanın başındaki tarih de değişir. Önemli bir değişiklikte koşulları Uygulama içinde yeniden kabul etmeni isteyebiliriz. Değişiklikten sonra Uygulamayı kullanmaya devam etmen kabul anlamına gelir.</p>
+
+    <h3>Bu site hakkında</h3>
+    <p>Bu site GitHub Pages'te barınır; GitHub ziyaretçilerin IP adreslerini, örneğin sunucu kayıtlarında, işleyebilir. Bu sayfalar analitik çalıştırmaz, çerez bırakmaz ve başka web sitelerinden yazı tipi, betik ya da başka bir dosya yüklemez.</p>
+
+    <h3>İletişim</h3>
+    <p>Yiğit Tamer · <a href="mailto:yigittamer99@gmail.com">yigittamer99@gmail.com</a></p>
+  </section>
+
+  <div class="foot"><a href="index.html">Privacy Policy / Gizlilik Politikası</a> · <a href="terms.html">Terms of Service / Kullanım Koşulları</a> · <a href="support.html">Support / Destek</a></div>
+</div>
+</body>
+</html>

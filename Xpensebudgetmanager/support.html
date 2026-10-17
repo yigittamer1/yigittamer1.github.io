@@ -152,6 +152,7 @@
     color: var(--text-muted);
     font-size: 13px;
   }
+  .foot a { color: var(--accent-strong); }
 </style>
 </head>
 <body>
@@ -229,7 +230,7 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Uygulama dilini ve ana para birimini nereden değiştiririm?</p>
-      <p class="faq-a">İkisini de Ayarlar'dan değiştirebilirsin. Yeni kullanıcıya tanıtımın ardından ana para birimi açıklanıp onaylatılır; özet ve analiz toplamları bu birimde gösterilir. Kayıtları başka para birimlerinde de girebilirsin. Destek ve gizlilik sayfaları yalnızca Türkçe ve İngilizce sunulur.</p>
+      <p class="faq-a">İkisini de Ayarlar'dan değiştirebilirsin. Yeni kullanıcıya tanıtımın ardından ana para birimi açıklanıp onaylatılır; özet ve analiz toplamları bu birimde gösterilir. Kayıtları başka para birimlerinde de girebilirsin. Destek, gizlilik ve kullanım koşulları sayfaları yalnızca Türkçe ve İngilizce sunulur.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Döviz kurları ne kadar güncel?</p>
@@ -241,15 +242,23 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Uygulama reklam gösteriyor mu?</p>
-      <p class="faq-a">Evet. Uygulama Unity LevelPlay aracılığıyla banner reklamlar (inline 300×250 MREC bannerlar dahil), tam ekran ve isteğe bağlı ödüllü reklamlar gösterebilir. LevelPlay, reklam isteklerini yapılandırılmış ağlar arasında yönetir; hangi ağın reklam sunacağı paneldeki aracılık ve teklif ayarlarına bağlıdır. İlk açılışta kişiselleştirilmiş veya sınırlı reklam tercihini sorar; sınırlı reklam seçeneğinde de reklam gösterilebilir. Sınırlı reklamı seçersen ATT izni istenmez. Kişiselleştirilmiş reklamı seçersen, daha önce karar vermediysen ATT izni istenir; reddedersen sınırlı reklamlarla devam edersin. Tercihini Ayarlar → Gizlilik ve iCloud → Reklam Gizliliği bölümünden değiştirebilirsin; yeni tercih yeni reklam isteklerine hemen uygulanır ve önceki tercihle yüklenmiş reklamlar kullanılmaz. Uygulama içindeki sınırlı reklam seçimi iOS'taki ATT iznini kapatmaz; onu iOS Ayarlar'dan ayrıca değiştirebilirsin.</p>
+      <p class="faq-a">Evet. Uygulama ücretsizdir ve reklam gösterir: bazı ekranlarda banner (inline 300×250 MREC bannerlar dahil), kayıt ekledikten sonra ara sıra tam ekran bir reklam ve CSV raporu dışa aktarmak için izlemeyi seçebileceğin ödüllü bir video. Reklamları Unity LevelPlay üzerinden ironSource Ads, Unity Ads ve Liftoff Monetize sunar. Uygulama içi satın alma yoktur ve reklamları kapatan bir ayar yoktur. Uygulamayı kullanmaya başlamadan önce Kişiselleştirilmiş ya da Kişiselleştirilmemiş (sınırlı) reklam tercihini sorar; ikisinde de reklam gösterilir. Kişiselleştirilmemiş reklamlarda ATT izni istenmez, ancak reklam ağları IP adresi, cihaz türü ve reklamlarla etkileşim gibi teknik verileri yine alır. Kişiselleştirilmiş reklamları seçersen, iOS daha önce sormadıysa ATT izni istenir; reddedersen kişiselleştirilmemiş reklamlarla devam edersin. Ayrıntılar için <a href="index.html#tr">Gizlilik Politikası</a>'na bakabilirsin.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">AppMetrica neden uygulamada bulunuyor?</p>
-      <p class="faq-a">Yandex reklam bileşeni AppMetrica'yı bağımlılık olarak getirir ve reklam hizmeti için otomatik başlatır. Xpense onu ayrı bir analiz ürünü olarak kurmaz. Reklam ortaklarının teknik veri beyanları ve reklam tercihlerin hakkında ayrıntılar için <a href="index.html">Gizlilik Politikası</a> sayfasına bakabilirsin.</p>
+      <p class="faq-q">Reklam tercihimi nereden değiştiririm?</p>
+      <p class="faq-a">Ayarlar → Gizlilik ve iCloud → Reklam gizliliği bölümünden Kişiselleştirilmiş ile Kişiselleştirilmemiş arasında geçiş yapabilirsin. Yeni seçimin, en geç Xpense'i bir sonraki açtığında reklamlara uygulanır. Uygulamadaki bu seçim iOS'taki ATT iznini ayrıca kapatmaz ya da açmaz; ATT iznini iOS Ayarlar → Gizlilik ve Güvenlik → Takip bölümünden değiştirebilirsin. 1.0.4 sürümünde herkese reklam tercihi bir kez yeniden sorulur.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">Uygunsuz bir reklamı nasıl bildiririm?</p>
+      <p class="faq-a">Ayarlar → Gizlilik ve iCloud → Reklam gizliliği → Reklam bildir'e dokun. Göndermeden önce düzenleyebileceğin hazır bir e-posta açılır: hangi reklam olduğunu ve nerede gördüğünü soran bir soru ile Uygulama sürümü, build numarası ve iOS sürümü içerir; başka bir şey eklenmez.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">CSV raporunu nasıl dışa aktarırım? Neden video izletiliyor?</p>
+      <p class="faq-a">Analiz sekmesinde dönemi seç ve CSV raporunu dışa aktar düğmesine dokun. CSV'yi ücretsiz dışa aktarmak için kısa bir ödüllü video izlersin; bu, Uygulamada ödüllü videonun sunulduğu tek yerdir. Video yüklenemez veya gösterilemezse ya da ödül kazanılmadan kapatılırsa bir kez daha deneyebilirsin; yine olmazsa CSV'yi reklamsız dışa aktarabilirsin. Dosyayı iOS paylaşım sayfasından istediğin yere gönderirsin; bize ulaşmaz.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">Verilerim nasıl kullanılıyor?</p>
-      <p class="faq-a">Detaylar için <a href="index.html">Gizlilik Politikası</a> sayfamıza bakabilirsin.</p>
+      <p class="faq-a">Detaylar için <a href="index.html#tr">Gizlilik Politikası</a> ve <a href="terms.html#tr">Kullanım Koşulları</a> sayfalarımıza bakabilirsin.</p>
     </div>
   </section>
  
@@ -324,7 +333,7 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Where can I change the App language and main currency?</p>
-      <p class="faq-a">Both are available in Settings. New users are asked to confirm their main currency after onboarding; summaries and analytics use this currency. You can still record entries in other currencies. Support and privacy pages are available only in English and Turkish.</p>
+      <p class="faq-a">Both are available in Settings. New users are asked to confirm their main currency after onboarding; summaries and analytics use this currency. You can still record entries in other currencies. Support, privacy and terms pages are available only in English and Turkish.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">How current are the exchange rates?</p>
@@ -336,19 +345,27 @@
     </div>
     <div class="faq-item">
       <p class="faq-q">Does the app show ads?</p>
-      <p class="faq-a">Yes. The App may show banner ads (including inline 300×250 MREC banners), interstitial, and optional rewarded ads through Unity LevelPlay. LevelPlay mediates requests among configured ad networks; which network serves an ad depends on the mediation and bidding settings in its dashboard. On first launch, you can choose personalised or limited advertising; limited advertising can still show ads. Limited advertising does not request ATT. Choosing personalised advertising requests ATT if you have not already decided; declining it switches to limited advertising. You can change the choice in Settings → Privacy and iCloud → Advertising Privacy; the new choice applies immediately to new ad requests, and ads loaded under the old choice are discarded. Choosing limited advertising in the App does not turn off iOS ATT permission; you can change that separately in iOS Settings.</p>
+      <p class="faq-a">Yes. The App is free and shows ads: banners on some screens (including inline 300×250 MREC banners), a full-screen ad every now and then after you save entries, and an optional rewarded video you can choose to watch to export a CSV report. Ads come from ironSource Ads, Unity Ads and Liftoff Monetize through Unity LevelPlay. There are no in-app purchases, and no setting turns ads off. Before you start using the App, it asks you to choose Personalized or Limited ads; both show ads. Limited ads do not request ATT, but the ad networks still receive technical data such as your IP address, device type and how you interact with ads. If you choose Personalized, ATT is requested if iOS has not asked before; if you decline, you continue with limited ads. See the <a href="index.html#en">Privacy Policy</a> for details.</p>
     </div>
     <div class="faq-item">
-      <p class="faq-q">Why is AppMetrica included?</p>
-      <p class="faq-a">The Yandex advertising component brings in AppMetrica and initializes it for its ad service. Xpense does not integrate it as a separate analytics product. See the <a href="index.html">Privacy Policy</a> for the advertising partners' technical data declarations and your advertising choices.</p>
+      <p class="faq-q">Where do I change my advertising choice?</p>
+      <p class="faq-a">In Settings → Privacy and iCloud → Advertising privacy you can switch between Personalized and Limited. Your new choice applies to ads at the latest the next time you open Xpense. Choosing Limited in the App does not turn off the iOS ATT permission, and choosing Personalized does not turn it on; you can change ATT in iOS Settings → Privacy &amp; Security → Tracking. In version 1.0.4, everyone is asked to choose their advertising option once more.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I report an inappropriate ad?</p>
+      <p class="faq-a">Tap Settings → Privacy and iCloud → Advertising privacy → Report an ad. It opens a ready-made email that you can edit before sending: a question about which ad you saw and where, followed by the App version, build number and iOS version. Nothing else is added.</p>
+    </div>
+    <div class="faq-item">
+      <p class="faq-q">How do I export a CSV report? Why is there a video?</p>
+      <p class="faq-a">In the Analytics tab, choose the period and tap the export CSV report button. To export the CSV for free, you watch a short rewarded video; this is the only place in the App where a rewarded video is offered. If the video can't be loaded or shown, or it is closed before the reward is earned, you can try once more; if that also fails, you can export the CSV without an ad. You send the file wherever you like through the iOS share sheet; it does not reach us.</p>
     </div>
     <div class="faq-item">
       <p class="faq-q">How is my data used?</p>
-      <p class="faq-a">See our <a href="index.html">Privacy Policy</a> for details.</p>
+      <p class="faq-a">See our <a href="index.html#en">Privacy Policy</a> and <a href="terms.html#en">Terms of Service</a> for details.</p>
     </div>
   </section>
  
-  <p class="foot">Xpense Budget Manager Support · yigittamer99@gmail.com</p>
+  <p class="foot"><a href="index.html">Privacy Policy / Gizlilik Politikası</a> · <a href="terms.html">Terms of Service / Kullanım Koşulları</a> · <a href="support.html">Support / Destek</a> · yigittamer99@gmail.com</p>
 </div>
 </body>
 </html>
