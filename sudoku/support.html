@@ -149,20 +149,24 @@
   <h2>Coins, hints and the Shop</h2>
   <p><strong>Where is the Shop?</strong> Tap your coin count — at the top of
   the Play tab or the Me tab, at the top of the Journey map, or in the top bar
-  of any game (the game pauses while the Shop is open). You can also buy
+  of any game (the game pauses while the Shop is open, except the Weekly
+  Challenge, whose clock keeps running). You can also buy
   inside a game: tap Magic, and if the puzzle needs more charges than you
   have, choose <em>Buy · 100</em> on the page that opens, once for each charge
   you need, then tap Magic again.</p>
   <p><strong>How many coins do I earn?</strong> A fixed amount for the
   difficulty, however long it took: Easy 10, Medium 15, Hard 20, Expert 25,
   Master 30, Extreme 40. Today's Daily Challenge pays double: Easy 20,
-  Medium 30, Hard 40, Expert 50, Master 60, Extreme 80. Replaying a Daily, or
-  playing an earlier day's, pays nothing more, and neither does a puzzle
-  opened from a shared link or from Saved Puzzles; winning one of those also
-  doesn't change your best time or your score, though the win itself is
-  counted. A Weekly Challenge win pays no coins; its prize goes to the fastest
-  three (see Weekly Challenge below). The Shop and the Daily tab show the same
-  table under <em>How rewards work</em>.</p>
+  Medium 30, Hard 40, Expert 50, Master 60, Extreme 80. Replaying a Daily you
+  have already finished pays nothing and counts for nothing. Finishing an
+  earlier day's Daily for the first time pays no coins, but otherwise counts
+  like any win: statistics, best time, score and points. A puzzle opened from
+  a shared link or from Saved Puzzles pays no coins and doesn't change your
+  best time, your score or your points, though the win itself is counted (and
+  keeps your streak). A Weekly Challenge win pays no coins; its prize goes to
+  the fastest three (see Weekly Challenge below). The same table is in the
+  Daily tab under <em>How rewards work</em> and in the Shop under <em>See every
+  level</em>.</p>
   <p><strong>Other ways to earn coins.</strong> The first time you pass a
   Journey level, it pays the amount from the same table for its difficulty;
   replaying it pays nothing. Passing every 20th Journey level wins a chest (see
@@ -234,8 +238,8 @@
   finished nothing yesterday but did the day before — a card on the Play tab
   offers to save your streak: <em>Watch &amp; save my streak</em> with a short
   video, or with coins: <em>Repair for N coins</em> costs 1,000 coins. A
-  repair counts yesterday as played; finish a Free play puzzle or a Daily
-  Challenge today to keep the streak going. You can repair at most once every
+  repair counts yesterday as played; finish a Free play puzzle, a Daily
+  Challenge or the Weekly Challenge today to keep the streak going. You can repair at most once every
   7 days. If no video is available, the streak is not repaired, but you can
   still use coins.</p>
 
@@ -300,15 +304,16 @@
   Journey level and longest streak, each with your value and world rank; then
   come your Awards. Each leaderboard opens on its own screen in the app, with
   your rank and score, the top 50 (<em>Show More</em> for up to 100) and, if
-  you are further down, the players just above and below you. The day, week and
-  month start at 00:00 UTC (the week on Monday), which may not be midnight
-  where you live.</p>
+  you are further down, the players just above and below you. The day and week
+  start at 00:00 UTC (the week on Monday). This Month is a repeating 30-day
+  period that also starts at 00:00 UTC, not a calendar month. These times may
+  not be midnight where you live.</p>
   <p><strong>What counts as points?</strong> Each puzzle's score (the star
   number) counts when you win a new Free play puzzle, a Daily the first time
   you finish that day, the Weekly Challenge, or a Journey level the first time
   you pass it. Puzzles opened from a shared link or from Saved Puzzles don't
-  count. Your All-Time Score is your Free play and Daily score plus your
-  Journey points, which are counted from version 1.1.1.</p>
+  count. Your All-Time Score is your Free play, Daily and Weekly Challenge
+  score plus your Journey points, which are counted from version 1.1.1.</p>
   <p><strong>Do I need Game Center?</strong> No, it is optional. When the main
   screen first opens, Sudoku quietly checks whether you are signed in to Game
   Center; if you are not, nothing pops up. To sign in, tap the
@@ -317,7 +322,9 @@
   you to turn it on in iOS Settings → Game Center. To stop using it, sign out
   in iOS Settings → Game Center. Without Game Center everything else works as
   before: you can still play the Weekly Challenge, but you are not ranked and
-  can't win its prize, and the leaderboards aren't shown. What is sent to Game
+  can't win its prize, and the leaderboards aren't shown. If you finish the
+  Weekly Challenge while signed out, your time is sent when you sign in to
+  Game Center before the week ends. What is sent to Game
   Center is described in the <a href="./#game-center">Privacy Policy</a>.</p>
   <p><strong>How does the Weekly Challenge work?</strong> Every week there is
   one puzzle, the same for everyone. A new one starts on Monday at 00:00 UTC,
@@ -329,11 +336,15 @@
   or switch to another device; it can't be paused. You can leave and come back
   to the same board. A win pays no coins, but it counts toward your
   statistics, your streak and your points, and your time goes to Game Center.
-  On iOS 26 you can also challenge a friend through Game Center.</p>
+  A try you haven't finished when the week ends simply expires: it isn't
+  ranked and doesn't count as a loss. After you finish, on iOS 26 and signed
+  in to Game Center, you can challenge a friend.</p>
   <p><strong>The Weekly Challenge prize.</strong> When the week ends, the three
   fastest times in the world win coins: 100 for first, 50 for second and 25 for
   third, going by Game Center's ranking. The coins come with a card the next
-  time you open Sudoku, signed in to Game Center, during the following week.
+  time you open Sudoku, signed in to Game Center, during the following week;
+  if you don't open it signed in during that week, that week's prize is not
+  paid.
   Each week's prize is paid once, even if you use several devices. The prize is
   in-game coins only (see the <a href="terms.html">Terms of Service</a>).</p>
   <p><strong>Awards.</strong> There are 40 awards: 20 general and 20 for the
@@ -419,6 +430,13 @@
   switched off — turn them back on there.</p>
 
   <h2>Something in the game went wrong</h2>
+  <p><strong>A level is locked.</strong> Easy and Medium are open from the
+  start. Hard unlocks after 3 Medium wins, Expert after 5 Hard, Master after
+  8 Expert and Extreme after 12 Master. Wins in Free play, the Daily Challenge
+  and the Weekly Challenge count; Journey levels don't.</p>
+  <p><strong>I can't erase a number.</strong> A correct number you enter locks:
+  it can't be erased or changed. Undo can take back your own last move, but
+  not a hint.</p>
   <p><strong>A game counted as a loss.</strong> Leaving a game never counts
   against you: a Free play game waits on the Play tab (tap
   <em>Continue</em>), a Daily on its day in the Daily tab (unless you open
@@ -428,8 +446,8 @@
   Challenge and a Daily on a day you haven't finished yet; a lost Journey level
   is not counted. A Free play game counts as lost only
   when you give up one you had already played. That happens in two ways: you
-  start a new puzzle over it (from the Play tab, from Saved Puzzles or with
-  the ↻ button in the game), or you end it after running out of mistakes.
+  start a new puzzle over it (from the Play tab, from Saved Puzzles, by
+  opening a shared puzzle link or with the ↻ button in the game), or you end it after running out of mistakes.
   The prompt says so before you confirm. A board you never touched never
   counts as a loss. Starting a new puzzle, at any level, over a Free play game
   you haven't finished or lost takes a short video or 30 coins, even if you
@@ -537,7 +555,8 @@
   önce kısa bir video oynatır, ama seviye her durumda yeniden açılır.</p>
   <p><strong>Video açılmadı.</strong> Ödül yalnızca videoyu sonuna kadar
   izlerseniz verilir. Hiç video gösterilemezse — örneğin çevrimdışıysanız —
-  ödül verilmez ve <em>Şu anda video yok</em> uyarısı çıkar; daha sonra
+  ödül verilmez ve <em>Şu anda video yok. Lütfen daha sonra tekrar dene.</em>
+  uyarısı çıkar; daha sonra
   tekrar deneyebilirsiniz. Hiç video gösterilemese de, videoyu erken
   kapatsanız da iki şey yine olur: Yolculuk sandığı normal miktarıyla açılır
   ve kaybettiğiniz bir Yolculuk seviyesi yeniden açılır (bu uyarı
@@ -585,21 +604,24 @@
   <h2>Coin, ipucu ve Mağaza</h2>
   <p><strong>Mağaza nerede?</strong> Coin sayınıza dokunun: Oyna ya da Ben
   sekmesindeki ekranın üstünde, Yolculuk haritasının üstünde ya da herhangi
-  bir oyunun üst çubuğunda (Mağaza açıkken oyun duraklar). Oyun içinde de
+  bir oyunun üst çubuğunda (Mağaza açıkken oyun duraklar; Haftanın Meydan
+  Okuması hariç, onun süresi işlemeye devam eder). Oyun içinde de
   satın alabilirsiniz: Sihir'e dokunun; bulmaca elinizdekinden fazla hak
   istiyorsa açılan sayfada gereken her hak için bir kez
   <em>Satın al · 100</em> düğmesine, sonra yeniden Sihir'e dokunun.</p>
   <p><strong>Kaç coin kazanırım?</strong> Zorluğa göre sabit bir miktar, ne
   kadar sürdüğünden bağımsız: Kolay 10, Orta 15, Zor 20, Uzman 25, Usta 30,
   Aşırı 40. Bugünün Günlük Meydan Okuması iki katını öder: Kolay 20, Orta 30,
-  Zor 40, Uzman 50, Usta 60, Aşırı 80. Bir Günlük'ü tekrar oynamak ya da
-  önceki bir günün Günlük'ünü oynamak fazladan bir şey kazandırmaz;
-  paylaşılan bir bağlantıdan ya da Kayıtlı Bulmacalar'dan açılan bulmaca da
-  coin kazandırmaz; bunları kazanmak en iyi sürenizi ve puanınızı da
-  değiştirmez, ama galibiyetin kendisi sayılır. Haftanın Meydan Okuması
-  galibiyeti coin kazandırmaz; ödülü en hızlı üç kişiye gider (aşağıda Haftanın
-  Meydan Okuması'na bakın). Mağaza ve Günlük sekmesi aynı tabloyu
-  <em>Ödüller nasıl çalışır</em> altında gösterir.</p>
+  Zor 40, Uzman 50, Usta 60, Aşırı 80. Bitirdiğiniz bir Günlük'ü tekrar
+  oynamak hiçbir şey kazandırmaz ve hiçbir şeye sayılmaz. Önceki bir günün
+  Günlük'ünü ilk kez bitirmek coin kazandırmaz, ama diğer her galibiyet gibi
+  sayılır: istatistikler, en iyi süre, puan. Paylaşılan bir bağlantıdan ya da
+  Kayıtlı Bulmacalar'dan açılan bulmaca coin kazandırmaz; en iyi sürenizi ve
+  puanınızı da değiştirmez, ama galibiyetin kendisi sayılır (ve serinizi
+  sürdürür). Haftanın Meydan Okuması galibiyeti coin kazandırmaz; ödülü en
+  hızlı üç kişiye gider (aşağıda Haftanın Meydan Okuması'na bakın). Aynı tablo
+  Günlük sekmesinde <em>Ödüller nasıl çalışır</em>, Mağaza'da <em>Tüm
+  seviyelere bak</em> altında yer alır.</p>
   <p><strong>Coin kazanmanın diğer yolları.</strong> Bir Yolculuk seviyesini
   ilk kez geçtiğinizde, zorluğuna göre aynı tablodaki kadar coin kazanırsınız;
   tekrar oynamak coin kazandırmaz. Her 20. Yolculuk seviyesini geçmek bir
@@ -673,7 +695,8 @@
   sekmesinde serinizi kurtarmayı öneren bir kart çıkar: kısa bir videoyla
   <em>İzle ve serimi kurtar</em> ya da coinle: <em>N coin ile onar</em>
   düğmesi 1.000 coin tutar. Onarım dünü oynanmış sayar; serinin sürmesi için
-  bugün bir Serbest oyun bulmacası ya da Günlük Meydan Okuma bitirin. En çok
+  bugün bir Serbest oyun bulmacası, Günlük Meydan Okuma ya da Haftanın Meydan
+  Okuması bitirin. En çok
   7 günde bir onarabilirsiniz. Video yoksa seri onarılmaz, ama coinle yine
   onarabilirsiniz.</p>
 
@@ -741,15 +764,16 @@
   seriyi, her birinde sizin değeriniz ve dünya sıranızla listeler; ardından
   Ödülleriniz gelir. Her sıralama uygulamanın içinde kendi ekranında açılır:
   sıranız ve puanınız, ilk 50 (<em>Daha Fazla</em> ile 100'e kadar) ve daha
-  aşağıdaysanız hemen üstünüzdeki ve altınızdaki oyuncular. Gün, hafta ve ay
-  UTC'ye göre 00:00'da başlar (hafta pazartesi); bu, yaşadığınız yerde gece
-  yarısı olmayabilir.</p>
+  aşağıdaysanız hemen üstünüzdeki ve altınızdaki oyuncular. Gün ve hafta
+  UTC'ye göre 00:00'da başlar (hafta pazartesi). Bu Ay, takvim ayı değil, yine
+  UTC'ye göre 00:00'da başlayan ve kendini yineleyen 30 günlük bir dönemdir.
+  Bu saatler yaşadığınız yerde gece yarısı olmayabilir.</p>
   <p><strong>Puan olarak ne sayılır?</strong> Bir bulmacanın puanı (yıldızlı
   sayı) şu durumlarda sayılır: yeni bir Serbest oyun bulmacası, bir Günlük'ü o
   gün için ilk kez bitirmek, Haftanın Meydan Okuması ya da bir Yolculuk
   seviyesini ilk kez geçmek. Paylaşılan bir bağlantıdan ya da Kayıtlı
-  Bulmacalar'dan açılan bulmacalar sayılmaz. Tüm Zamanların Puanı, Serbest oyun
-  ve Günlük puanınız ile 1.1.1 sürümünden itibaren sayılan Yolculuk
+  Bulmacalar'dan açılan bulmacalar sayılmaz. Tüm Zamanların Puanı, Serbest oyun,
+  Günlük ve Haftanın Meydan Okuması puanınız ile 1.1.1 sürümünden itibaren sayılan Yolculuk
   puanınızın toplamıdır.</p>
   <p><strong>Game Center gerekli mi?</strong> Hayır, isteğe bağlıdır. Ana ekran
   ilk açıldığında Sudoku, Game Center'a giriş yapmış olup olmadığınıza sessizce
@@ -760,6 +784,8 @@
   iOS Ayarları → Game Center'dan çıkış yapın. Game Center olmadan diğer her şey
   eskisi gibi çalışır: Haftanın Meydan Okuması'nı yine oynayabilirsiniz, ama
   sıralamaya girmezsiniz ve ödülünü kazanamazsınız; sıralamalar da gösterilmez.
+  Haftanın Meydan Okuması'nı giriş yapmadan bitirirseniz, hafta bitmeden Game
+  Center'a giriş yaptığınızda süreniz gönderilir.
   Game Center'a neyin gönderildiğini
   <a href="./#game-center-tr">Gizlilik Politikası</a> anlatır.</p>
   <p><strong>Haftanın Meydan Okuması nasıl işler?</strong> Her hafta herkes
@@ -771,12 +797,15 @@
   zamanla işlemeye devam eder: oyundan çıksanız, uygulamayı kapatsanız ya da
   başka bir cihaza geçseniz de durmaz; duraklatılamaz. Çıkıp aynı tahtaya geri
   dönebilirsiniz. Galibiyet coin kazandırmaz, ama istatistiklerinize, serinize
-  ve puanınıza sayılır; süreniz Game Center'a gider. iOS 26'da Game Center
-  üzerinden bir arkadaşınıza da meydan okuyabilirsiniz.</p>
+  ve puanınıza sayılır; süreniz Game Center'a gider. Hafta biterken
+  bitirmediğiniz deneme sona erer: sıralamaya girmez ve yenilgi sayılmaz.
+  Bitirdikten sonra, iOS 26'da ve Game Center'a giriş yapmışken bir
+  arkadaşınıza meydan okuyabilirsiniz.</p>
   <p><strong>Haftanın Meydan Okuması ödülü.</strong> Hafta bittiğinde dünyadaki
   en hızlı üç süre coin kazanır: Game Center'ın sıralamasına göre birinciye
   100, ikinciye 50, üçüncüye 25. Coinler, sonraki hafta içinde Sudoku'yu Game
-  Center'a giriş yapmış olarak ilk açtığınızda bir kartla gelir. Her haftanın
+  Center'a giriş yapmış olarak ilk açtığınızda bir kartla gelir; o hafta
+  içinde giriş yapmış olarak açmazsanız o haftanın ödülü verilmez. Her haftanın
   ödülü, birden çok cihaz kullansanız da bir kez verilir. Ödül yalnızca oyun
   içi coindir (bkz. <a href="terms.html#tr">Kullanım Koşulları</a>).</p>
   <p><strong>Ödüller.</strong> 40 ödül var: 20 genel ve 20 Yolculuk ödülü.
@@ -867,6 +896,13 @@
   hatırlatma da kapanmıştır — onları orada yeniden açın.</p>
 
   <h2>Oyunda bir şey ters gitti</h2>
+  <p><strong>Bir seviye kilitli.</strong> Kolay ve Orta baştan açıktır. Zor 3
+  Orta galibiyetinden, Uzman 5 Zor'dan, Usta 8 Uzman'dan, Aşırı 12 Usta'dan
+  sonra açılır. Serbest oyun, Günlük Meydan Okuma ve Haftanın Meydan Okuması
+  galibiyetleri sayılır; Yolculuk seviyeleri sayılmaz.</p>
+  <p><strong>Bir rakamı silemiyorum.</strong> Doğru girdiğiniz rakam
+  kilitlenir: silinemez, değiştirilemez. Geri Al kendi son hamlenizi geri
+  alabilir, ipucunu alamaz.</p>
   <p><strong>Bir oyun yenilgi sayıldı.</strong> Bir oyundan çıkmak asla
   aleyhinize sayılmaz: Serbest oyun Oyna sekmesinde bekler
   (<em>Devam et</em>'e dokunun), Günlük kendi gününde Günlük sekmesinde
@@ -877,8 +913,8 @@
   bitirmediğiniz bir günün Günlük'ünü sayar; kaybedilen bir Yolculuk seviyesi
   sayılmaz. Bir Serbest oyun yalnızca, daha önce oynadığınız bir oyunu
   bıraktığınızda yenilgi sayılır. Bu iki yolla olur: üstüne yeni bir bulmaca
-  başlatırsınız (Oyna sekmesinden, Kayıtlı Bulmacalar'dan ya da oyundaki ↻
-  düğmesinden) ya da hatalar bittikten sonra oyunu bitirirsiniz. Ekran bunu
+  başlatırsınız (Oyna sekmesinden, Kayıtlı Bulmacalar'dan, paylaşılan bir
+  bulmaca bağlantısını açarak ya da oyundaki ↻ düğmesinden) ya da hatalar bittikten sonra oyunu bitirirsiniz. Ekran bunu
   onaylamadan önce söyler. Hiç dokunulmamış bir tahta asla yenilgi sayılmaz.
   Bitirmediğiniz ve kaybetmediğiniz bir Serbest oyunun üstüne, hangi seviyede
   olursa olsun yeni bir bulmaca başlatmak, tahtaya hiç dokunmamış olsanız

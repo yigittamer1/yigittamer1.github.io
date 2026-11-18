@@ -103,9 +103,9 @@
     themes and the Shop's daily bonus-video count. From version 1.1.1 this also
     includes the points you won on each of the last 62 days (counted in UTC,
     for the day, week and month leaderboards), your Journey points, how many
-    puzzles you have won without a mistake (for the awards), your Weekly
-    Challenge attempt for the current week (when you started it, whether you
-    finished it and your time), how many Weekly Challenges you have finished,
+    puzzles you have won without a mistake, in all and on Extreme (for the
+    awards), your Weekly Challenge attempt for the current week (when you
+    started it, whether you finished or lost it, and your time), how many Weekly Challenges you have finished,
     and the weeks whose prize you have already received.</li>
     <li>A note that your welcome gift has been settled (whether or not it was
     given), so that it is not given again.</li>
@@ -122,23 +122,27 @@
     <li>A short history of your recent coin earnings and spending, and a list of
     the puzzles you opened from a link or from Saved Puzzles (those do not pay
     coins).</li>
-    <li>Which version of the Terms of Service you have accepted, and whether the
-    app has already asked iOS about notifications.</li>
+    <li>Which version of the Terms of Service you have accepted, whether the
+    app has already asked iOS about notifications or shown the Remind Me card,
+    and iOS's last answer about notifications (so the reminders can follow
+    it).</li>
     <li>For the rating request: how many puzzles you have won, which of those
     win counts it last asked at, and the dates it asked Apple to show its rating
     window (Apple limits how often that window can appear in a year). The rating
-    window itself is Apple's.</li>
+    window itself is Apple's; once iOS's yearly limit is reached, Rate Sudoku
+    opens Sudoku's page in the App Store instead.</li>
     <li>If you use Game Center: a record of what the app last sent to Game
     Center (each award's progress and whether this week's Weekly Challenge time
     has been accepted) and which week's prize it last checked, so it does not
     send the same thing twice.</li>
     <li>A few technical markers (for example where the Journey map was last
-    shown) and a cache of ready-made puzzles, including ready copies of the
-    Daily Challenge puzzles for the last 180 days, today and the next 30 days
-    (these copies contain no personal data and are not copied to iCloud or to
-    your device backup); an image of your stats, made for
-    sharing when you open Statistics, may stay in the device's temporary folder
-    until iOS clears it.</li>
+    shown) and a cache of ready-made puzzles (no personal data, not copied to
+    iCloud), including ready copies of the Daily Challenge puzzles for the last
+    180 days, today and the next 30 days and of puzzles you opened from a link
+    or Saved Puzzles; those copies are also left out of your device backup. An
+    image of your stats, made for sharing when you open Statistics after
+    winning at least one game, may stay in the device's temporary folder until
+    iOS clears it.</li>
   </ul>
   <p>Some of this is also copied to your own iCloud — see iCloud sync. If you
   sign in to Game Center, scores and award progress worked out from it are sent
@@ -149,8 +153,9 @@
   first item in the list above — to <strong>your own private iCloud
   database</strong> using Apple's CloudKit and iCloud Key-Value Storage, along
   with the note about your welcome gift. This is your personal iCloud
-  account; we cannot access it. Everything else in that list, apart from that
-  note, stays on this device only. If you are not signed in to iCloud the app
+  account; we cannot access it. Everything else in that list stays on this
+  device only, apart from that note and a few technical markers that record
+  one-time updates to your progress (they contain no personal data). If you are not signed in to iCloud the app
   works normally and keeps everything on the device instead.</p>
   <p>You can erase your game data — on the device and in iCloud — at any time
   with <strong>Me → Settings → Delete All Data</strong> inside the app.
@@ -160,7 +165,8 @@
   your welcome gift has been settled (on the device or in iCloud), this week's
   Weekly Challenge attempt and the weeks whose prize you have already received
   (on the device and in iCloud, so a week can't be played or paid twice), your survey
-  answer, your acceptance of the Terms of Service, the rating-request record,
+  answer, your acceptance of the Terms of Service, the notification question
+  records, the rating-request record,
   the record of what was last sent to Game Center, a few technical markers or
   your ad choice (see Your ad choice). The ad networks' software may keep its
   own data on your device; Delete All Data does not touch it. It also does not
@@ -182,7 +188,12 @@
     <li>your progress on the 40 awards, which are also Game Center
     achievements.</li>
   </ul>
-  <p>It sends them after each win and when you open or return to the app. Game
+  <p>It sends them when you first sign in — including scores and awards you
+  earned before, in any earlier version — then after each win, when you open
+  or return to the app, and when the app shows your Weekly Challenge rank.
+  On iOS 26 and later, after finishing the Weekly Challenge you can tap
+  Challenge a Friend: this opens Apple's own Game Center challenge screen, and
+  any invitation is sent by Apple to the friends you pick there. Game
   Center is Apple's service: Apple links these scores to your Game Center
   profile and shows them to other players with your Game Center name, and it
   handles this data under its own terms and
@@ -261,6 +272,8 @@
   and other diagnostic data for analytics and app functionality, and this data
   is not linked to you and not used for tracking. The App Store label above
   shows all of the ad software together.</p>
+  <p>At the ad networks' request, ads may be loaded over unencrypted
+  connections; the app's own connections are encrypted.</p>
   <p><strong>Reporting an ad.</strong> If you see an ad that isn't appropriate,
   use <strong>Me → Settings → Ad privacy → Report an ad</strong>. It opens an
   email to us that you can edit before you send it; it contains only a question
@@ -341,9 +354,10 @@
 
   <h2>Apple's services</h2>
   <p>Apart from Unity LevelPlay and the ad networks described under Advertising,
-  the outside services the app talks to are Apple's: iCloud, for the sync
-  described above, Game Center, if you sign in to it (see Game Center), and
-  Apple's push notification service, which carries a
+  and this website when you open a link to it, the outside services the app
+  talks to are Apple's: iCloud, for the sync described above, Game Center, if
+  you sign in to it (see Game Center), the App Store (from the rating card)
+  and Apple's push notification service, which carries a
   silent signal from iCloud telling your other devices that new data is
   waiting. The signal contains none of your data and shows nothing on screen.
   The reminders you can turn on are different: they are scheduled on your own
@@ -471,9 +485,10 @@
     device and in your own iCloud account. Apart from emails you send us, there
     is no file for us to hand over or delete —
     <strong>Me → Settings → Delete All Data</strong> erases your game data from
-    both at any time, without asking us. It does not remove your ad choice (see
-    Your ad choice), the note that your welcome gift has been settled, or this
-    week's Weekly Challenge attempt and the weeks already paid.</li>
+    both at any time, without asking us. What it leaves — such as your ad
+    choice (see Your ad choice), your settings, the note that your welcome gift
+    has been settled, and this week's Weekly Challenge attempt and the weeks
+    already paid — is listed under iCloud sync.</li>
     <li><strong>Game Center:</strong> scores and award progress sent to Game
     Center are held by Apple, not by us, and Delete All Data does not remove
     them. To stop sending more, sign out of Game Center in iOS Settings; to use
@@ -568,9 +583,9 @@
     Mağaza'nın günlük bonus video sayısı. 1.1.1 sürümünden itibaren buna şunlar
     da girer: son 62 günün her birinde kazandığınız puanlar (günlük, haftalık ve
     aylık sıralamalar için, UTC'ye göre sayılır), Yolculuk puanınız, hatasız
-    kazandığınız bulmaca sayısı (ödüller için), bu haftaki Haftanın Meydan
-    Okuması denemeniz (ne zaman başladığınız, bitirip bitirmediğiniz ve
-    süreniz), bitirdiğiniz Haftanın Meydan Okuması sayısı ve ödülünü almış
+    kazandığınız bulmaca sayısı, toplamda ve Extreme'de (ödüller için), bu
+    haftaki Haftanın Meydan Okuması denemeniz (ne zaman başladığınız,
+    bitirdiğiniz ya da kaybettiğiniz ve süreniz), bitirdiğiniz Haftanın Meydan Okuması sayısı ve ödülünü almış
     olduğunuz haftalar.</li>
     <li>Hoş geldin hediyenizin sonuçlandığına (verilmiş olsun ya da olmasın)
     dair bir kayıt; hediye yeniden verilmesin diye tutulur.</li>
@@ -588,23 +603,28 @@
     <li>Son coin kazanç ve harcamalarınızın kısa bir geçmişi ve bağlantıdan ya da
     Kayıtlı Bulmacalar'dan açtığınız bulmacaların listesi (bunlar coin
     ödemez).</li>
-    <li>Kullanım Koşulları'nın hangi sürümünü kabul ettiğiniz ve uygulamanın
-    bildirimler için iOS'a daha önce sorup sormadığı.</li>
+    <li>Kullanım Koşulları'nın hangi sürümünü kabul ettiğiniz, uygulamanın
+    bildirimler için iOS'a daha önce sorup sormadığı ya da Hatırlat kartını
+    gösterip göstermediği ve iOS'un bildirimlere verdiği son cevap
+    (hatırlatmalar onu izlesin diye).</li>
     <li>Puan verme isteği için: kaç bulmaca kazandığınız, en son hangi galibiyet
     sayısında sorulduğu ve Apple'ın puanlama penceresinin hangi tarihlerde
     istendiği (Apple bu pencerenin bir yılda kaç kez çıkabileceğini
-    sınırlar). Puanlama penceresinin kendisi Apple'ındır.</li>
+    sınırlar). Puanlama penceresinin kendisi Apple'ındır; iOS'un yıllık sınırı
+    dolduğunda Sudoku'ya puan ver düğmesi bunun yerine Sudoku'nun App Store
+    sayfasını açar.</li>
     <li>Game Center kullanıyorsanız: uygulamanın Game Center'a en son ne
     gönderdiğine dair bir kayıt (her ödülün ilerlemesi ve bu haftaki Haftanın
     Meydan Okuması sürenizin kabul edilip edilmediği) ve en son hangi haftanın
     ödülüne baktığı; aynı şeyi iki kez göndermemek için tutulur.</li>
     <li>Birkaç teknik işaret (örneğin Yolculuk haritasında en son görülen yer) ve
-    hazır bulmaca önbelleği; buna son 180 günün, bugünün ve önümüzdeki 30 günün
-    Günlük Meydan Okuma bulmacalarının hazır kopyaları da dahildir (bu kopyalar
-    kişisel veri içermez, iCloud'a ve cihaz yedeğinize kopyalanmaz);
-    İstatistikler'i açtığınızda paylaşım için hazırlanan
-    istatistik görseli, iOS temizleyene kadar cihazın geçici klasöründe
-    kalabilir.</li>
+    hazır bulmaca önbelleği (kişisel veri içermez, iCloud'a kopyalanmaz); buna
+    son 180 günün, bugünün ve önümüzdeki 30 günün Günlük Meydan Okuma
+    bulmacalarının ve bağlantıdan ya da Kayıtlı Bulmacalar'dan açtığınız
+    bulmacaların hazır kopyaları da dahildir; bu kopyalar cihaz yedeğinize de
+    alınmaz. En az bir oyun kazandıktan sonra İstatistikler'i açtığınızda
+    paylaşım için hazırlanan istatistik görseli, iOS temizleyene kadar cihazın
+    geçici klasöründe kalabilir.</li>
   </ul>
   <p>Bunların bir kısmı kendi iCloud hesabınıza da kopyalanır (bkz. iCloud
   senkronizasyonu). Game Center'a giriş yaparsanız bunlardan hesaplanan skorlar
@@ -616,8 +636,10 @@
   verilerinizi — yukarıdaki listenin ilk maddesini — hoş geldin hediyenize dair
   kayıtla birlikte Apple'ın CloudKit ve iCloud Key-Value Storage teknolojisiyle
   <strong>sizin özel iCloud veritabanınıza</strong> kopyalar. Burası sizin
-  kişisel iCloud hesabınızdır; bizim oraya erişimimiz yoktur. O listedeki, bu
-  kayıt dışındaki diğer her şey yalnızca bu cihazda kalır. iCloud'a giriş
+  kişisel iCloud hesabınızdır; bizim oraya erişimimiz yoktur. O listedeki
+  diğer her şey yalnızca bu cihazda kalır; bunun istisnaları o kayıt ve
+  ilerlemenize yapılan tek seferlik güncellemeleri kaydeden birkaç teknik
+  işarettir (kişisel veri içermezler). iCloud'a giriş
   yapmış değilseniz uygulama normal çalışır ve her şeyi yalnızca cihazda
   tutar.</p>
   <p>Oyun verilerinizi — cihazdaki ve iCloud'daki — istediğiniz zaman uygulama
@@ -628,8 +650,8 @@
   geldin hediyenizin sonuçlandığına dair kaydı (ne cihazda ne iCloud'da), bu
   haftanın Haftanın Meydan Okuması denemesini ve ödülü ödenmiş haftaları (cihazda
   ve iCloud'da; bir hafta iki kez oynanamasın ya da ödenmesin diye), anket
-  cevabınızı, Kullanım Koşulları'nı kabul ettiğinize dair kaydı, puan verme
-  isteği kaydını, Game Center'a en son gönderilenlerin kaydını, birkaç teknik
+  cevabınızı, Kullanım Koşulları'nı kabul ettiğinize dair kaydı, bildirim
+  sorusu kayıtlarını, puan verme isteği kaydını, Game Center'a en son gönderilenlerin kaydını, birkaç teknik
   işareti ve reklam tercihinizi (bkz. Reklam tercihiniz) sıfırlamaz. Reklam
   ağlarının yazılımı cihazınızda kendi verisini tutabilir; Tüm Verileri Sil
   işlemi buna dokunmaz. Game Center'a daha önce gönderilmiş skorları ve
@@ -651,8 +673,14 @@
     <li>aynı zamanda Game Center başarımları olan 40 ödüldeki
     ilerlemeniz.</li>
   </ul>
-  <p>Bunları her galibiyetten sonra ve uygulamayı açtığınızda ya da uygulamaya
-  döndüğünüzde gönderir. Game Center Apple'ın hizmetidir: Apple bu skorları Game
+  <p>Bunları ilk giriş yaptığınızda — daha önce, önceki sürümlerde
+  kazandığınız skorlar ve ödüller dahil — sonra her galibiyetten sonra,
+  uygulamayı açtığınızda ya da uygulamaya döndüğünüzde ve uygulama Haftanın
+  Meydan Okuması sıranızı gösterdiğinde gönderir. iOS 26 ve sonrasında,
+  Haftanın Meydan Okuması'nı bitirdikten sonra Arkadaşına Meydan Oku'ya
+  dokunabilirsiniz: bu, Apple'ın kendi Game Center meydan okuma ekranını açar;
+  davet, orada seçtiğiniz arkadaşlara Apple tarafından gönderilir. Game Center
+  Apple'ın hizmetidir: Apple bu skorları Game
   Center profilinize bağlar ve diğer oyunculara Game Center adınızla gösterir;
   bu verileri kendi koşullarına ve
   <a href="https://www.apple.com/legal/privacy/">gizlilik politikasına</a> göre
@@ -736,6 +764,8 @@
   verilerini toplar; bu veriler sizinle ilişkilendirilmez ve takip için
   kullanılmaz. Yukarıdaki App Store etiketi, reklam yazılımlarının tamamını
   birlikte gösterir.</p>
+  <p>Reklam ağlarının isteğiyle reklamlar şifrelenmemiş bağlantılar üzerinden
+  yüklenebilir; uygulamanın kendi bağlantıları şifrelidir.</p>
   <p><strong>Reklam bildirmek.</strong> Uygunsuz bir reklam görürseniz
   <strong>Ben → Ayarlar → Reklam gizliliği → Reklam bildir</strong> yolunu
   kullanın. Bu, göndermeden önce düzenleyebileceğiniz, bize gidecek bir
@@ -829,10 +859,11 @@
   posta kutumuzdan sileriz.</p>
 
   <h2>Apple'ın hizmetleri</h2>
-  <p>Reklamlar bölümünde anlatılan Unity LevelPlay ve reklam ağları dışında,
-  uygulamanın konuştuğu dış hizmetler Apple'ınkilerdir: yukarıda anlatılan
-  senkronizasyon için iCloud, giriş yaparsanız Game Center (bkz. Game Center)
-  ve Apple'ın anlık bildirim hizmeti; bu hizmet
+  <p>Reklamlar bölümünde anlatılan Unity LevelPlay ve reklam ağları ile
+  bağlantısını açtığınızda bu web sitesi dışında, uygulamanın konuştuğu dış
+  hizmetler Apple'ınkilerdir: yukarıda anlatılan senkronizasyon için iCloud,
+  giriş yaparsanız Game Center (bkz. Game Center), App Store (puan verme
+  kartından) ve Apple'ın anlık bildirim hizmeti; bu hizmet
   iCloud'dan diğer cihazlarınıza yeni veri olduğunu bildiren sessiz bir işaret
   taşır. Bu işaret sizin verinizden hiçbir şey içermez ve ekranda hiçbir şey
   göstermez. Açabileceğiniz hatırlatmalar ise farklıdır: kendi cihazınızda
@@ -972,10 +1003,11 @@
     cihazınızda ve kendi iCloud hesabınızdadır. Bize gönderdiğiniz e-postalar
     dışında size verecek ya da silecek bir dosyamız yok —
     <strong>Ben → Ayarlar → Tüm Verileri Sil</strong> oyun verilerinizi bize
-    sormanıza gerek kalmadan, istediğiniz an her ikisinden de siler. Bu işlem
-    reklam tercihinizi (bkz. Reklam tercihiniz), hoş geldin hediyenizin
-    sonuçlandığına dair kaydı, bu haftanın Haftanın Meydan Okuması denemesini ve
-    ödülü ödenmiş haftaları silmez.</li>
+    sormanıza gerek kalmadan, istediğiniz an her ikisinden de siler.
+    Bıraktıkları — örneğin reklam tercihiniz (bkz. Reklam tercihiniz),
+    ayarlarınız, hoş geldin hediyenize dair kayıt, bu haftanın Haftanın Meydan
+    Okuması denemesi ve ödülü ödenmiş haftalar — iCloud senkronizasyonu
+    bölümünde listelenmiştir.</li>
     <li><strong>Game Center:</strong> Game Center'a gönderilen skorları ve ödül
     ilerlemesini biz değil Apple tutar; Tüm Verileri Sil bunları silmez. Daha
     fazlasının gönderilmesini durdurmak için iOS Ayarları'nda Game Center'dan
